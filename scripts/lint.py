@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Lint do curso v2 (PT): manifesto idêntico, tópicos = manifesto, títulos h2 = SPEC, linhas, SVG,
-ids de SVG únicos, Mapa da trilha, Ver Completo, links relativos, comandos fora da lista.
-Uso: python3 scripts/lint.py [arquivo ...]   (sem argumento: todas as páginas PT)"""
+"""Lint do curso v2 (PT): manifesto idÃªntico, tÃ³picos = manifesto, tÃ­tulos h2 = SPEC, linhas, SVG,
+ids de SVG Ãºnicos, Mapa da trilha, Ver Completo, links relativos, comandos fora da lista.
+Uso: python3 scripts/lint.py [arquivo ...]   (sem argumento: todas as pÃ¡ginas PT)"""
 import re, sys, json, os
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 spec = (RAIZ / 'context' / 'SPEC.md').read_text(encoding='utf-8')
 
-# títulos dos tópicos por módulo, lidos do mapa congelado da SPEC
+# tÃ­tulos dos tÃ³picos por mÃ³dulo, lidos do mapa congelado da SPEC
 TOPICOS = {}
 atual = None
 for linha in spec.split('\n'):
@@ -27,14 +27,14 @@ ref_manifest = None
 for p in paginas:
     txt = p.read_text(encoding='utf-8')
     rel = p.relative_to(RAIZ)
-    m = re.search(r'data-inema-manifest[^>]*>\s*(.*?)\s*</script>', txt, re.S)
+    m = re.search(r'data-ARCKHÉ-manifest[^>]*>\s*(.*?)\s*</script>', txt, re.S)
     if not m: falha(rel, 'sem manifesto'); continue
     ref_manifest = ref_manifest or m.group(1)
     if m.group(1) != ref_manifest: falha(rel, 'manifesto difere')
-    if 'https://inema.pro' not in txt: falha(rel, 'sem PRO')
-    if not re.search(r'<a [^>]*text-sky-400[^>]*>INEMA.CLUB</a>', txt): falha(rel, 'sem INEMA.CLUB')
+    if 'https://ARCKHÉ.pro' not in txt: falha(rel, 'sem PRO')
+    if not re.search(r'<a [^>]*text-sky-400[^>]*>ARCKHÉ AI</a>', txt): falha(rel, 'sem ARCKHÉ AI')
     if txt.find('ANTI-FOUC') > txt.find('cdn.tailwindcss.com'): falha(rel, 'anti-FOUC fora de ordem')
-    if re.search(r'justify-center space-x', txt): falha(rel, 'justify-center em botões')
+    if re.search(r'justify-center space-x', txt): falha(rel, 'justify-center em botÃµes')
     ids = re.findall(r'<(?:pattern|filter|marker|linearGradient|radialGradient)[^>]*\sid="([^"]+)"', txt)
     dup = {i for i in ids if ids.count(i) > 1}
     if dup: falha(rel, f'ids de SVG repetidos: {sorted(dup)[:5]}')
@@ -44,34 +44,34 @@ for p in paginas:
     mod = re.match(r'modulo-(\d-\d)\.html', p.name)
     if mod:
         mid = mod.group(1)
-        n = len(re.findall(rf'data-inema-topic="modulo-{mid}#topico-\d"', txt))
+        n = len(re.findall(rf'data-ARCKHÉ-topic="modulo-{mid}#topico-\d"', txt))
         linhas = txt.count('\n')
         svg = len(re.findall(r'<svg[^>]*role="img"', txt))
         h2 = re.findall(r'<h2 class="text-2xl font-bold flex-1">(.*?)</h2>', txt)
         esperado = TOPICOS.get(mid, [])
         print(f'{str(rel):34} linhas={linhas:<4} topicos={n} svg={svg} copyrun={txt.count("Como verificar")} check={txt.count("registerCheck(")}')
-        if n != 6: falha(rel, f'{n} tópicos (precisa 6)')
+        if n != 6: falha(rel, f'{n} tÃ³picos (precisa 6)')
         if not 500 <= linhas <= 850: falha(rel, f'{linhas} linhas fora de 500-850')
-        if svg < 2: falha(rel, f'{svg} SVG (mínimo 2)')
-        if [re.sub('<[^>]+>', '', x) for x in h2] != esperado: falha(rel, f'h2 ≠ SPEC: {h2}')
+        if svg < 2: falha(rel, f'{svg} SVG (mÃ­nimo 2)')
+        if [re.sub('<[^>]+>', '', x) for x in h2] != esperado: falha(rel, f'h2 â‰  SPEC: {h2}')
         if 'registerCheck(' not in txt: falha(rel, 'sem checagem')
-        if 'data-inema-toc' not in txt: falha(rel, 'sem TOC')
+        if 'data-ARCKHÉ-toc' not in txt: falha(rel, 'sem TOC')
     elif p.name == 'index.html' and 'trilha' in str(p.parent):
         tn = p.parent.name[-1]
-        mods = len([d for d in re.findall(r'<div [^>]*data-inema-module="\d-\d"[^>]*>', txt) if 'id="modulo-' in d])
+        mods = len([d for d in re.findall(r'<div [^>]*data-ARCKHÉ-module="\d-\d"[^>]*>', txt) if 'id="modulo-' in d])
         vc = txt.count('>Ver Completo<'); tp = txt.count('class="topic-item"')
         print(f'{str(rel):34} modulos={mods} ver_completo={vc} topicos={tp} svg={txt.count(chr(114)+"ole=\"img\"")}')
         if '>Mapa da trilha<' not in txt: falha(rel, 'sem Mapa da trilha')
-        if mods != 4 or vc != 4 or tp != 24: falha(rel, 'precisa 4 módulos, 4 Ver Completo, 24 tópicos')
+        if mods != 4 or vc != 4 or tp != 24: falha(rel, 'precisa 4 mÃ³dulos, 4 Ver Completo, 24 tÃ³picos')
         for mid, tits in TOPICOS.items():
             if mid.startswith(tn):
                 for t in tits:
-                    if f'<span class="font-medium">{t}</span>' not in txt: falha(rel, f'tópico ausente/diferente: {mid} "{t}"')
+                    if f'<span class="font-medium">{t}</span>' not in txt: falha(rel, f'tÃ³pico ausente/diferente: {mid} "{t}"')
 
-# --- nomes de API e comandos (anti-invenção) ---
+# --- nomes de API e comandos (anti-invenÃ§Ã£o) ---
 import html as _html, glob as _glob
 DTS_P = sorted(_glob.glob('/tmp/claude-*/bundled-skills/2.1.289/*/plugin-authoring/types/claude-code.d.ts'))
-if not DTS_P: print('AVISO: tipos 2.1.289 não achados; checagem de API pulada')
+if not DTS_P: print('AVISO: tipos 2.1.289 nÃ£o achados; checagem de API pulada')
 else:
     dts = open(DTS_P[0], encoding='utf-8').read()
     eventos = set(re.findall(r"'([a-z]+\.[a-zA-Z]+(?:\.[a-zA-Z*]+)?)'\s*:", dts))
@@ -86,7 +86,7 @@ else:
         for ev in set(re.findall(r"""\bon\(\s*['"]([a-zA-Z]+\.[a-zA-Z.*]+)['"]""", t)):
             if ev.startswith('classic.'):
                 nome = ev.split('.', 1)[1]
-                if f"'{nome}'" not in dts: falha(p.name, f'evento clássico inexistente: {ev}')
+                if f"'{nome}'" not in dts: falha(p.name, f'evento clÃ¡ssico inexistente: {ev}')
             elif ev not in eventos and not ev.endswith('.*'): falha(p.name, f'evento inexistente: {ev}')
         for cmd in set(re.findall(r'\bclaude (plugin [a-z]+|-p|--[a-z-]+)', t)):
             if cmd not in CLAUDE_OK: falha(p.name, f'comando claude fora da SPEC: claude {cmd}')

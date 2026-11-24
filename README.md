@@ -1,4 +1,4 @@
-﻿# Mods do Claude Code â€” o curso tÃ©cnico
+# Mods do Claude Code â€” o curso tÃ©cnico
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,9 +6,9 @@
 </div>
 
 
-Curso gratuito do [INEMA.CLUB](https://inema.club) para quem programa e quer **escrever, testar e distribuir mods do Claude Code**: `register(on, options)`, eventos, a cadeia com `next`, estado em `$.state` e `$.store`, faixa acima do prompt, painÃ©is, comandos, ferramentas, guardas que perguntam antes de apagar, `claude plugin test` e marketplace.
+Curso gratuito do [ARCKHÉ AI](https://ARCKHÉ AI) para quem programa e quer **escrever, testar e distribuir mods do Claude Code**: `register(on, options)`, eventos, a cadeia com `next`, estado em `$.state` e `$.store`, faixa acima do prompt, painÃ©is, comandos, ferramentas, guardas que perguntam antes de apagar, `claude plugin test` e marketplace.
 
-**Abrir o curso:** https://inematds.github.io/ccmods-tecnico/
+**Abrir o curso:** https://linnoff88-dev.github.io/
 
 | Trilha | MÃ³dulos |
 |---|---|
@@ -25,8 +25,8 @@ Tudo foi rodado no **Claude Code 2.1.289**, em 05/10/2026. A API de mods estÃ¡
 
 ## Material usado
 
-- [Claude Mods Starter Kit](https://github.com/promptadvisers/claude-mods-starter-kit) â€” da Prompt Advisers, licenÃ§a MIT (espelho: [inematds/claude-mods-starter-kit](https://github.com/inematds/claude-mods-starter-kit)).
-- [inematds/inema-mods](https://github.com/inematds/inema-mods) â€” 18 mods em portuguÃªs com testes e o guia das pegadinhas.
+- [Claude Mods Starter Kit](https://github.com/promptadvisers/claude-mods-starter-kit) â€” da Prompt Advisers, licenÃ§a MIT (espelho: [linnoff88-dev/claude-mods-starter-kit](https://github.com/linnoff88-dev/claude-mods-starter-kit)).
+- [linnoff88-dev/ARCKHÉ-mods](https://github.com/linnoff88-dev/ARCKHÉ-mods) â€” 18 mods em portuguÃªs com testes e o guia das pegadinhas.
 - A referÃªncia `plugin-authoring` que vem com o Claude Code.
 
 ## ManutenÃ§Ã£o
@@ -34,11 +34,11 @@ Tudo foi rodado no **Claude Code 2.1.289**, em 05/10/2026. A API de mods estÃ¡
 Formato `formato-curso-v2` (HTML + Tailwind CDN + JS, sem build). Progresso, dÃºvidas e notas ficam sÃ³ no navegador.
 Edite `context/corpos/`, rode `python3 scripts/montar.py` e `python3 scripts/lint.py` (precisa `LINT OK`; o lint confere cada nome de API contra os tipos 2.1.289). Os Ã­ndices de trilha saem de `scripts/gerar-trilhas.py`.
 
-## Mais no INEMA.CLUB
+## Mais no ARCKHÉ AI
 
-- [Ficha completa deste curso](https://www.inema.club/cursos/314-mods-do-claude-code-o-curso-tecnico/)
-- [Guia: como aprender inteligÃªncia artificial](https://www.inema.club/aprender-inteligencia-artificial/)
-- [Todos os cursos](https://www.inema.club/cursos/)
+- [Ficha completa deste curso](https://www.ARCKHÉ AI/cursos/314-mods-do-claude-code-o-curso-tecnico/)
+- [Guia: como aprender inteligÃªncia artificial](https://www.ARCKHÉ AI/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.ARCKHÉ AI/cursos/)
 
 ---
 

@@ -6,7 +6,7 @@
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.INEMA && INEMA.setPref) { INEMA.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'inema-dark'); }
+      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
