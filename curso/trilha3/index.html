@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="ccmt">
-  <title>Trilha 3 Â· Telas e comandos | Mods do Claude Code â€” tÃ©cnico</title>
-  <meta name="description" content="Curso tÃ©cnico gratuito do ARCKHÉ AI: escreva, teste e distribua mods do Claude Code â€” register, eventos, cadeia com next, estado, faixa, painÃ©is, comandos, guardas e claude plugin test.">
+  <meta name="ARCKHê-course" content="ccmt">
+  <title>Trilha 3 êÂ· Telas e comandos | Mods do Claude Code ê¢â¬â têÂ©cnico</title>
+  <meta name="description" content="Curso têÂ©cnico gratuito do ARCKHê AI: escreva, teste e distribua mods do Claude Code ê¢â¬â register, eventos, cadeia com next, estado, faixa, painêÂ©is, comandos, guardas e claude plugin test.">
 
   <!-- ANTI-FOUC: bloqueante, ANTES do Tailwind -->
   <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('ARCKHÉ.prefs');
+        var raw = localStorage.getItem('ARCKHê.prefs');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
         } else {
           var legacy = localStorage.getItem('theme');
-          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark';
+          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark';
         }
       } catch (e) { p = clone(DEF); }
       var THEMES = {
-        'ARCKHÉ-dark': { dark: true,  attr: null,        cs: 'dark'  },
+        'ARCKHê-dark': { dark: true,  attr: null,        cs: 'dark'  },
         'claro':      { dark: false, attr: null,        cs: 'light' },
         'sepia':      { dark: false, attr: 'sepia',     cs: 'light' },
         'foco':       { dark: null,  attr: 'foco',      cs: null    },
         'contraste':  { dark: true,  attr: 'contraste', cs: 'dark'  }
       };
-      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+      var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style; var scale = (+p.fontScale || 100);
-      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHê-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -63,8 +63,8 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (OBRIGATORIO em TODA pagina, identico) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
-  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que Ã© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfÃ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainÃ©is e botÃµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraÃ§Ã£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
+  <script type="application/json" data-ARCKHê-manifest>
+  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que êÂ© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfêÂ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainêÂ©is e botêÂµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraêÂ§êÂ£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
   </script>
 
   <style>
@@ -155,7 +155,7 @@
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
     /* Alvos de ancora abaixo do nav sticky */
-    [data-ARCKHÉ-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
+    [data-ARCKHê-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
 
     /* SVG light mode + animacao */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
@@ -171,28 +171,28 @@
     /* Topicos expansiveis */
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    /* Popover de aparÃªncia ancorado Ã  direita e fora do layout quando fechado (sem transbordo) */
-    .ARCKHÉ-appearance-pop { right: 0; }
+    /* Popover de aparêÂªncia ancorado êÂ  direita e fora do layout quando fechado (sem transbordo) */
+    .ARCKHê-appearance-pop { right: 0; }
     main code, main pre { overflow-wrap: anywhere; }
     main .flex-1 { min-width: 0; }
-    .ARCKHÉ-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
+    .ARCKHê-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteÃºdo</a>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteêÂºdo</a>
 
   <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-1.5 sm:space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ§©</span>
-            <span class="font-bold text-lg hidden lg:inline">Mods tÃ©cnico</span>
+            <span class="text-2xl">ê°Å¸Â§Â©</span>
+            <span class="font-bold text-lg hidden lg:inline">Mods têÂ©cnico</span>
           </a>
           <span class="text-neutral-600 hidden sm:inline">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
         </div>
         <div class="flex items-center sm:space-x-1">
           <a href="../trilha1/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -207,40 +207,40 @@
           <a href="../trilha4/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
             <span class="xl:hidden">T4</span><span class="hidden xl:inline">Controlar e distribuir</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
-            <span aria-hidden="true">â—·</span><span class="hidden md:inline">Jornada</span>
-            <span class="ARCKHÉ-journey-badge" data-ARCKHÉ-journey-badge data-count="0"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
+            <span aria-hidden="true">ê¢âÂ·</span><span class="hidden md:inline">Jornada</span>
+            <span class="ARCKHê-journey-badge" data-ARCKHê-journey-badge data-count="0"></span>
           </button>
           <div class="relative">
-            <button type="button" data-ARCKHÉ-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparÃªncia">
-              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparÃªncia</span>
+            <button type="button" data-ARCKHê-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparêÂªncia">
+              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparêÂªncia</span>
             </button>
-            <div id="aparencia" data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop">
-              <div class="ARCKHÉ-segment" aria-label="Tema">
-                <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark">Escuro</button>
-                <button type="button" data-ARCKHÉ-set-theme="claro">Claro</button>
-                <button type="button" data-ARCKHÉ-set-theme="sepia">SÃ©pia</button>
-                <button type="button" data-ARCKHÉ-set-theme="foco">Foco</button>
-                <button type="button" data-ARCKHÉ-set-theme="contraste">Alto contraste</button>
+            <div id="aparencia" data-ARCKHê-appearance class="ARCKHê-appearance-pop">
+              <div class="ARCKHê-segment" aria-label="Tema">
+                <button type="button" data-ARCKHê-set-theme="ARCKHê-dark">Escuro</button>
+                <button type="button" data-ARCKHê-set-theme="claro">Claro</button>
+                <button type="button" data-ARCKHê-set-theme="sepia">SêÂ©pia</button>
+                <button type="button" data-ARCKHê-set-theme="foco">Foco</button>
+                <button type="button" data-ARCKHê-set-theme="contraste">Alto contraste</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Fonte">
-                <button type="button" data-ARCKHÉ-set-font="inter">Inter</button>
-                <button type="button" data-ARCKHÉ-set-font="system">Sistema</button>
-                <button type="button" data-ARCKHÉ-set-font="leitura">Leitura</button>
+              <div class="ARCKHê-segment" aria-label="Fonte">
+                <button type="button" data-ARCKHê-set-font="inter">Inter</button>
+                <button type="button" data-ARCKHê-set-font="system">Sistema</button>
+                <button type="button" data-ARCKHê-set-font="leitura">Leitura</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Tamanho do texto">
-                <button type="button" data-ARCKHÉ-set-fontscale="100">A</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="112">A+</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="125">A++</button>
+              <div class="ARCKHê-segment" aria-label="Tamanho do texto">
+                <button type="button" data-ARCKHê-set-fontscale="100">A</button>
+                <button type="button" data-ARCKHê-set-fontscale="112">A+</button>
+                <button type="button" data-ARCKHê-set-fontscale="125">A++</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Largura da linha">
-                <button type="button" data-ARCKHÉ-set-linewidth="60">Estreito</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="68">MÃ©dio</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="75">Largo</button>
+              <div class="ARCKHê-segment" aria-label="Largura da linha">
+                <button type="button" data-ARCKHê-set-linewidth="60">Estreito</button>
+                <button type="button" data-ARCKHê-set-linewidth="68">MêÂ©dio</button>
+                <button type="button" data-ARCKHê-set-linewidth="75">Largo</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Entrelinha">
-                <button type="button" data-ARCKHÉ-set-leading="1.45">Compacto</button>
-                <button type="button" data-ARCKHÉ-set-leading="1.7">ConfortÃ¡vel</button>
+              <div class="ARCKHê-segment" aria-label="Entrelinha">
+                <button type="button" data-ARCKHê-set-leading="1.45">Compacto</button>
+                <button type="button" data-ARCKHê-set-leading="1.7">ConfortêÂ¡vel</button>
               </div>
             </div>
           </div>
@@ -253,25 +253,25 @@
     </div>
   </nav>
 
-  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-track="3">
+  <header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-track="3">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-[1fr_380px] lg:gap-10 lg:items-center">
       <div>
         <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">TRILHA 3</span>
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ–¥ï¸ Telas e comandos</h1>
-        <p class="text-lg text-neutral-400 max-w-3xl">Desenhe no Claude Code: ui.render e as quatro superfÃ­cies, a faixa acima do prompt, status e avisos, painÃ©is com botÃµes, comandos de barra que respondem sem modelo e ferramentas que o modelo pode chamar.</p>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸âÂ¥ê¯Â¸Â Telas e comandos</h1>
+        <p class="text-lg text-neutral-400 max-w-3xl">Desenhe no Claude Code: ui.render e as quatro superfêÂ­cies, a faixa acima do prompt, status e avisos, painêÂ©is com botêÂµes, comandos de barra que respondem sem modelo e ferramentas que o modelo pode chamar.</p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">4</div><div class="text-xs text-neutral-400">MÃ³dulos</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">24</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~2h20</div><div class="text-xs text-neutral-400">DuraÃ§Ã£o</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">TÃ©cnico</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">4</div><div class="text-xs text-neutral-400">MêÂ³dulos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">24</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~2h20</div><div class="text-xs text-neutral-400">DuraêÂ§êÂ£o</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">TêÂ©cnico</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
         </div>
-        <div data-ARCKHÉ-meter="trilha:3" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 3">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 24</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div data-ARCKHê-meter="trilha:3" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 3">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 24</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="mt-8 lg:mt-0 rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 overflow-hidden">
-        <svg viewBox="0 0 380 240" class="w-full h-auto" role="img" aria-label="A janela do Claude Code com trÃªs lugares onde um mod desenha: a conversa no alto, um painel encaixado Ã  direita com botÃµes e, logo acima da caixa de prompt, a faixa compartilhada. Ao lado, as quatro superfÃ­cies: terminal, desktop, mobile e vscode.">
+        <svg viewBox="0 0 380 240" class="w-full h-auto" role="img" aria-label="A janela do Claude Code com trêÂªs lugares onde um mod desenha: a conversa no alto, um painel encaixado êÂ  direita com botêÂµes e, logo acima da caixa de prompt, a faixa compartilhada. Ao lado, as quatro superfêÂ­cies: terminal, desktop, mobile e vscode.">
           <defs>
             <pattern id="t3a-grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#c084fc" opacity="0.12"/></pattern>
             <filter id="t3a-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -287,7 +287,7 @@
             <text x="225" y="50" text-anchor="middle" fill="#c084fc" font-weight="600">Pane</text>
             <rect x="196" y="64" width="58" height="18" rx="4" fill="none" stroke="#e9d5ff" stroke-width="1.2"/><text x="225" y="77" text-anchor="middle" fill="#e9d5ff" font-size="10">[ a ] abrir</text>
             <rect x="196" y="90" width="58" height="18" rx="4" fill="none" stroke="#e9d5ff" stroke-width="1.2"/><text x="225" y="103" text-anchor="middle" fill="#e9d5ff" font-size="10">[ x ] fechar</text>
-            <rect class="wf-a" x="28" y="144" width="236" height="26" rx="6" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.8"/><text x="146" y="161" text-anchor="middle" fill="#bae6fd">AbovePrompt Â· faixa de todos</text>
+            <rect class="wf-a" x="28" y="144" width="236" height="26" rx="6" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.8"/><text x="146" y="161" text-anchor="middle" fill="#bae6fd">AbovePrompt êÂ· faixa de todos</text>
             <rect x="28" y="180" width="236" height="30" rx="6" fill="#111827" stroke="#475569" stroke-width="1.2"/><text x="40" y="199" fill="#94a3b8">&gt; /meu-comando</text>
             <g text-anchor="middle" font-size="10">
               <rect x="294" y="30" width="72" height="34" rx="8" fill="#1e1233" stroke="#c084fc" stroke-width="1.6"/><text x="330" y="51" fill="#e9d5ff">terminal</text>
@@ -301,58 +301,58 @@
     </div>
   </header>
 
-  <main id="conteudo" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-ARCKHÉ-track="3">
+  <main id="conteudo" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-ARCKHê-track="3">
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <a href="#modulo-3-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.1</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ðŸŽ¨ ui.render e as superfÃ­cies</h3>
-          <p class="text-xs text-neutral-400">Uma Ã¡rvore por superfÃ­cie</p>
+          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.1</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ê°Å¸Å½Â¨ ui.render e as superfêÂ­cies</h3>
+          <p class="text-xs text-neutral-400">Uma êÂ¡rvore por superfêÂ­cie</p>
         </a>
         <a href="#modulo-3-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.2</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ðŸ“Ÿ Faixa, status e avisos</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.2</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ê°Å¸âÅ¸ Faixa, status e avisos</h3>
           <p class="text-xs text-neutral-400">Uma faixa para todos</p>
         </a>
         <a href="#modulo-3-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.3</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ðŸªŸ PainÃ©is e botÃµes</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.3</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ê°Å¸ÂªÅ¸ PainêÂ©is e botêÂµes</h3>
           <p class="text-xs text-neutral-400">Abra por comando</p>
         </a>
         <a href="#modulo-3-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.4</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">âŒ¨ï¸ Comandos, ferramentas e configuraÃ§Ã£o</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.4</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">ê¢ÅÂ¨ê¯Â¸Â Comandos, ferramentas e configuraêÂ§êÂ£o</h3>
           <p class="text-xs text-neutral-400">/comando sem modelo</p>
         </a>
       </div>
     </section>
 
-    <h2 class="text-2xl font-bold mb-6">ConteÃºdo detalhado</h2>
+    <h2 class="text-2xl font-bold mb-6">ConteêÂºdo detalhado</h2>
 
     <!-- ===== MODULO 3.1 ===== -->
-    <div id="modulo-3-1" data-ARCKHÉ-module="3-1" data-ARCKHÉ-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-3-1" data-ARCKHê-module="3-1" data-ARCKHê-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.1</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸŽ¨ ui.render e as superfÃ­cies</h3>
-        <p class="text-neutral-400 text-sm">O que o hook de ui.render recebe, a tabela de elementos de cada superfÃ­cie e as regras de uma Ã¡rvore que valida.</p>
-        <div data-ARCKHÉ-meter="modulo:3-1" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 3.1">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.1</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸Å½Â¨ ui.render e as superfêÂ­cies</h3>
+        <p class="text-neutral-400 text-sm">O que o hook de ui.render recebe, a tabela de elementos de cada superfêÂ­cie e as regras de uma êÂ¡rvore que valida.</p>
+        <div data-ARCKHê-meter="modulo:3-1" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 3.1">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-3-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸŽ¨</span>
+            <span class="text-lg">ê°Å¸Å½Â¨</span>
             <div><span class="font-medium">Entenda o que o ui.render recebe</span><span class="text-neutral-500 text-sm ml-2">- component, surface, props</span></div>
           </button>
           <div id="t1-3-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O hook de ui.render recebe uma instÃ¢ncia de componente: e.component, e.surface, e.requestId, e.props e e.viewport.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Com esses campos vocÃª decide se desenha, onde desenha e do tamanho certo.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O hook de ui.render recebe uma instêÂ¢ncia de componente: e.component, e.surface, e.requestId, e.props e e.viewport.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Com esses campos vocêÂª decide se desenha, onde desenha e do tamanho certo.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">ui.render, component, surface, requestId, viewport.</p></div>
             </div>
           </div>
@@ -360,13 +360,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-3-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ§±</span>
-            <div><span class="font-medium">Pegue os elementos com ui.resolve</span><span class="text-neutral-500 text-sm ml-2">- elementos por superfÃ­cie</span></div>
+            <span class="text-lg">ê°Å¸Â§Â±</span>
+            <div><span class="font-medium">Pegue os elementos com ui.resolve</span><span class="text-neutral-500 text-sm ml-2">- elementos por superfêÂ­cie</span></div>
           </button>
           <div id="t2-3-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.ui.resolve(e) devolve a tabela de construtores da superfÃ­cie, que vocÃª desestrutura nas tags JSX.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O mÃ³dulo nÃ£o tem elementos globais; sem resolve nÃ£o hÃ¡ Box nem Text.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.ui.resolve(e) devolve a tabela de construtores da superfêÂ­cie, que vocêÂª desestrutura nas tags JSX.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O mêÂ³dulo nêÂ£o tem elementos globais; sem resolve nêÂ£o hêÂ¡ Box nem Text.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.ui.resolve, Box, Text, JSX com h.</p></div>
             </div>
           </div>
@@ -374,27 +374,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-3-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ“±</span>
-            <div><span class="font-medium">Respeite as diferenÃ§as entre superfÃ­cies</span><span class="text-neutral-500 text-sm ml-2">- terminal, desktop, mobile, vscode</span></div>
+            <span class="text-lg">ê°Å¸âÂ±</span>
+            <div><span class="font-medium">Respeite as diferenêÂ§as entre superfêÂ­cies</span><span class="text-neutral-500 text-sm ml-2">- terminal, desktop, mobile, vscode</span></div>
           </button>
           <div id="t3-3-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Cada superfÃ­cie tem sua tabela: o terminal nÃ£o tem Svg, mas tem Raster e Image; o mobile nÃ£o tem Input nem Select.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Uma Ã¡rvore com elemento que a superfÃ­cie nÃ£o tem nÃ£o Ã© desenhada.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">superfÃ­cie, Elements, diferenÃ§as, narrowing por e.surface.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Cada superfêÂ­cie tem sua tabela: o terminal nêÂ£o tem Svg, mas tem Raster e Image; o mobile nêÂ£o tem Input nem Select.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Uma êÂ¡rvore com elemento que a superfêÂ­cie nêÂ£o tem nêÂ£o êÂ© desenhada.</p></div>
+              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">superfêÂ­cie, Elements, diferenêÂ§as, narrowing por e.surface.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-3-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ“</span>
-            <div><span class="font-medium">Desenhe do estado, nunca escreva ao desenhar</span><span class="text-neutral-500 text-sm ml-2">- render sÃ³ lÃª</span></div>
+            <span class="text-lg">ê°Å¸âÂ</span>
+            <div><span class="font-medium">Desenhe do estado, nunca escreva ao desenhar</span><span class="text-neutral-500 text-sm ml-2">- render sêÂ³ lêÂª</span></div>
           </button>
           <div id="t4-3-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O hook de render lÃª o estado com $.state.get e nunca escreve; quem escreve Ã© um handler ou outro evento.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Escrever ao desenhar Ã© negado; ler assina a instÃ¢ncia e o redesenho vem sozinho.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O hook de render lêÂª o estado com $.state.get e nunca escreve; quem escreve êÂ© um handler ou outro evento.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Escrever ao desenhar êÂ© negado; ler assina a instêÂ¢ncia e o redesenho vem sozinho.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">render puro, $.state.get, handler, redesenho.</p></div>
             </div>
           </div>
@@ -402,27 +402,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-3-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸš«</span>
-            <div><span class="font-medium">Saiba o que acontece quando a Ã¡rvore nÃ£o valida</span><span class="text-neutral-500 text-sm ml-2">- o engine desenha o dele</span></div>
+            <span class="text-lg">ê°Å¸Å¡Â«</span>
+            <div><span class="font-medium">Saiba o que acontece quando a êÂ¡rvore nêÂ£o valida</span><span class="text-neutral-500 text-sm ml-2">- o engine desenha o dele</span></div>
           </button>
           <div id="t5-3-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Uma Ã¡rvore que nÃ£o valida nÃ£o Ã© desenhada: o engine desenha a prÃ³pria e registra o motivo no log.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber ler essa linha poupa horas de &quot;por que nÃ£o aparece nada&quot;.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">validaÃ§Ã£o, ui.render refused, debug log.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Uma êÂ¡rvore que nêÂ£o valida nêÂ£o êÂ© desenhada: o engine desenha a prêÂ³pria e registra o motivo no log.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber ler essa linha poupa horas de &quot;por que nêÂ£o aparece nada&quot;.</p></div>
+              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">validaêÂ§êÂ£o, ui.render refused, debug log.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-3-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ–¼ï¸</span>
+            <span class="text-lg">ê°Å¸âÂ¼ê¯Â¸Â</span>
             <div><span class="font-medium">Use Raster e Image no terminal</span><span class="text-neutral-500 text-sm ml-2">- pixels no terminal</span></div>
           </button>
           <div id="t6-3-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Raster desenha uma grade de cÃ©lulas coloridas; Image mostra uma figura pelo protocolo grÃ¡fico do terminal, com alt nos outros.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">GrÃ¡ficos e mapas de calor sem um Box por cÃ©lula.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Raster desenha uma grade de cêÂ©lulas coloridas; Image mostra uma figura pelo protocolo grêÂ¡fico do terminal, com alt nos outros.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">GrêÂ¡ficos e mapas de calor sem um Box por cêÂ©lula.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Raster, Image, $.ui.blit, alt.</p></div>
             </div>
           </div>
@@ -435,27 +435,27 @@
     </div>
 
     <!-- ===== MODULO 3.2 ===== -->
-    <div id="modulo-3-2" data-ARCKHÉ-module="3-2" data-ARCKHÉ-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-3-2" data-ARCKHê-module="3-2" data-ARCKHê-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.2</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸ“Ÿ Faixa, status e avisos</h3>
+        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.2</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸âÅ¸ Faixa, status e avisos</h3>
         <p class="text-neutral-400 text-sm">A faixa AbovePrompt compartilhada, status, toast e log, com o exemplo oficial band.tsx dissecado.</p>
-        <div data-ARCKHÉ-meter="modulo:3-2" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 3.2">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div data-ARCKHê-meter="modulo:3-2" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 3.2">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-3-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸ“Ÿ</span>
+            <span class="text-lg">ê°Å¸âÅ¸</span>
             <div><span class="font-medium">Desenhe na faixa acima do prompt</span><span class="text-neutral-500 text-sm ml-2">- AbovePrompt</span></div>
           </button>
           <div id="t1-3-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O componente AbovePrompt Ã© a faixa acima da caixa de prompt; o hook desenha nela com o tamanho de bodyColumns.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o lugar de informaÃ§Ã£o contÃ­nua: contadores, avisos, estado do mod.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O componente AbovePrompt êÂ© a faixa acima da caixa de prompt; o hook desenha nela com o tamanho de bodyColumns.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o lugar de informaêÂ§êÂ£o contêÂ­nua: contadores, avisos, estado do mod.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">AbovePrompt, faixa, bodyColumns.</p></div>
             </div>
           </div>
@@ -463,27 +463,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-3-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ¤</span>
+            <span class="text-lg">ê°Å¸Â¤Â</span>
             <div><span class="font-medium">Conviva com os outros mods</span><span class="text-neutral-500 text-sm ml-2">- uma faixa para todos</span></div>
           </button>
           <div id="t2-3-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A faixa Ã© uma sÃ³ e compartilhada: o exemplo oficial band.tsx mostra como desenhar nela sem apagar os vizinhos.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A faixa êÂ© uma sêÂ³ e compartilhada: o exemplo oficial band.tsx mostra como desenhar nela sem apagar os vizinhos.</p></div>
               <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Um mod que toma a faixa inteira apaga os vizinhos.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">compartilhar, next, composiÃ§Ã£o.</p></div>
+              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">compartilhar, next, composiêÂ§êÂ£o.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-3-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ”†</span>
+            <span class="text-lg">ê°Å¸ââ </span>
             <div><span class="font-medium">Mostre status sem abrir nada</span><span class="text-neutral-500 text-sm ml-2">- status sem abrir nada</span></div>
           </button>
           <div id="t3-3-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.ui.status mostra um estado curto sem abrir painel e sem comeÃ§ar turno.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">InformaÃ§Ã£o discreta nÃ£o precisa de tela prÃ³pria.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.ui.status mostra um estado curto sem abrir painel e sem comeêÂ§ar turno.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">InformaêÂ§êÂ£o discreta nêÂ£o precisa de tela prêÂ³pria.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.ui.status, linha de status, sem turno.</p></div>
             </div>
           </div>
@@ -491,12 +491,12 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-3-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ“£</span>
+            <span class="text-lg">ê°Å¸âÂ£</span>
             <div><span class="font-medium">Avise com toast e log</span><span class="text-neutral-500 text-sm ml-2">- toast e log</span></div>
           </button>
           <div id="t4-3-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.ui.toast dÃ¡ um aviso passageiro e o $.ui.log escreve uma linha no registro, sem chamar o modelo.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.ui.toast dêÂ¡ um aviso passageiro e o $.ui.log escreve uma linha no registro, sem chamar o modelo.</p></div>
               <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Avisos certos no lugar certo, sem poluir a conversa.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.ui.toast, $.ui.log, aviso, registro.</p></div>
             </div>
@@ -505,27 +505,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-3-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ”¬</span>
+            <span class="text-lg">ê°Å¸âÂ¬</span>
             <div><span class="font-medium">Disseque o exemplo oficial da faixa</span><span class="text-neutral-500 text-sm ml-2">- band.tsx linha a linha</span></div>
           </button>
           <div id="t5-3-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Ler o exemplo oficial da faixa que vem com o Claude Code: estado tipado, resolve, Ã¡rvore e botÃ£o.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o modelo mais curto e correto de faixa que existe para copiar.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">examples/band.tsx, band-state.d.ts, referÃªncia oficial.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Ler o exemplo oficial da faixa que vem com o Claude Code: estado tipado, resolve, êÂ¡rvore e botêÂ£o.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o modelo mais curto e correto de faixa que existe para copiar.</p></div>
+              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">examples/band.tsx, band-state.d.ts, referêÂªncia oficial.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-3-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ§ª</span>
-            <div><span class="font-medium">Teste a faixa no terminal e no desktop</span><span class="text-neutral-500 text-sm ml-2">- mount nas duas superfÃ­cies</span></div>
+            <span class="text-lg">ê°Å¸Â§Âª</span>
+            <div><span class="font-medium">Teste a faixa no terminal e no desktop</span><span class="text-neutral-500 text-sm ml-2">- mount nas duas superfêÂ­cies</span></div>
           </button>
           <div id="t6-3-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Montar a faixa num teste para terminal e desktop, com o mesmo corpo num laÃ§o.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Prova que o mod nÃ£o depende de uma superfÃ­cie sÃ³.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Montar a faixa num teste para terminal e desktop, com o mesmo corpo num laêÂ§o.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Prova que o mod nêÂ£o depende de uma superfêÂ­cie sêÂ³.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">claude plugin test, mount, terminal, desktop.</p></div>
             </div>
           </div>
@@ -538,27 +538,27 @@
     </div>
 
     <!-- ===== MODULO 3.3 ===== -->
-    <div id="modulo-3-3" data-ARCKHÉ-module="3-3" data-ARCKHÉ-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-3-3" data-ARCKHê-module="3-3" data-ARCKHê-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.3</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸªŸ PainÃ©is e botÃµes</h3>
-        <p class="text-neutral-400 text-sm">PainÃ©is abertos por comando, dimensionados pelo bodyColumns, com botÃµes, hotkeys, campos e modo diÃ¡logo.</p>
-        <div data-ARCKHÉ-meter="modulo:3-3" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 3.3">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.3</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸ÂªÅ¸ PainêÂ©is e botêÂµes</h3>
+        <p class="text-neutral-400 text-sm">PainêÂ©is abertos por comando, dimensionados pelo bodyColumns, com botêÂµes, hotkeys, campos e modo diêÂ¡logo.</p>
+        <div data-ARCKHê-meter="modulo:3-3" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 3.3">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-3-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸªŸ</span>
+            <span class="text-lg">ê°Å¸ÂªÅ¸</span>
             <div><span class="font-medium">Abra um painel com ui.open</span><span class="text-neutral-500 text-sm ml-2">- Pane</span></div>
           </button>
           <div id="t1-3-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.ui.open abre um painel, o componente Pane, que o hook de ui.render desenha.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Painel Ã© a tela prÃ³pria do mod: listas, detalhes, formulÃ¡rios.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.ui.open abre um painel, o componente Pane, que o hook de ui.render desenha.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Painel êÂ© a tela prêÂ³pria do mod: listas, detalhes, formulêÂ¡rios.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.ui.open, Pane, requestId.</p></div>
             </div>
           </div>
@@ -566,13 +566,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-3-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ“</span>
+            <span class="text-lg">ê°Å¸âÂ</span>
             <div><span class="font-medium">Dimensione pelo bodyColumns</span><span class="text-neutral-500 text-sm ml-2">- largura que muda</span></div>
           </button>
           <div id="t2-3-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O painel desenha no bodyColumns, mais estreito que a tela quando fica ao lado da conversa.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ãrvore dimensionada pelo viewport quebra quando o painel estÃ¡ encaixado.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O painel desenha no bodyColumns, mais estreito que a tela quando fica ao lado da conversa.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êÂrvore dimensionada pelo viewport quebra quando o painel estêÂ¡ encaixado.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">bodyColumns, viewport, isFullscreen.</p></div>
             </div>
           </div>
@@ -580,13 +580,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-3-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ”˜</span>
-            <div><span class="font-medium">Ponha botÃµes com hotkey</span><span class="text-neutral-500 text-sm ml-2">- Button e hotkey</span></div>
+            <span class="text-lg">ê°Å¸âË</span>
+            <div><span class="font-medium">Ponha botêÂµes com hotkey</span><span class="text-neutral-500 text-sm ml-2">- Button e hotkey</span></div>
           </button>
           <div id="t3-3-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">BotÃµes com label, variant e hotkey de uma letra ou dÃ­gito, que funcionam quando o painel tem o teclado.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Atalho de uma tecla torna o painel usÃ¡vel sem mouse.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">BotêÂµes com label, variant e hotkey de uma letra ou dêÂ­gito, que funcionam quando o painel tem o teclado.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Atalho de uma tecla torna o painel usêÂ¡vel sem mouse.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Button, hotkey, variant, foco.</p></div>
             </div>
           </div>
@@ -594,13 +594,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-3-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ–±ï¸</span>
+            <span class="text-lg">ê°Å¸âÂ±ê¯Â¸Â</span>
             <div><span class="font-medium">Trate press, input e select</span><span class="text-neutral-500 text-sm ml-2">- ui.press, ui.input, ui.select</span></div>
           </button>
           <div id="t4-3-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Os handlers ficam no plugin e disparam os eventos ui.press, ui.input e ui.select com a chave do elemento.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ assim que um clique vira aÃ§Ã£o e um texto digitado vira dado.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Os handlers ficam no plugin e disparam os eventos ui.press, ui.input e ui.select com a chave do elemento.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° assim que um clique vira aêÂ§êÂ£o e um texto digitado vira dado.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">ui.press, ui.input, ui.select, key.</p></div>
             </div>
           </div>
@@ -608,27 +608,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-3-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ’¬</span>
-            <div><span class="font-medium">FaÃ§a um painel virar diÃ¡logo</span><span class="text-neutral-500 text-sm ml-2">- focus, closeOnEscape, holdToasts</span></div>
+            <span class="text-lg">ê°Å¸âÂ¬</span>
+            <div><span class="font-medium">FaêÂ§a um painel virar diêÂ¡logo</span><span class="text-neutral-500 text-sm ml-2">- focus, closeOnEscape, holdToasts</span></div>
           </button>
           <div id="t5-3-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Abrir o painel com focus, closeOnEscape e holdToasts faz ele se comportar como diÃ¡logo.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">DiÃ¡logo prende a atenÃ§Ã£o do usuÃ¡rio; deixar holdToasts num painel fixo trava os avisos.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">diÃ¡logo, focus, closeOnEscape, holdToasts.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Abrir o painel com focus, closeOnEscape e holdToasts faz ele se comportar como diêÂ¡logo.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">DiêÂ¡logo prende a atenêÂ§êÂ£o do usuêÂ¡rio; deixar holdToasts num painel fixo trava os avisos.</p></div>
+              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">diêÂ¡logo, focus, closeOnEscape, holdToasts.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-3-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸšª</span>
+            <span class="text-lg">ê°Å¸Å¡Âª</span>
             <div><span class="font-medium">Feche e libere o painel</span><span class="text-neutral-500 text-sm ml-2">- fechar e liberar</span></div>
           </button>
           <div id="t6-3-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Fechar o painel por botÃ£o de dispensa ou por Esc e limpar o estado ligado a ele.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Painel que nÃ£o fecha ou estado que sobra confunde a prÃ³xima abertura.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Fechar o painel por botêÂ£o de dispensa ou por Esc e limpar o estado ligado a ele.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Painel que nêÂ£o fecha ou estado que sobra confunde a prêÂ³xima abertura.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">role dismiss, Esc, limpeza de estado.</p></div>
             </div>
           </div>
@@ -641,27 +641,27 @@
     </div>
 
     <!-- ===== MODULO 3.4 ===== -->
-    <div id="modulo-3-4" data-ARCKHÉ-module="3-4" data-ARCKHÉ-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-3-4" data-ARCKHê-module="3-4" data-ARCKHê-track="3" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.4</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">âŒ¨ï¸ Comandos, ferramentas e configuraÃ§Ã£o</h3>
-        <p class="text-neutral-400 text-sm">Comandos de barra que respondem sem modelo, ferramentas para o modelo, opÃ§Ãµes do /config e nomes sem colisÃ£o.</p>
-        <div data-ARCKHÉ-meter="modulo:3-4" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 3.4">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.4</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê¢ÅÂ¨ê¯Â¸Â Comandos, ferramentas e configuraêÂ§êÂ£o</h3>
+        <p class="text-neutral-400 text-sm">Comandos de barra que respondem sem modelo, ferramentas para o modelo, opêÂ§êÂµes do /config e nomes sem colisêÂ£o.</p>
+        <div data-ARCKHê-meter="modulo:3-4" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 3.4">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-3-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">âŒ¨ï¸</span>
+            <span class="text-lg">ê¢ÅÂ¨ê¯Â¸Â</span>
             <div><span class="font-medium">Registre um comando de barra</span><span class="text-neutral-500 text-sm ml-2">- $.command.register</span></div>
           </button>
           <div id="t1-3-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Registrar um comando de barra com nome e descriÃ§Ã£o, normalmente no session.start.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Comando de mod roda na hora e nÃ£o precisa de modelo.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Registrar um comando de barra com nome e descriêÂ§êÂ£o, normalmente no session.start.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Comando de mod roda na hora e nêÂ£o precisa de modelo.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.command.register, session.start, /comando.</p></div>
             </div>
           </div>
@@ -669,13 +669,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-3-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">â†©ï¸</span>
+            <span class="text-lg">ê¢â Â©ê¯Â¸Â</span>
             <div><span class="font-medium">Responda o command.run</span><span class="text-neutral-500 text-sm ml-2">- command.run com matcher</span></div>
           </button>
           <div id="t2-3-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Responder o evento command.run, filtrado pelo nome do comando, com { text } e, se quiser, context.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">text Ã© a linha que aparece e o modelo tambÃ©m lÃª; context sÃ³ o modelo lÃª.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Responder o evento command.run, filtrado pelo nome do comando, com { text } e, se quiser, context.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">text êÂ© a linha que aparece e o modelo tambêÂ©m lêÂª; context sêÂ³ o modelo lêÂª.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">command.run, { text }, context.</p></div>
             </div>
           </div>
@@ -683,12 +683,12 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-3-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ–¨ï¸</span>
-            <div><span class="font-medium">Desenhe a saÃ­da do comando</span><span class="text-neutral-500 text-sm ml-2">- CommandOutput</span></div>
+            <span class="text-lg">ê°Å¸âÂ¨ê¯Â¸Â</span>
+            <div><span class="font-medium">Desenhe a saêÂ­da do comando</span><span class="text-neutral-500 text-sm ml-2">- CommandOutput</span></div>
           </button>
           <div id="t3-3-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Desenhar a saÃ­da do comando como Ã¡rvore na conversa hookando o componente CommandOutput.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Desenhar a saêÂ­da do comando como êÂ¡rvore na conversa hookando o componente CommandOutput.</p></div>
               <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A resposta vira tabela ou card em vez de texto cru.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">CommandOutput, ui.render, matcher por props.</p></div>
             </div>
@@ -697,13 +697,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-3-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ§°</span>
-            <div><span class="font-medium">DÃª uma ferramenta ao modelo</span><span class="text-neutral-500 text-sm ml-2">- $.tool.register</span></div>
+            <span class="text-lg">ê°Å¸Â§Â°</span>
+            <div><span class="font-medium">DêÂª uma ferramenta ao modelo</span><span class="text-neutral-500 text-sm ml-2">- $.tool.register</span></div>
           </button>
           <div id="t4-3-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Declarar uma ferramenta com nome, descriÃ§Ã£o e schema, servida por um hook de tool.call; ela aparece como mcp__&lt;plugin&gt;__&lt;nome&gt;.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O modelo passa a usar uma capacidade que sÃ³ o seu mod oferece.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Declarar uma ferramenta com nome, descriêÂ§êÂ£o e schema, servida por um hook de tool.call; ela aparece como mcp__&lt;plugin&gt;__&lt;nome&gt;.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O modelo passa a usar uma capacidade que sêÂ³ o seu mod oferece.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.tool.register, tool.call, schema, mcp__plugin__nome.</p></div>
             </div>
           </div>
@@ -711,13 +711,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-3-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ”§</span>
-            <div><span class="font-medium">Leia as opÃ§Ãµes do /config</span><span class="text-neutral-500 text-sm ml-2">- options na prÃ¡tica</span></div>
+            <span class="text-lg">ê°Å¸âÂ§</span>
+            <div><span class="font-medium">Leia as opêÂ§êÂµes do /config</span><span class="text-neutral-500 text-sm ml-2">- options na prêÂ¡tica</span></div>
           </button>
           <div id="t5-3-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Ler os valores que o usuÃ¡rio ajustou no /config pelo options do register, com padrÃµes do manifesto.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mudar uma opÃ§Ã£o recarrega o mÃ³dulo; o mod nunca lÃª config velha.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Ler os valores que o usuêÂ¡rio ajustou no /config pelo options do register, com padrêÂµes do manifesto.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mudar uma opêÂ§êÂ£o recarrega o mêÂ³dulo; o mod nunca lêÂª config velha.</p></div>
               <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">userConfig, options, picker, /config.</p></div>
             </div>
           </div>
@@ -725,14 +725,14 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-3-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ·ï¸</span>
-            <div><span class="font-medium">Evite colisÃ£o de nomes</span><span class="text-neutral-500 text-sm ml-2">- prefixe tudo</span></div>
+            <span class="text-lg">ê°Å¸ÂÂ·ê¯Â¸Â</span>
+            <div><span class="font-medium">Evite colisêÂ£o de nomes</span><span class="text-neutral-500 text-sm ml-2">- prefixe tudo</span></div>
           </button>
           <div id="t6-3-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-purple-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Escolher nomes de comandos, ferramentas e chaves de estado que nÃ£o batam com os de outros mods.</p></div>
-              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Dois mods com o mesmo comando brigam, e o usuÃ¡rio nÃ£o sabe qual respondeu.</p></div>
-              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">colisÃ£o, prefixo, nome do plugin.</p></div>
+              <div><span class="text-purple-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Escolher nomes de comandos, ferramentas e chaves de estado que nêÂ£o batam com os de outros mods.</p></div>
+              <div><span class="text-purple-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Dois mods com o mesmo comando brigam, e o usuêÂ¡rio nêÂ£o sabe qual respondeu.</p></div>
+              <div><span class="text-purple-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">colisêÂ£o, prefixo, nome do plugin.</p></div>
             </div>
           </div>
         </div>
@@ -744,8 +744,8 @@
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 mt-12">
-      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar ao inÃ­cio</a>
-      <a href="../trilha4/index.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">PrÃ³xima trilha: Controlar e distribuir â†’</a>
+      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">ê¢â Â Voltar ao inêÂ­cio</a>
+      <a href="../trilha4/index.html" class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors">PrêÂ³xima trilha: Controlar e distribuir ê¢â â</a>
     </div>
   </main>
 
@@ -753,10 +753,10 @@
   <div id="modal-3-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-3-1-title" onclick="if(event.target === this) closeModal()">
     <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
       <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
-        <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.1</span><span id="modal-3-1-title" class="font-semibold">ui.render e as superfÃ­cies</span></div>
+        <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.1</span><span id="modal-3-1-title" class="font-semibold">ui.render e as superfêÂ­cies</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-3-1.html" title="MÃ³dulo 3.1" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-3-1.html" title="MêÂ³dulo 3.1" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-3-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-3-2-title" onclick="if(event.target === this) closeModal()">
@@ -765,32 +765,32 @@
         <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.2</span><span id="modal-3-2-title" class="font-semibold">Faixa, status e avisos</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-3-2.html" title="MÃ³dulo 3.2" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-3-2.html" title="MêÂ³dulo 3.2" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-3-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-3-3-title" onclick="if(event.target === this) closeModal()">
     <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
       <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
-        <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.3</span><span id="modal-3-3-title" class="font-semibold">PainÃ©is e botÃµes</span></div>
+        <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.3</span><span id="modal-3-3-title" class="font-semibold">PainêÂ©is e botêÂµes</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-3-3.html" title="MÃ³dulo 3.3" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-3-3.html" title="MêÂ³dulo 3.3" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-3-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-3-4-title" onclick="if(event.target === this) closeModal()">
     <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
       <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
-        <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.4</span><span id="modal-3-4-title" class="font-semibold">Comandos, ferramentas e configuraÃ§Ã£o</span></div>
+        <div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.4</span><span id="modal-3-4-title" class="font-semibold">Comandos, ferramentas e configuraêÂ§êÂ£o</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-3-4.html" title="MÃ³dulo 3.4" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-3-4.html" title="MêÂ³dulo 3.4" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
 
   <footer class="border-t border-dark-600 py-8 mt-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Mods do Claude Code â€” tÃ©cnico Â· 2026 | <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> - <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
-      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHÉ-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHÉ-mods</a> Â· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
+      <p>Mods do Claude Code ê¢â¬â têÂ©cnico êÂ· 2026 | <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> - <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
+      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHê-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHê-mods</a> êÂ· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
     </div>
   </footer>
 
@@ -802,7 +802,7 @@
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
+      if (window.ARCKHê && ARCKHê.setPref) { ARCKHê.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHê-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
@@ -823,7 +823,7 @@
   </script>
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>

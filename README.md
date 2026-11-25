@@ -1,4 +1,4 @@
-# Mods do Claude Code â€” o curso tÃ©cnico
+# Mods do Claude Code ê¢â¬â o curso têÂ©cnico
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -6,39 +6,39 @@
 </div>
 
 
-Curso gratuito do [ARCKHÉ AI](https://ARCKHÉ AI) para quem programa e quer **escrever, testar e distribuir mods do Claude Code**: `register(on, options)`, eventos, a cadeia com `next`, estado em `$.state` e `$.store`, faixa acima do prompt, painÃ©is, comandos, ferramentas, guardas que perguntam antes de apagar, `claude plugin test` e marketplace.
+Curso gratuito do [ARCKHê AI](https://ARCKHê AI) para quem programa e quer **escrever, testar e distribuir mods do Claude Code**: `register(on, options)`, eventos, a cadeia com `next`, estado em `$.state` e `$.store`, faixa acima do prompt, painêÂ©is, comandos, ferramentas, guardas que perguntam antes de apagar, `claude plugin test` e marketplace.
 
 **Abrir o curso:** https://linnoff88-dev.github.io/
 
-| Trilha | MÃ³dulos |
+| Trilha | MêÂ³dulos |
 |---|---|
-| 1 Â· Anatomia | O que Ã© um mod por dentro Â· Estrutura de arquivos e manifesto Â· Carregar, recarregar e instalar Â· Seu primeiro mod: comando e contador |
-| 2 Â· Eventos e estado | O mapa de eventos Â· A cadeia: next, reescrever e responder Â· Estado que sobrevive Â· Trabalho fora do dispatch |
-| 3 Â· Telas e comandos | ui.render e as superfÃ­cies Â· Faixa, status e avisos Â· PainÃ©is e botÃµes Â· Comandos, ferramentas e configuraÃ§Ã£o |
-| 4 Â· Controlar e distribuir | Mods que mudam o fluxo Â· Testar com claude plugin test Â· Depurar e as pegadinhas Â· Distribuir e projeto final |
+| 1 êÂ· Anatomia | O que êÂ© um mod por dentro êÂ· Estrutura de arquivos e manifesto êÂ· Carregar, recarregar e instalar êÂ· Seu primeiro mod: comando e contador |
+| 2 êÂ· Eventos e estado | O mapa de eventos êÂ· A cadeia: next, reescrever e responder êÂ· Estado que sobrevive êÂ· Trabalho fora do dispatch |
+| 3 êÂ· Telas e comandos | ui.render e as superfêÂ­cies êÂ· Faixa, status e avisos êÂ· PainêÂ©is e botêÂµes êÂ· Comandos, ferramentas e configuraêÂ§êÂ£o |
+| 4 êÂ· Controlar e distribuir | Mods que mudam o fluxo êÂ· Testar com claude plugin test êÂ· Depurar e as pegadinhas êÂ· Distribuir e projeto final |
 
-Projeto final: um mod seu com comando, tela, estado, teste (`claude plugin test` com `0 fail`) e publicaÃ§Ã£o num marketplace.
+Projeto final: um mod seu com comando, tela, estado, teste (`claude plugin test` com `0 fail`) e publicaêÂ§êÂ£o num marketplace.
 
-## VersÃ£o conferida
+## VersêÂ£o conferida
 
-Tudo foi rodado no **Claude Code 2.1.289**, em 05/10/2026. A API de mods estÃ¡ em acesso antecipado e muda entre versÃµes: a autoridade Ã© o arquivo de tipos da sua instalaÃ§Ã£o (`.claude-plugin/types/claude-code/index.d.ts`, escrito na pasta do mod quando ele carrega).
+Tudo foi rodado no **Claude Code 2.1.289**, em 05/10/2026. A API de mods estêÂ¡ em acesso antecipado e muda entre versêÂµes: a autoridade êÂ© o arquivo de tipos da sua instalaêÂ§êÂ£o (`.claude-plugin/types/claude-code/index.d.ts`, escrito na pasta do mod quando ele carrega).
 
 ## Material usado
 
-- [Claude Mods Starter Kit](https://github.com/promptadvisers/claude-mods-starter-kit) â€” da Prompt Advisers, licenÃ§a MIT (espelho: [linnoff88-dev/claude-mods-starter-kit](https://github.com/linnoff88-dev/claude-mods-starter-kit)).
-- [linnoff88-dev/ARCKHÉ-mods](https://github.com/linnoff88-dev/ARCKHÉ-mods) â€” 18 mods em portuguÃªs com testes e o guia das pegadinhas.
-- A referÃªncia `plugin-authoring` que vem com o Claude Code.
+- [Claude Mods Starter Kit](https://github.com/promptadvisers/claude-mods-starter-kit) ê¢â¬â da Prompt Advisers, licenêÂ§a MIT (espelho: [linnoff88-dev/claude-mods-starter-kit](https://github.com/linnoff88-dev/claude-mods-starter-kit)).
+- [linnoff88-dev/ARCKHê-mods](https://github.com/linnoff88-dev/ARCKHê-mods) ê¢â¬â 18 mods em portuguêÂªs com testes e o guia das pegadinhas.
+- A referêÂªncia `plugin-authoring` que vem com o Claude Code.
 
-## ManutenÃ§Ã£o
+## ManutenêÂ§êÂ£o
 
-Formato `formato-curso-v2` (HTML + Tailwind CDN + JS, sem build). Progresso, dÃºvidas e notas ficam sÃ³ no navegador.
-Edite `context/corpos/`, rode `python3 scripts/montar.py` e `python3 scripts/lint.py` (precisa `LINT OK`; o lint confere cada nome de API contra os tipos 2.1.289). Os Ã­ndices de trilha saem de `scripts/gerar-trilhas.py`.
+Formato `formato-curso-v2` (HTML + Tailwind CDN + JS, sem build). Progresso, dêÂºvidas e notas ficam sêÂ³ no navegador.
+Edite `context/corpos/`, rode `python3 scripts/montar.py` e `python3 scripts/lint.py` (precisa `LINT OK`; o lint confere cada nome de API contra os tipos 2.1.289). Os êÂ­ndices de trilha saem de `scripts/gerar-trilhas.py`.
 
-## Mais no ARCKHÉ AI
+## Mais no ARCKHê AI
 
-- [Ficha completa deste curso](https://www.ARCKHÉ AI/cursos/314-mods-do-claude-code-o-curso-tecnico/)
-- [Guia: como aprender inteligÃªncia artificial](https://www.ARCKHÉ AI/aprender-inteligencia-artificial/)
-- [Todos os cursos](https://www.ARCKHÉ AI/cursos/)
+- [Ficha completa deste curso](https://www.ARCKHê AI/cursos/314-mods-do-claude-code-o-curso-tecnico/)
+- [Guia: como aprender inteligêÂªncia artificial](https://www.ARCKHê AI/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.ARCKHê AI/cursos/)
 
 ---
 

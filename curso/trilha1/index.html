@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="ccmt">
-  <title>Trilha 1 Â· Anatomia | Mods do Claude Code â€” tÃ©cnico</title>
-  <meta name="description" content="Curso tÃ©cnico gratuito do ARCKHÉ AI: escreva, teste e distribua mods do Claude Code â€” register, eventos, cadeia com next, estado, faixa, painÃ©is, comandos, guardas e claude plugin test.">
+  <meta name="ARCKHê-course" content="ccmt">
+  <title>Trilha 1 êÂ· Anatomia | Mods do Claude Code ê¢â¬â têÂ©cnico</title>
+  <meta name="description" content="Curso têÂ©cnico gratuito do ARCKHê AI: escreva, teste e distribua mods do Claude Code ê¢â¬â register, eventos, cadeia com next, estado, faixa, painêÂ©is, comandos, guardas e claude plugin test.">
 
   <!-- ANTI-FOUC: bloqueante, ANTES do Tailwind -->
   <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('ARCKHÉ.prefs');
+        var raw = localStorage.getItem('ARCKHê.prefs');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
         } else {
           var legacy = localStorage.getItem('theme');
-          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark';
+          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark';
         }
       } catch (e) { p = clone(DEF); }
       var THEMES = {
-        'ARCKHÉ-dark': { dark: true,  attr: null,        cs: 'dark'  },
+        'ARCKHê-dark': { dark: true,  attr: null,        cs: 'dark'  },
         'claro':      { dark: false, attr: null,        cs: 'light' },
         'sepia':      { dark: false, attr: 'sepia',     cs: 'light' },
         'foco':       { dark: null,  attr: 'foco',      cs: null    },
         'contraste':  { dark: true,  attr: 'contraste', cs: 'dark'  }
       };
-      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+      var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style; var scale = (+p.fontScale || 100);
-      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHê-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -63,8 +63,8 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (OBRIGATORIO em TODA pagina, identico) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
-  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que Ã© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfÃ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainÃ©is e botÃµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraÃ§Ã£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
+  <script type="application/json" data-ARCKHê-manifest>
+  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que êÂ© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfêÂ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainêÂ©is e botêÂµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraêÂ§êÂ£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
   </script>
 
   <style>
@@ -155,7 +155,7 @@
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
     /* Alvos de ancora abaixo do nav sticky */
-    [data-ARCKHÉ-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
+    [data-ARCKHê-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
 
     /* SVG light mode + animacao */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
@@ -171,28 +171,28 @@
     /* Topicos expansiveis */
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    /* Popover de aparÃªncia ancorado Ã  direita e fora do layout quando fechado (sem transbordo) */
-    .ARCKHÉ-appearance-pop { right: 0; }
+    /* Popover de aparêÂªncia ancorado êÂ  direita e fora do layout quando fechado (sem transbordo) */
+    .ARCKHê-appearance-pop { right: 0; }
     main code, main pre { overflow-wrap: anywhere; }
     main .flex-1 { min-width: 0; }
-    .ARCKHÉ-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
+    .ARCKHê-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteÃºdo</a>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteêÂºdo</a>
 
   <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-1.5 sm:space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ§©</span>
-            <span class="font-bold text-lg hidden lg:inline">Mods tÃ©cnico</span>
+            <span class="text-2xl">ê°Å¸Â§Â©</span>
+            <span class="font-bold text-lg hidden lg:inline">Mods têÂ©cnico</span>
           </a>
           <span class="text-neutral-600 hidden sm:inline">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
         </div>
         <div class="flex items-center sm:space-x-1">
           <a href="index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
@@ -207,40 +207,40 @@
           <a href="../trilha4/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
             <span class="xl:hidden">T4</span><span class="hidden xl:inline">Controlar e distribuir</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
-            <span aria-hidden="true">â—·</span><span class="hidden md:inline">Jornada</span>
-            <span class="ARCKHÉ-journey-badge" data-ARCKHÉ-journey-badge data-count="0"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
+            <span aria-hidden="true">ê¢âÂ·</span><span class="hidden md:inline">Jornada</span>
+            <span class="ARCKHê-journey-badge" data-ARCKHê-journey-badge data-count="0"></span>
           </button>
           <div class="relative">
-            <button type="button" data-ARCKHÉ-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparÃªncia">
-              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparÃªncia</span>
+            <button type="button" data-ARCKHê-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparêÂªncia">
+              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparêÂªncia</span>
             </button>
-            <div id="aparencia" data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop">
-              <div class="ARCKHÉ-segment" aria-label="Tema">
-                <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark">Escuro</button>
-                <button type="button" data-ARCKHÉ-set-theme="claro">Claro</button>
-                <button type="button" data-ARCKHÉ-set-theme="sepia">SÃ©pia</button>
-                <button type="button" data-ARCKHÉ-set-theme="foco">Foco</button>
-                <button type="button" data-ARCKHÉ-set-theme="contraste">Alto contraste</button>
+            <div id="aparencia" data-ARCKHê-appearance class="ARCKHê-appearance-pop">
+              <div class="ARCKHê-segment" aria-label="Tema">
+                <button type="button" data-ARCKHê-set-theme="ARCKHê-dark">Escuro</button>
+                <button type="button" data-ARCKHê-set-theme="claro">Claro</button>
+                <button type="button" data-ARCKHê-set-theme="sepia">SêÂ©pia</button>
+                <button type="button" data-ARCKHê-set-theme="foco">Foco</button>
+                <button type="button" data-ARCKHê-set-theme="contraste">Alto contraste</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Fonte">
-                <button type="button" data-ARCKHÉ-set-font="inter">Inter</button>
-                <button type="button" data-ARCKHÉ-set-font="system">Sistema</button>
-                <button type="button" data-ARCKHÉ-set-font="leitura">Leitura</button>
+              <div class="ARCKHê-segment" aria-label="Fonte">
+                <button type="button" data-ARCKHê-set-font="inter">Inter</button>
+                <button type="button" data-ARCKHê-set-font="system">Sistema</button>
+                <button type="button" data-ARCKHê-set-font="leitura">Leitura</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Tamanho do texto">
-                <button type="button" data-ARCKHÉ-set-fontscale="100">A</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="112">A+</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="125">A++</button>
+              <div class="ARCKHê-segment" aria-label="Tamanho do texto">
+                <button type="button" data-ARCKHê-set-fontscale="100">A</button>
+                <button type="button" data-ARCKHê-set-fontscale="112">A+</button>
+                <button type="button" data-ARCKHê-set-fontscale="125">A++</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Largura da linha">
-                <button type="button" data-ARCKHÉ-set-linewidth="60">Estreito</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="68">MÃ©dio</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="75">Largo</button>
+              <div class="ARCKHê-segment" aria-label="Largura da linha">
+                <button type="button" data-ARCKHê-set-linewidth="60">Estreito</button>
+                <button type="button" data-ARCKHê-set-linewidth="68">MêÂ©dio</button>
+                <button type="button" data-ARCKHê-set-linewidth="75">Largo</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Entrelinha">
-                <button type="button" data-ARCKHÉ-set-leading="1.45">Compacto</button>
-                <button type="button" data-ARCKHÉ-set-leading="1.7">ConfortÃ¡vel</button>
+              <div class="ARCKHê-segment" aria-label="Entrelinha">
+                <button type="button" data-ARCKHê-set-leading="1.45">Compacto</button>
+                <button type="button" data-ARCKHê-set-leading="1.7">ConfortêÂ¡vel</button>
               </div>
             </div>
           </div>
@@ -253,25 +253,25 @@
     </div>
   </nav>
 
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-track="1">
+  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-track="1">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-[1fr_380px] lg:gap-10 lg:items-center">
       <div>
         <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">TRILHA 1</span>
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ§¬ Anatomia</h1>
-        <p class="text-lg text-neutral-400 max-w-3xl">Abra um mod e veja o que tem dentro: trÃªs arquivos, uma funÃ§Ã£o register e hooks com trÃªs parÃ¢metros. Monte a pasta, carregue com --plugin-dir, instale por marketplace e termine com o seu primeiro mod funcionando, um comando que conta leituras.</p>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸Â§Â¬ Anatomia</h1>
+        <p class="text-lg text-neutral-400 max-w-3xl">Abra um mod e veja o que tem dentro: trêÂªs arquivos, uma funêÂ§êÂ£o register e hooks com trêÂªs parêÂ¢metros. Monte a pasta, carregue com --plugin-dir, instale por marketplace e termine com o seu primeiro mod funcionando, um comando que conta leituras.</p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">4</div><div class="text-xs text-neutral-400">MÃ³dulos</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">24</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~2h20</div><div class="text-xs text-neutral-400">DuraÃ§Ã£o</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">TÃ©cnico</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">4</div><div class="text-xs text-neutral-400">MêÂ³dulos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">24</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~2h20</div><div class="text-xs text-neutral-400">DuraêÂ§êÂ£o</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">TêÂ©cnico</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
         </div>
-        <div data-ARCKHÉ-meter="trilha:1" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 1">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 24</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div data-ARCKHê-meter="trilha:1" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 1">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 24</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="mt-8 lg:mt-0 rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 overflow-hidden">
-        <svg viewBox="0 0 380 240" class="w-full h-auto" role="img" aria-label="Uma pasta de mod aberta: plugin.json aponta para hooks.json, que aponta para o mÃ³dulo. Do mÃ³dulo sai a funÃ§Ã£o register(on, options), e dela trÃªs hooks com a forma ($, e, next).">
+        <svg viewBox="0 0 380 240" class="w-full h-auto" role="img" aria-label="Uma pasta de mod aberta: plugin.json aponta para hooks.json, que aponta para o mêÂ³dulo. Do mêÂ³dulo sai a funêÂ§êÂ£o register(on, options), e dela trêÂªs hooks com a forma ($, e, next).">
           <defs>
             <pattern id="t1a-grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#34d399" opacity="0.12"/></pattern>
             <filter id="t1a-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -280,13 +280,13 @@
           <rect x="0" y="0" width="380" height="240" fill="url(#t1a-grid)"/>
           <g font-family="Inter,sans-serif" font-size="11">
             <rect x="20" y="20" width="150" height="200" rx="10" fill="#0e2018" stroke="#34d399" stroke-width="1.8"/>
-            <text x="34" y="42" fill="#34d399" font-weight="600">ðŸ“ meu-mod/</text>
+            <text x="34" y="42" fill="#34d399" font-weight="600">ê°Å¸âÂ meu-mod/</text>
             <rect x="34" y="56" width="124" height="26" rx="6" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.5"/><text x="96" y="73" text-anchor="middle" fill="#bae6fd">plugin.json</text>
             <rect x="34" y="104" width="124" height="26" rx="6" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.5"/><text x="96" y="121" text-anchor="middle" fill="#bae6fd">hooks.json</text>
             <g filter="url(#t1a-glow)"><rect x="34" y="152" width="124" height="26" rx="6" fill="#0e2018" stroke="#34d399" stroke-width="2"/></g><text x="96" y="169" text-anchor="middle" fill="#a7f3d0">starter.mjs</text>
             <line x1="96" y1="82" x2="96" y2="102" stroke="#38bdf8" stroke-width="1.6" marker-end="url(#t1a-seta)"/>
             <line x1="96" y1="130" x2="96" y2="150" stroke="#38bdf8" stroke-width="1.6" marker-end="url(#t1a-seta)"/>
-            <text x="96" y="205" text-anchor="middle" fill="#a7f3d0" font-size="10">trÃªs arquivos</text>
+            <text x="96" y="205" text-anchor="middle" fill="#a7f3d0" font-size="10">trêÂªs arquivos</text>
             <line class="wf-flow" x1="158" y1="165" x2="206" y2="120" stroke="#34d399" stroke-width="2" marker-end="url(#t1a-seta)"/>
             <rect x="208" y="98" width="156" height="34" rx="8" fill="#0e2018" stroke="#34d399" stroke-width="2"/><text x="286" y="120" text-anchor="middle" fill="#34d399" font-weight="600">register(on, options)</text>
             <rect class="wf-a" x="200" y="30" width="54" height="26" rx="6" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.5"/><text x="227" y="47" text-anchor="middle" fill="#bae6fd">$</text>
@@ -294,8 +294,8 @@
             <rect class="wf-a" x="320" y="30" width="54" height="26" rx="6" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.5"/><text x="347" y="47" text-anchor="middle" fill="#bae6fd">next</text>
             <line x1="286" y1="98" x2="286" y2="60" stroke="#34d399" stroke-width="1.6" marker-end="url(#t1a-seta)"/>
             <rect x="208" y="160" width="156" height="60" rx="8" fill="none" stroke="#34d399" stroke-width="1.4" stroke-dasharray="4 3"/>
-            <text x="286" y="182" text-anchor="middle" fill="#a7f3d0">on('tool.call', â€¦)</text>
-            <text x="286" y="202" text-anchor="middle" fill="#a7f3d0">on('command.run', â€¦)</text>
+            <text x="286" y="182" text-anchor="middle" fill="#a7f3d0">on('tool.call', ê¢â¬Â¦)</text>
+            <text x="286" y="202" text-anchor="middle" fill="#a7f3d0">on('command.run', ê¢â¬Â¦)</text>
             <line x1="286" y1="132" x2="286" y2="158" stroke="#34d399" stroke-width="1.6" marker-end="url(#t1a-seta)"/>
           </g>
         </svg>
@@ -303,58 +303,58 @@
     </div>
   </header>
 
-  <main id="conteudo" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-ARCKHÉ-track="1">
+  <main id="conteudo" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-ARCKHê-track="1">
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <a href="#modulo-1-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.1</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ðŸ§¬ O que Ã© um mod por dentro</h3>
-          <p class="text-xs text-neutral-400">TrÃªs arquivos e uma funÃ§Ã£o</p>
+          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.1</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ê°Å¸Â§Â¬ O que êÂ© um mod por dentro</h3>
+          <p class="text-xs text-neutral-400">TrêÂªs arquivos e uma funêÂ§êÂ£o</p>
         </a>
         <a href="#modulo-1-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.2</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ðŸ—‚ï¸ Estrutura de arquivos e manifesto</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.2</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ê°Å¸ââê¯Â¸Â Estrutura de arquivos e manifesto</h3>
           <p class="text-xs text-neutral-400">plugin.json manda</p>
         </a>
         <a href="#modulo-1-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.3</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ðŸ”„ Carregar, recarregar e instalar</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.3</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ê°Å¸ââ Carregar, recarregar e instalar</h3>
           <p class="text-xs text-neutral-400">Pasta vigiada, mod vivo</p>
         </a>
         <a href="#modulo-1-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.4</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ðŸš€ Seu primeiro mod: comando e contador</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.4</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">ê°Å¸Å¡â¬ Seu primeiro mod: comando e contador</h3>
           <p class="text-xs text-neutral-400">readcount funcionando</p>
         </a>
       </div>
     </section>
 
-    <h2 class="text-2xl font-bold mb-6">ConteÃºdo detalhado</h2>
+    <h2 class="text-2xl font-bold mb-6">ConteêÂºdo detalhado</h2>
 
     <!-- ===== MODULO 1.1 ===== -->
-    <div id="modulo-1-1" data-ARCKHÉ-module="1-1" data-ARCKHÉ-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-1-1" data-ARCKHê-module="1-1" data-ARCKHê-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.1</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸ§¬ O que Ã© um mod por dentro</h3>
-        <p class="text-neutral-400 text-sm">O que um mod Ã© por dentro, onde ele roda e como ele se separa do hook clÃ¡ssico, da skill e do MCP.</p>
-        <div data-ARCKHÉ-meter="modulo:1-1" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 1.1">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.1</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸Â§Â¬ O que êÂ© um mod por dentro</h3>
+        <p class="text-neutral-400 text-sm">O que um mod êÂ© por dentro, onde ele roda e como ele se separa do hook clêÂ¡ssico, da skill e do MCP.</p>
+        <div data-ARCKHê-meter="modulo:1-1" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 1.1">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-1-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸ”Œ</span>
+            <span class="text-lg">ê°Å¸âÅ</span>
             <div><span class="font-medium">Entenda o que muda quando um mod carrega</span><span class="text-neutral-500 text-sm ml-2">- register roda, hooks entram na cadeia</span></div>
           </button>
           <div id="t1-1-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Quando o Claude Code carrega um mod, ele importa o mÃ³dulo, chama register(on, options) e passa a chamar os hooks registrados a cada evento.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Entender esse momento explica por que um mod pode mudar o que o Claude vÃª, desenha e faz sem tocar no cÃ³digo do Claude Code.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Quando o Claude Code carrega um mod, ele importa o mêÂ³dulo, chama register(on, options) e passa a chamar os hooks registrados a cada evento.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Entender esse momento explica por que um mod pode mudar o que o Claude vêÂª, desenha e faz sem tocar no cêÂ³digo do Claude Code.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">mod, plugin, function hook, register, carregamento.</p></div>
             </div>
           </div>
@@ -362,27 +362,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-1-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ§©</span>
-            <div><span class="font-medium">Separe mod, hook clÃ¡ssico, skill e MCP</span><span class="text-neutral-500 text-sm ml-2">- quatro formas de estender</span></div>
+            <span class="text-lg">ê°Å¸Â§Â©</span>
+            <div><span class="font-medium">Separe mod, hook clêÂ¡ssico, skill e MCP</span><span class="text-neutral-500 text-sm ml-2">- quatro formas de estender</span></div>
           </button>
           <div id="t2-1-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Mod roda dentro do processo, em um ambiente prÃ³prio; hook clÃ¡ssico Ã© um comando de shell do settings.json; skill Ã© instruÃ§Ã£o para o modelo; MCP Ã© um servidor de ferramentas.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Mod roda dentro do processo, em um ambiente prêÂ³prio; hook clêÂ¡ssico êÂ© um comando de shell do settings.json; skill êÂ© instruêÂ§êÂ£o para o modelo; MCP êÂ© um servidor de ferramentas.</p></div>
               <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Escolher a forma errada custa caro: muita coisa que parece mod se resolve com uma skill, e vice-versa.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">mod, hook clÃ¡ssico, skill, MCP, settings.json.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">mod, hook clêÂ¡ssico, skill, MCP, settings.json.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-1-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">âœï¸</span>
-            <div><span class="font-medium">Leia a assinatura register(on, options)</span><span class="text-neutral-500 text-sm ml-2">- on adiciona, options lÃª a config</span></div>
+            <span class="text-lg">ê¢ÅÂê¯Â¸Â</span>
+            <div><span class="font-medium">Leia a assinatura register(on, options)</span><span class="text-neutral-500 text-sm ml-2">- on adiciona, options lêÂª a config</span></div>
           </button>
           <div id="t3-1-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A funÃ§Ã£o exportada recebe on, para registrar hooks, e options, com os valores dos campos que o manifesto declara em userConfig.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ a Ãºnica porta de entrada do mod: tudo o que ele faz comeÃ§a nessa funÃ§Ã£o.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A funêÂ§êÂ£o exportada recebe on, para registrar hooks, e options, com os valores dos campos que o manifesto declara em userConfig.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° a êÂºnica porta de entrada do mod: tudo o que ele faz comeêÂ§a nessa funêÂ§êÂ£o.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">register, on(evento, matcher?, hook), options, userConfig.</p></div>
             </div>
           </div>
@@ -390,13 +390,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-1-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸŽ›ï¸</span>
-            <div><span class="font-medium">ConheÃ§a os trÃªs parÃ¢metros de todo hook</span><span class="text-neutral-500 text-sm ml-2">- $, e e next</span></div>
+            <span class="text-lg">ê°Å¸Å½âºê¯Â¸Â</span>
+            <div><span class="font-medium">ConheêÂ§a os trêÂªs parêÂ¢metros de todo hook</span><span class="text-neutral-500 text-sm ml-2">- $, e e next</span></div>
           </button>
           <div id="t4-1-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Todo hook tem a forma ($, e, next): $ Ã© a interface do engine, e Ã© a entrada do evento e next(e) passa adiante na cadeia.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Esses trÃªs nomes aparecem em todo exemplo do curso; dominÃ¡-los Ã© ler qualquer mod.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Todo hook tem a forma ($, e, next): $ êÂ© a interface do engine, e êÂ© a entrada do evento e next(e) passa adiante na cadeia.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Esses trêÂªs nomes aparecem em todo exemplo do curso; dominêÂ¡-los êÂ© ler qualquer mod.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$, e, next, cadeia, resultado do evento.</p></div>
             </div>
           </div>
@@ -404,28 +404,28 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-1-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ“¦</span>
-            <div><span class="font-medium">Saiba onde o mod roda e o que ele nÃ£o tem</span><span class="text-neutral-500 text-sm ml-2">- sem DOM, sem Node</span></div>
+            <span class="text-lg">ê°Å¸âÂ¦</span>
+            <div><span class="font-medium">Saiba onde o mod roda e o que ele nêÂ£o tem</span><span class="text-neutral-500 text-sm ml-2">- sem DOM, sem Node</span></div>
           </button>
           <div id="t5-1-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O mÃ³dulo Ã© um ES module que roda num ambiente prÃ³prio, sem DOM e sem Node; tudo fora dele Ã© alcanÃ§ado pelo $.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Evita o erro mais comum de quem chega: importar fs do Node ou usar import() dinÃ¢mico, que nÃ£o carregam.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">ES module, ambiente isolado, $ como Ãºnica saÃ­da, import estÃ¡tico.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O mêÂ³dulo êÂ© um ES module que roda num ambiente prêÂ³prio, sem DOM e sem Node; tudo fora dele êÂ© alcanêÂ§ado pelo $.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Evita o erro mais comum de quem chega: importar fs do Node ou usar import() dinêÂ¢mico, que nêÂ£o carregam.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">ES module, ambiente isolado, $ como êÂºnica saêÂ­da, import estêÂ¡tico.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-1-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ—ºï¸</span>
+            <span class="text-lg">ê°Å¸âÂºê¯Â¸Â</span>
             <div><span class="font-medium">Veja o mapa do curso e os dois kits</span><span class="text-neutral-500 text-sm ml-2">- quatro trilhas, dois kits</span></div>
           </button>
           <div id="t6-1-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O caminho do curso, do primeiro mod ao marketplace, e os dois kits usados: o Claude Mods Starter Kit (Prompt Advisers, MIT) e o ARCKHÉ-mods.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocÃª sabe de onde vem cada exemplo e em que versÃ£o foi conferido: Claude Code 2.1.289.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">starter kit, ARCKHÉ-mods, versÃ£o 2.1.289, acesso antecipado.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O caminho do curso, do primeiro mod ao marketplace, e os dois kits usados: o Claude Mods Starter Kit (Prompt Advisers, MIT) e o ARCKHê-mods.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocêÂª sabe de onde vem cada exemplo e em que versêÂ£o foi conferido: Claude Code 2.1.289.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">starter kit, ARCKHê-mods, versêÂ£o 2.1.289, acesso antecipado.</p></div>
             </div>
           </div>
         </div>
@@ -437,27 +437,27 @@
     </div>
 
     <!-- ===== MODULO 1.2 ===== -->
-    <div id="modulo-1-2" data-ARCKHÉ-module="1-2" data-ARCKHÉ-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-1-2" data-ARCKHê-module="1-2" data-ARCKHê-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.2</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸ—‚ï¸ Estrutura de arquivos e manifesto</h3>
-        <p class="text-neutral-400 text-sm">A Ã¡rvore mÃ­nima: .claude-plugin/plugin.json, hooks/hooks.json e o mÃ³dulo. OpÃ§Ãµes com userConfig e validaÃ§Ã£o antes de carregar.</p>
-        <div data-ARCKHÉ-meter="modulo:1-2" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 1.2">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.2</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸ââê¯Â¸Â Estrutura de arquivos e manifesto</h3>
+        <p class="text-neutral-400 text-sm">A êÂ¡rvore mêÂ­nima: .claude-plugin/plugin.json, hooks/hooks.json e o mêÂ³dulo. OpêÂ§êÂµes com userConfig e validaêÂ§êÂ£o antes de carregar.</p>
+        <div data-ARCKHê-meter="modulo:1-2" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 1.2">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-1-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸŒ³</span>
-            <div><span class="font-medium">Monte a Ã¡rvore mÃ­nima de pastas</span><span class="text-neutral-500 text-sm ml-2">- trÃªs arquivos</span></div>
+            <span class="text-lg">ê°Å¸ÅÂ³</span>
+            <div><span class="font-medium">Monte a êÂ¡rvore mêÂ­nima de pastas</span><span class="text-neutral-500 text-sm ml-2">- trêÂªs arquivos</span></div>
           </button>
           <div id="t1-1-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A pasta do mod com .claude-plugin/plugin.json, hooks/hooks.json e o mÃ³dulo de hooks, mais tests/ quando houver teste.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Com a Ã¡rvore certa o Claude Code acha o mod; com um nome trocado, nada carrega e nada avisa alto.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A pasta do mod com .claude-plugin/plugin.json, hooks/hooks.json e o mêÂ³dulo de hooks, mais tests/ quando houver teste.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Com a êÂ¡rvore certa o Claude Code acha o mod; com um nome trocado, nada carrega e nada avisa alto.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">pasta do plugin, .claude-plugin, hooks/, tests/.</p></div>
             </div>
           </div>
@@ -465,13 +465,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-1-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸªª</span>
-            <div><span class="font-medium">Escreva o plugin.json</span><span class="text-neutral-500 text-sm ml-2">- nome, versÃ£o, descriÃ§Ã£o</span></div>
+            <span class="text-lg">ê°Å¸ÂªÂª</span>
+            <div><span class="font-medium">Escreva o plugin.json</span><span class="text-neutral-500 text-sm ml-2">- nome, versêÂ£o, descriêÂ§êÂ£o</span></div>
           </button>
           <div id="t2-1-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O manifesto do plugin: name, version, description e, quando houver, userConfig e types.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O name vira o prefixo de comandos, ferramentas e estado; mudar depois quebra quem jÃ¡ usa.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O manifesto do plugin: name, version, description e, quando houver, userConfig e types.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O name vira o prefixo de comandos, ferramentas e estado; mudar depois quebra quem jêÂ¡ usa.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">plugin.json, name, version, manifesto.</p></div>
             </div>
           </div>
@@ -479,13 +479,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-1-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ§­</span>
-            <div><span class="font-medium">Aponte o mÃ³dulo no hooks.json</span><span class="text-neutral-500 text-sm ml-2">- modules: um caminho</span></div>
+            <span class="text-lg">ê°Å¸Â§Â­</span>
+            <div><span class="font-medium">Aponte o mêÂ³dulo no hooks.json</span><span class="text-neutral-500 text-sm ml-2">- modules: um caminho</span></div>
           </button>
           <div id="t3-1-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O hooks.json lista em modules o caminho do mÃ³dulo, relativo ao prÃ³prio hooks.json, como {&quot;modules&quot;:[&quot;./starter.mjs&quot;]}.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o elo entre o manifesto e o cÃ³digo; o validate mostra se ele aponta para o lugar certo.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O hooks.json lista em modules o caminho do mêÂ³dulo, relativo ao prêÂ³prio hooks.json, como {&quot;modules&quot;:[&quot;./starter.mjs&quot;]}.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o elo entre o manifesto e o cêÂ³digo; o validate mostra se ele aponta para o lugar certo.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">hooks.json, modules, caminho relativo.</p></div>
             </div>
           </div>
@@ -493,27 +493,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-1-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ“„</span>
-            <div><span class="font-medium">Escolha a extensÃ£o do arquivo</span><span class="text-neutral-500 text-sm ml-2">- .mjs, .ts ou .tsx</span></div>
+            <span class="text-lg">ê°Å¸ââ</span>
+            <div><span class="font-medium">Escolha a extensêÂ£o do arquivo</span><span class="text-neutral-500 text-sm ml-2">- .mjs, .ts ou .tsx</span></div>
           </button>
           <div id="t4-1-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O mÃ³dulo pode ser .ts, .tsx, .jsx, .js, .mjs, .cjs, .mts ou .cts, e Ã© sempre ES module; outro sufixo nÃ£o carrega.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O kit comeÃ§a em .mjs sem compilaÃ§Ã£o; a partir da trilha 2 o curso usa .tsx tipado.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">extensÃ£o, ES module, TypeScript, JSX com h.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O mêÂ³dulo pode ser .ts, .tsx, .jsx, .js, .mjs, .cjs, .mts ou .cts, e êÂ© sempre ES module; outro sufixo nêÂ£o carrega.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O kit comeêÂ§a em .mjs sem compilaêÂ§êÂ£o; a partir da trilha 2 o curso usa .tsx tipado.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">extensêÂ£o, ES module, TypeScript, JSX com h.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-1-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">âš™ï¸</span>
-            <div><span class="font-medium">Declare opÃ§Ãµes com userConfig</span><span class="text-neutral-500 text-sm ml-2">- opÃ§Ãµes no /config</span></div>
+            <span class="text-lg">ê¢Å¡â¢ê¯Â¸Â</span>
+            <div><span class="font-medium">Declare opêÂ§êÂµes com userConfig</span><span class="text-neutral-500 text-sm ml-2">- opêÂ§êÂµes no /config</span></div>
           </button>
           <div id="t5-1-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Campos declarados em userConfig no plugin.json viram linhas do menu de configuraÃ§Ã£o e chegam ao mod em options.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Deixa o usuÃ¡rio ajustar o mod sem editar cÃ³digo, e cada mudanÃ§a recarrega o mÃ³dulo.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Campos declarados em userConfig no plugin.json viram linhas do menu de configuraêÂ§êÂ£o e chegam ao mod em options.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Deixa o usuêÂ¡rio ajustar o mod sem editar cêÂ³digo, e cada mudanêÂ§a recarrega o mêÂ³dulo.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">userConfig, options, pluginConfigs, /config.</p></div>
             </div>
           </div>
@@ -521,13 +521,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-1-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">âœ…</span>
+            <span class="text-lg">ê¢Åâ¦</span>
             <div><span class="font-medium">Valide antes de carregar</span><span class="text-neutral-500 text-sm ml-2">- claude plugin validate</span></div>
           </button>
           <div id="t6-1-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O comando lÃª o manifesto e o cÃ³digo do mÃ³dulo como o engine leria e lista os hooks, as chamadas e o que seria recusado.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pega o erro antes de abrir uma sessÃ£o: Ã© o primeiro passo de todo ciclo de mudanÃ§a.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O comando lêÂª o manifesto e o cêÂ³digo do mêÂ³dulo como o engine leria e lista os hooks, as chamadas e o que seria recusado.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Pega o erro antes de abrir uma sessêÂ£o: êÂ© o primeiro passo de todo ciclo de mudanêÂ§a.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">claude plugin validate, hooks listados, calls, Validation passed.</p></div>
             </div>
           </div>
@@ -540,41 +540,41 @@
     </div>
 
     <!-- ===== MODULO 1.3 ===== -->
-    <div id="modulo-1-3" data-ARCKHÉ-module="1-3" data-ARCKHÉ-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-1-3" data-ARCKHê-module="1-3" data-ARCKHê-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.3</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸ”„ Carregar, recarregar e instalar</h3>
-        <p class="text-neutral-400 text-sm">Do --plugin-dir com hot-reload Ã  instalaÃ§Ã£o por marketplace, com escopo certo e desinstalaÃ§Ã£o limpa.</p>
-        <div data-ARCKHÉ-meter="modulo:1-3" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 1.3">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.3</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸ââ Carregar, recarregar e instalar</h3>
+        <p class="text-neutral-400 text-sm">Do --plugin-dir com hot-reload êÂ  instalaêÂ§êÂ£o por marketplace, com escopo certo e desinstalaêÂ§êÂ£o limpa.</p>
+        <div data-ARCKHê-meter="modulo:1-3" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 1.3">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-1-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸ“‚</span>
-            <div><span class="font-medium">Carregue com --plugin-dir</span><span class="text-neutral-500 text-sm ml-2">- sÃ³ nesta sessÃ£o</span></div>
+            <span class="text-lg">ê°Å¸ââ</span>
+            <div><span class="font-medium">Carregue com --plugin-dir</span><span class="text-neutral-500 text-sm ml-2">- sêÂ³ nesta sessêÂ£o</span></div>
           </button>
           <div id="t1-1-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A flag carrega o mod de uma pasta do disco sÃ³ para aquela sessÃ£o; repita a flag para carregar vÃ¡rios.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o jeito de desenvolver: nada fica instalado, e fechar a sessÃ£o desfaz tudo.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">--plugin-dir, sessÃ£o, pasta local.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A flag carrega o mod de uma pasta do disco sêÂ³ para aquela sessêÂ£o; repita a flag para carregar vêÂ¡rios.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o jeito de desenvolver: nada fica instalado, e fechar a sessêÂ£o desfaz tudo.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">--plugin-dir, sessêÂ£o, pasta local.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-1-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">â™»ï¸</span>
+            <span class="text-lg">ê¢â¢Â»ê¯Â¸Â</span>
             <div><span class="font-medium">Veja o hot-reload acontecer</span><span class="text-neutral-500 text-sm ml-2">- salvou, recarregou</span></div>
           </button>
           <div id="t2-1-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Numa sessÃ£o interativa a pasta Ã© vigiada: salvar um arquivo roda o register de novo num ambiente novo, e os timers antigos caem.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocÃª ajusta e vÃª na hora, sem reiniciar o Claude Code.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Numa sessêÂ£o interativa a pasta êÂ© vigiada: salvar um arquivo roda o register de novo num ambiente novo, e os timers antigos caem.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocêÂª ajusta e vêÂª na hora, sem reiniciar o Claude Code.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">hot-reload, pasta vigiada, ambiente novo, timers.</p></div>
             </div>
           </div>
@@ -582,13 +582,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-1-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ–¥ï¸</span>
-            <div><span class="font-medium">Use CLAUDE_CODE_PLUGIN_DIRS no desktop</span><span class="text-neutral-500 text-sm ml-2">- quando nÃ£o dÃ¡ para passar flag</span></div>
+            <span class="text-lg">ê°Å¸âÂ¥ê¯Â¸Â</span>
+            <div><span class="font-medium">Use CLAUDE_CODE_PLUGIN_DIRS no desktop</span><span class="text-neutral-500 text-sm ml-2">- quando nêÂ£o dêÂ¡ para passar flag</span></div>
           </button>
           <div id="t3-1-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A variÃ¡vel de ambiente nomeia as mesmas pastas, com caminho absoluto, para sessÃµes abertas pelo app desktop ou por um SDK.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">No desktop nÃ£o existe linha de comando para pÃ´r a flag; a variÃ¡vel resolve.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A variêÂ¡vel de ambiente nomeia as mesmas pastas, com caminho absoluto, para sessêÂµes abertas pelo app desktop ou por um SDK.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">No desktop nêÂ£o existe linha de comando para pêÂ´r a flag; a variêÂ¡vel resolve.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">CLAUDE_CODE_PLUGIN_DIRS, desktop, SDK, settings env.</p></div>
             </div>
           </div>
@@ -596,13 +596,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-1-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸª</span>
+            <span class="text-lg">ê°Å¸ÂÂª</span>
             <div><span class="font-medium">Instale por marketplace</span><span class="text-neutral-500 text-sm ml-2">- marketplace add + install</span></div>
           </button>
           <div id="t4-1-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Registrar uma pasta ou repositÃ³rio como marketplace e instalar o plugin dele com claude plugin install.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ como o mod chega Ã s sessÃµes de todo dia sem flag nenhuma.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Registrar uma pasta ou repositêÂ³rio como marketplace e instalar o plugin dele com claude plugin install.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° como o mod chega êÂ s sessêÂµes de todo dia sem flag nenhuma.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">marketplace, claude plugin marketplace add, claude plugin install.</p></div>
             </div>
           </div>
@@ -610,13 +610,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-1-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸŽšï¸</span>
+            <span class="text-lg">ê°Å¸Å½Å¡ê¯Â¸Â</span>
             <div><span class="font-medium">Escolha o escopo certo</span><span class="text-neutral-500 text-sm ml-2">- user, project, local</span></div>
           </button>
           <div id="t5-1-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O escopo diz onde a instalaÃ§Ã£o vale: para vocÃª em todo projeto, para o projeto inteiro ou sÃ³ na sua cÃ³pia local.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Instalar no escopo errado espalha o mod onde nÃ£o devia ou esconde de quem precisa.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O escopo diz onde a instalaêÂ§êÂ£o vale: para vocêÂª em todo projeto, para o projeto inteiro ou sêÂ³ na sua cêÂ³pia local.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Instalar no escopo errado espalha o mod onde nêÂ£o devia ou esconde de quem precisa.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">--scope user, project, local.</p></div>
             </div>
           </div>
@@ -624,14 +624,14 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-1-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ§¹</span>
+            <span class="text-lg">ê°Å¸Â§Â¹</span>
             <div><span class="font-medium">Desligue e desinstale sem sobras</span><span class="text-neutral-500 text-sm ml-2">- disable e uninstall</span></div>
           </button>
           <div id="t6-1-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Desligar com claude plugin disable e remover a instalaÃ§Ã£o sem deixar marketplace ou config esquecidos.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mod que nÃ£o sai direito vira suspeito de todo comportamento estranho depois.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">claude plugin disable, remover a instalaÃ§Ã£o, claude plugin list.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Desligar com claude plugin disable e remover a instalaêÂ§êÂ£o sem deixar marketplace ou config esquecidos.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mod que nêÂ£o sai direito vira suspeito de todo comportamento estranho depois.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">claude plugin disable, remover a instalaêÂ§êÂ£o, claude plugin list.</p></div>
             </div>
           </div>
         </div>
@@ -643,41 +643,41 @@
     </div>
 
     <!-- ===== MODULO 1.4 ===== -->
-    <div id="modulo-1-4" data-ARCKHÉ-module="1-4" data-ARCKHÉ-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-1-4" data-ARCKHê-module="1-4" data-ARCKHê-track="1" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.4</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸš€ Seu primeiro mod: comando e contador</h3>
+        <div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.4</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸Å¡â¬ Seu primeiro mod: comando e contador</h3>
         <p class="text-neutral-400 text-sm">O starter-mod do kit da Prompt Advisers: o comando /readcount, o contador de leituras, validate, test e claude -p.</p>
-        <div data-ARCKHÉ-meter="modulo:1-4" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 1.4">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div data-ARCKHê-meter="modulo:1-4" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 1.4">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-1-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸ“‹</span>
+            <span class="text-lg">ê°Å¸ââ¹</span>
             <div><span class="font-medium">Copie o starter-mod</span><span class="text-neutral-500 text-sm ml-2">- templates/starter-mod</span></div>
           </button>
           <div id="t1-1-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Copiar o modelo do kit da Prompt Advisers, que jÃ¡ traz manifesto, hooks.json, starter.mjs e um teste.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">ComeÃ§ar de um mod que passa no validate e no test tira o atrito do primeiro dia.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">starter-mod, cÃ³pia, read-counter-example.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Copiar o modelo do kit da Prompt Advisers, que jêÂ¡ traz manifesto, hooks.json, starter.mjs e um teste.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">ComeêÂ§ar de um mod que passa no validate e no test tira o atrito do primeiro dia.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">starter-mod, cêÂ³pia, read-counter-example.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-1-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ”Ž</span>
-            <div><span class="font-medium">Leia o cÃ³digo linha por linha</span><span class="text-neutral-500 text-sm ml-2">- session.start, tool.call, command.run</span></div>
+            <span class="text-lg">ê°Å¸âÅ½</span>
+            <div><span class="font-medium">Leia o cêÂ³digo linha por linha</span><span class="text-neutral-500 text-sm ml-2">- session.start, tool.call, command.run</span></div>
           </button>
           <div id="t2-1-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O starter.mjs registra o comando em session.start, conta leituras bem-sucedidas em tool.call com matcher Read e responde em command.run.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">SÃ£o trÃªs dos eventos mais usados, num arquivo curto que vocÃª lÃª inteiro.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O starter.mjs registra o comando em session.start, conta leituras bem-sucedidas em tool.call com matcher Read e responde em command.run.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">SêÂ£o trêÂªs dos eventos mais usados, num arquivo curto que vocêÂª lêÂª inteiro.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">session.start, tool.call, matcher, command.run, $.command.register.</p></div>
             </div>
           </div>
@@ -685,13 +685,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-1-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ§ª</span>
+            <span class="text-lg">ê°Å¸Â§Âª</span>
             <div><span class="font-medium">Valide e teste</span><span class="text-neutral-500 text-sm ml-2">- validate e test</span></div>
           </button>
           <div id="t3-1-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Rodar claude plugin validate e claude plugin test na pasta copiada e ler as duas saÃ­das.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocÃª confirma que a cÃ³pia estÃ¡ Ã­ntegra antes de mudar uma linha.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Rodar claude plugin validate e claude plugin test na pasta copiada e ler as duas saêÂ­das.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocêÂª confirma que a cêÂ³pia estêÂ¡ êÂ­ntegra antes de mudar uma linha.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">Validation passed, 1 pass, 0 fail.</p></div>
             </div>
           </div>
@@ -699,13 +699,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-1-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">âš¡</span>
+            <span class="text-lg">ê¢Å¡Â¡</span>
             <div><span class="font-medium">Rode o comando sem gastar modelo</span><span class="text-neutral-500 text-sm ml-2">- claude -p sem modelo</span></div>
           </button>
           <div id="t4-1-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Chamar /readcount com claude -p e --plugin-dir: o prÃ³prio mod responde, sem turno do modelo.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o teste de fumaÃ§a mais barato que existe e vale para qualquer comando de mod.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Chamar /readcount com claude -p e --plugin-dir: o prêÂ³prio mod responde, sem turno do modelo.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o teste de fumaêÂ§a mais barato que existe e vale para qualquer comando de mod.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">claude -p, comando de barra, resposta sem modelo.</p></div>
             </div>
           </div>
@@ -713,13 +713,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-1-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ”§</span>
+            <span class="text-lg">ê°Å¸âÂ§</span>
             <div><span class="font-medium">Mude o contador para outra ferramenta</span><span class="text-neutral-500 text-sm ml-2">- outra ferramenta no matcher</span></div>
           </button>
           <div id="t5-1-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Trocar o matcher do tool.call para contar outra ferramenta, como Edit ou Write, e rodar o teste de novo.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ a primeira mudanÃ§a real: vocÃª vÃª o teste quebrar e sabe consertar.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Trocar o matcher do tool.call para contar outra ferramenta, como Edit ou Write, e rodar o teste de novo.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° a primeira mudanêÂ§a real: vocêÂª vêÂª o teste quebrar e sabe consertar.</p></div>
               <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">matcher, tool, teste que falha, ajuste.</p></div>
             </div>
           </div>
@@ -727,14 +727,14 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-1-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ·ï¸</span>
+            <span class="text-lg">ê°Å¸ÂÂ·ê¯Â¸Â</span>
             <div><span class="font-medium">Renomeie para virar seu</span><span class="text-neutral-500 text-sm ml-2">- nome, comando, estado</span></div>
           </button>
           <div id="t6-1-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-emerald-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Trocar o name do manifesto, o nome do comando e as mensagens para o mod virar seu.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Nome repetido colide com outros mods; seu nome Ã© o prefixo de tudo o que o mod registra.</p></div>
-              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">name, prefixo, colisÃ£o, README.</p></div>
+              <div><span class="text-emerald-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Trocar o name do manifesto, o nome do comando e as mensagens para o mod virar seu.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Nome repetido colide com outros mods; seu nome êÂ© o prefixo de tudo o que o mod registra.</p></div>
+              <div><span class="text-emerald-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">name, prefixo, colisêÂ£o, README.</p></div>
             </div>
           </div>
         </div>
@@ -746,8 +746,8 @@
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 mt-12">
-      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar ao inÃ­cio</a>
-      <a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">PrÃ³xima trilha: Eventos e estado â†’</a>
+      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">ê¢â Â Voltar ao inêÂ­cio</a>
+      <a href="../trilha2/index.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">PrêÂ³xima trilha: Eventos e estado ê¢â â</a>
     </div>
   </main>
 
@@ -755,10 +755,10 @@
   <div id="modal-1-1" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-1-1-title" onclick="if(event.target === this) closeModal()">
     <div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
       <div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
-        <div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span id="modal-1-1-title" class="font-semibold">O que Ã© um mod por dentro</span></div>
+        <div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span id="modal-1-1-title" class="font-semibold">O que êÂ© um mod por dentro</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-1-1.html" title="MÃ³dulo 1.1" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-1-1.html" title="MêÂ³dulo 1.1" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-1-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-1-2-title" onclick="if(event.target === this) closeModal()">
@@ -767,7 +767,7 @@
         <div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.2</span><span id="modal-1-2-title" class="font-semibold">Estrutura de arquivos e manifesto</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-1-2.html" title="MÃ³dulo 1.2" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-1-2.html" title="MêÂ³dulo 1.2" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-1-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-1-3-title" onclick="if(event.target === this) closeModal()">
@@ -776,7 +776,7 @@
         <div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.3</span><span id="modal-1-3-title" class="font-semibold">Carregar, recarregar e instalar</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-1-3.html" title="MÃ³dulo 1.3" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-1-3.html" title="MêÂ³dulo 1.3" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-1-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-1-4-title" onclick="if(event.target === this) closeModal()">
@@ -785,14 +785,14 @@
         <div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.4</span><span id="modal-1-4-title" class="font-semibold">Seu primeiro mod: comando e contador</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-1-4.html" title="MÃ³dulo 1.4" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-1-4.html" title="MêÂ³dulo 1.4" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
 
   <footer class="border-t border-dark-600 py-8 mt-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Mods do Claude Code â€” tÃ©cnico Â· 2026 | <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> - <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
-      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHÉ-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHÉ-mods</a> Â· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
+      <p>Mods do Claude Code ê¢â¬â têÂ©cnico êÂ· 2026 | <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> - <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
+      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHê-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHê-mods</a> êÂ· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
     </div>
   </footer>
 
@@ -804,7 +804,7 @@
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
+      if (window.ARCKHê && ARCKHê.setPref) { ARCKHê.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHê-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
@@ -825,7 +825,7 @@
   </script>
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>

@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="ccmt">
-  <title>Trilha 2 Â· Eventos e estado | Mods do Claude Code â€” tÃ©cnico</title>
-  <meta name="description" content="Curso tÃ©cnico gratuito do ARCKHÉ AI: escreva, teste e distribua mods do Claude Code â€” register, eventos, cadeia com next, estado, faixa, painÃ©is, comandos, guardas e claude plugin test.">
+  <meta name="ARCKHê-course" content="ccmt">
+  <title>Trilha 2 êÂ· Eventos e estado | Mods do Claude Code ê¢â¬â têÂ©cnico</title>
+  <meta name="description" content="Curso têÂ©cnico gratuito do ARCKHê AI: escreva, teste e distribua mods do Claude Code ê¢â¬â register, eventos, cadeia com next, estado, faixa, painêÂ©is, comandos, guardas e claude plugin test.">
 
   <!-- ANTI-FOUC: bloqueante, ANTES do Tailwind -->
   <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('ARCKHÉ.prefs');
+        var raw = localStorage.getItem('ARCKHê.prefs');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
         } else {
           var legacy = localStorage.getItem('theme');
-          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark';
+          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark';
         }
       } catch (e) { p = clone(DEF); }
       var THEMES = {
-        'ARCKHÉ-dark': { dark: true,  attr: null,        cs: 'dark'  },
+        'ARCKHê-dark': { dark: true,  attr: null,        cs: 'dark'  },
         'claro':      { dark: false, attr: null,        cs: 'light' },
         'sepia':      { dark: false, attr: 'sepia',     cs: 'light' },
         'foco':       { dark: null,  attr: 'foco',      cs: null    },
         'contraste':  { dark: true,  attr: 'contraste', cs: 'dark'  }
       };
-      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+      var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style; var scale = (+p.fontScale || 100);
-      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHê-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -63,8 +63,8 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (OBRIGATORIO em TODA pagina, identico) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
-  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que Ã© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfÃ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainÃ©is e botÃµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraÃ§Ã£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
+  <script type="application/json" data-ARCKHê-manifest>
+  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que êÂ© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfêÂ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainêÂ©is e botêÂµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraêÂ§êÂ£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
   </script>
 
   <style>
@@ -155,7 +155,7 @@
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
     /* Alvos de ancora abaixo do nav sticky */
-    [data-ARCKHÉ-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
+    [data-ARCKHê-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
 
     /* SVG light mode + animacao */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
@@ -171,28 +171,28 @@
     /* Topicos expansiveis */
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    /* Popover de aparÃªncia ancorado Ã  direita e fora do layout quando fechado (sem transbordo) */
-    .ARCKHÉ-appearance-pop { right: 0; }
+    /* Popover de aparêÂªncia ancorado êÂ  direita e fora do layout quando fechado (sem transbordo) */
+    .ARCKHê-appearance-pop { right: 0; }
     main code, main pre { overflow-wrap: anywhere; }
     main .flex-1 { min-width: 0; }
-    .ARCKHÉ-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
+    .ARCKHê-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteÃºdo</a>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteêÂºdo</a>
 
   <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-1.5 sm:space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ§©</span>
-            <span class="font-bold text-lg hidden lg:inline">Mods tÃ©cnico</span>
+            <span class="text-2xl">ê°Å¸Â§Â©</span>
+            <span class="font-bold text-lg hidden lg:inline">Mods têÂ©cnico</span>
           </a>
           <span class="text-neutral-600 hidden sm:inline">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
         </div>
         <div class="flex items-center sm:space-x-1">
           <a href="../trilha1/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -207,40 +207,40 @@
           <a href="../trilha4/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
             <span class="xl:hidden">T4</span><span class="hidden xl:inline">Controlar e distribuir</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
-            <span aria-hidden="true">â—·</span><span class="hidden md:inline">Jornada</span>
-            <span class="ARCKHÉ-journey-badge" data-ARCKHÉ-journey-badge data-count="0"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
+            <span aria-hidden="true">ê¢âÂ·</span><span class="hidden md:inline">Jornada</span>
+            <span class="ARCKHê-journey-badge" data-ARCKHê-journey-badge data-count="0"></span>
           </button>
           <div class="relative">
-            <button type="button" data-ARCKHÉ-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparÃªncia">
-              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparÃªncia</span>
+            <button type="button" data-ARCKHê-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparêÂªncia">
+              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparêÂªncia</span>
             </button>
-            <div id="aparencia" data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop">
-              <div class="ARCKHÉ-segment" aria-label="Tema">
-                <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark">Escuro</button>
-                <button type="button" data-ARCKHÉ-set-theme="claro">Claro</button>
-                <button type="button" data-ARCKHÉ-set-theme="sepia">SÃ©pia</button>
-                <button type="button" data-ARCKHÉ-set-theme="foco">Foco</button>
-                <button type="button" data-ARCKHÉ-set-theme="contraste">Alto contraste</button>
+            <div id="aparencia" data-ARCKHê-appearance class="ARCKHê-appearance-pop">
+              <div class="ARCKHê-segment" aria-label="Tema">
+                <button type="button" data-ARCKHê-set-theme="ARCKHê-dark">Escuro</button>
+                <button type="button" data-ARCKHê-set-theme="claro">Claro</button>
+                <button type="button" data-ARCKHê-set-theme="sepia">SêÂ©pia</button>
+                <button type="button" data-ARCKHê-set-theme="foco">Foco</button>
+                <button type="button" data-ARCKHê-set-theme="contraste">Alto contraste</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Fonte">
-                <button type="button" data-ARCKHÉ-set-font="inter">Inter</button>
-                <button type="button" data-ARCKHÉ-set-font="system">Sistema</button>
-                <button type="button" data-ARCKHÉ-set-font="leitura">Leitura</button>
+              <div class="ARCKHê-segment" aria-label="Fonte">
+                <button type="button" data-ARCKHê-set-font="inter">Inter</button>
+                <button type="button" data-ARCKHê-set-font="system">Sistema</button>
+                <button type="button" data-ARCKHê-set-font="leitura">Leitura</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Tamanho do texto">
-                <button type="button" data-ARCKHÉ-set-fontscale="100">A</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="112">A+</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="125">A++</button>
+              <div class="ARCKHê-segment" aria-label="Tamanho do texto">
+                <button type="button" data-ARCKHê-set-fontscale="100">A</button>
+                <button type="button" data-ARCKHê-set-fontscale="112">A+</button>
+                <button type="button" data-ARCKHê-set-fontscale="125">A++</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Largura da linha">
-                <button type="button" data-ARCKHÉ-set-linewidth="60">Estreito</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="68">MÃ©dio</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="75">Largo</button>
+              <div class="ARCKHê-segment" aria-label="Largura da linha">
+                <button type="button" data-ARCKHê-set-linewidth="60">Estreito</button>
+                <button type="button" data-ARCKHê-set-linewidth="68">MêÂ©dio</button>
+                <button type="button" data-ARCKHê-set-linewidth="75">Largo</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Entrelinha">
-                <button type="button" data-ARCKHÉ-set-leading="1.45">Compacto</button>
-                <button type="button" data-ARCKHÉ-set-leading="1.7">ConfortÃ¡vel</button>
+              <div class="ARCKHê-segment" aria-label="Entrelinha">
+                <button type="button" data-ARCKHê-set-leading="1.45">Compacto</button>
+                <button type="button" data-ARCKHê-set-leading="1.7">ConfortêÂ¡vel</button>
               </div>
             </div>
           </div>
@@ -253,25 +253,25 @@
     </div>
   </nav>
 
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-track="2">
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-track="2">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-[1fr_380px] lg:gap-10 lg:items-center">
       <div>
         <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">TRILHA 2</span>
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4">âš¡ Eventos e estado</h1>
-        <p class="text-lg text-neutral-400 max-w-3xl">Escolha o evento certo antes de escrever cÃ³digo. Entenda a cadeia ligada por next, guarde estado que sobrevive ao reload e faÃ§a trabalho fora do dispatch com relÃ³gio, arquivos e processos â€” sempre na forma tipada.</p>
+        <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê¢Å¡Â¡ Eventos e estado</h1>
+        <p class="text-lg text-neutral-400 max-w-3xl">Escolha o evento certo antes de escrever cêÂ³digo. Entenda a cadeia ligada por next, guarde estado que sobrevive ao reload e faêÂ§a trabalho fora do dispatch com relêÂ³gio, arquivos e processos ê¢â¬â sempre na forma tipada.</p>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">4</div><div class="text-xs text-neutral-400">MÃ³dulos</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">24</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~2h20</div><div class="text-xs text-neutral-400">DuraÃ§Ã£o</div></div>
-          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">TÃ©cnico</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">4</div><div class="text-xs text-neutral-400">MêÂ³dulos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">24</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~2h20</div><div class="text-xs text-neutral-400">DuraêÂ§êÂ£o</div></div>
+          <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">TêÂ©cnico</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
         </div>
-        <div data-ARCKHÉ-meter="trilha:2" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 2">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 24</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div data-ARCKHê-meter="trilha:2" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da trilha 2">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 24</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="mt-8 lg:mt-0 rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 overflow-hidden">
-        <svg viewBox="0 0 380 240" class="w-full h-auto" role="img" aria-label="Um evento entra pela esquerda e atravessa a cadeia: plugin A observa e chama next, plugin B reescreve e chama next, e o engine responde no fim. Embaixo, o estado mora em $.state durante a sessÃ£o e em $.store entre sessÃµes.">
+        <svg viewBox="0 0 380 240" class="w-full h-auto" role="img" aria-label="Um evento entra pela esquerda e atravessa a cadeia: plugin A observa e chama next, plugin B reescreve e chama next, e o engine responde no fim. Embaixo, o estado mora em $.state durante a sessêÂ£o e em $.store entre sessêÂµes.">
           <defs>
             <pattern id="t2a-grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1.2" cy="1.2" r="1.2" fill="#60a5fa" opacity="0.12"/></pattern>
             <filter id="t2a-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -286,67 +286,67 @@
             <line class="wf-flow" x1="64" y1="70" x2="86" y2="70" stroke="#60a5fa" stroke-width="2" marker-end="url(#t2a-seta)"/>
             <line class="wf-flow" x1="164" y1="70" x2="186" y2="70" stroke="#60a5fa" stroke-width="2" marker-end="url(#t2a-seta)"/>
             <line class="wf-flow" x1="264" y1="70" x2="286" y2="70" stroke="#60a5fa" stroke-width="2" marker-end="url(#t2a-seta)"/>
-            <text x="175" y="40" fill="#bfdbfe" font-size="10">next(e) â†’ next(e) â†’ resultado</text>
-            <rect x="40" y="130" width="140" height="44" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="1.8"/><text x="110" y="150" fill="#60a5fa" font-weight="600">$.state</text><text x="110" y="165" fill="#bfdbfe" font-size="10">vale na sessÃ£o</text>
-            <rect x="200" y="130" width="140" height="44" rx="10" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.8"/><text x="270" y="150" fill="#bae6fd" font-weight="600">$.store</text><text x="270" y="165" fill="#7dd3fc" font-size="10">volta amanhÃ£</text>
-            <rect x="40" y="190" width="300" height="34" rx="8" fill="none" stroke="#f87171" stroke-width="1.4" stroke-dasharray="4 3"/><text x="190" y="211" fill="#fca5a5">variÃ¡vel de mÃ³dulo: some no reload</text>
+            <text x="175" y="40" fill="#bfdbfe" font-size="10">next(e) ê¢â â next(e) ê¢â â resultado</text>
+            <rect x="40" y="130" width="140" height="44" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="1.8"/><text x="110" y="150" fill="#60a5fa" font-weight="600">$.state</text><text x="110" y="165" fill="#bfdbfe" font-size="10">vale na sessêÂ£o</text>
+            <rect x="200" y="130" width="140" height="44" rx="10" fill="#0b1f2e" stroke="#38bdf8" stroke-width="1.8"/><text x="270" y="150" fill="#bae6fd" font-weight="600">$.store</text><text x="270" y="165" fill="#7dd3fc" font-size="10">volta amanhêÂ£</text>
+            <rect x="40" y="190" width="300" height="34" rx="8" fill="none" stroke="#f87171" stroke-width="1.4" stroke-dasharray="4 3"/><text x="190" y="211" fill="#fca5a5">variêÂ¡vel de mêÂ³dulo: some no reload</text>
           </g>
         </svg>
       </div>
     </div>
   </header>
 
-  <main id="conteudo" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-ARCKHÉ-track="2">
+  <main id="conteudo" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-ARCKHê-track="2">
 
     <section class="mb-12">
       <h2 class="text-2xl font-bold mb-6">Mapa da trilha</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <a href="#modulo-2-1" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.1</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">ðŸ—ºï¸ O mapa de eventos</h3>
-          <p class="text-xs text-neutral-400">Escolha o evento antes do cÃ³digo</p>
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.1</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">ê°Å¸âÂºê¯Â¸Â O mapa de eventos</h3>
+          <p class="text-xs text-neutral-400">Escolha o evento antes do cêÂ³digo</p>
         </a>
         <a href="#modulo-2-2" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.2</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">â›“ï¸ A cadeia: next, reescrever e responder</h3>
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.2</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">ê¢âºâê¯Â¸Â A cadeia: next, reescrever e responder</h3>
           <p class="text-xs text-neutral-400">Quem chama next decide</p>
         </a>
         <a href="#modulo-2-3" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.3</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">ðŸ’¾ Estado que sobrevive</h3>
-          <p class="text-xs text-neutral-400">VariÃ¡vel some no reload</p>
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.3</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">ê°Å¸âÂ¾ Estado que sobrevive</h3>
+          <p class="text-xs text-neutral-400">VariêÂ¡vel some no reload</p>
         </a>
         <a href="#modulo-2-4" class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all">
-          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.4</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">â±ï¸ Trabalho fora do dispatch</h3>
-          <p class="text-xs text-neutral-400">session.start acende, clock mantÃ©m</p>
+          <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.4</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+          <h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">ê¢ÂÂ±ê¯Â¸Â Trabalho fora do dispatch</h3>
+          <p class="text-xs text-neutral-400">session.start acende, clock mantêÂ©m</p>
         </a>
       </div>
     </section>
 
-    <h2 class="text-2xl font-bold mb-6">ConteÃºdo detalhado</h2>
+    <h2 class="text-2xl font-bold mb-6">ConteêÂºdo detalhado</h2>
 
     <!-- ===== MODULO 2.1 ===== -->
-    <div id="modulo-2-1" data-ARCKHÉ-module="2-1" data-ARCKHÉ-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-2-1" data-ARCKHê-module="2-1" data-ARCKHê-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.1</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸ—ºï¸ O mapa de eventos</h3>
-        <p class="text-neutral-400 text-sm">Os eventos agrupados por noun, a volta completa de um turno, matchers, streams e os hooks clÃ¡ssicos dentro do mod.</p>
-        <div data-ARCKHÉ-meter="modulo:2-1" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 2.1">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.1</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸âÂºê¯Â¸Â O mapa de eventos</h3>
+        <p class="text-neutral-400 text-sm">Os eventos agrupados por noun, a volta completa de um turno, matchers, streams e os hooks clêÂ¡ssicos dentro do mod.</p>
+        <div data-ARCKHê-meter="modulo:2-1" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 2.1">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-2-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸ—‚ï¸</span>
+            <span class="text-lg">ê°Å¸ââê¯Â¸Â</span>
             <div><span class="font-medium">Agrupe os eventos por noun</span><span class="text-neutral-500 text-sm ml-2">- tool, ui, session, turn...</span></div>
           </button>
           <div id="t1-2-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Cada evento Ã© noun.aÃ§Ã£o; agrupar por noun mostra o que o mod pode tocar: ferramentas, tela, sessÃ£o, turno, prompt, estado.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Cada evento êÂ© noun.aêÂ§êÂ£o; agrupar por noun mostra o que o mod pode tocar: ferramentas, tela, sessêÂ£o, turno, prompt, estado.</p></div>
               <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ver o mapa inteiro evita escrever em ui.render o que deveria ser um tool.call.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">evento, noun, tool, ui, session, turn, prompt.</p></div>
             </div>
@@ -355,13 +355,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-2-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ”</span>
+            <span class="text-lg">ê°Å¸âÂ</span>
             <div><span class="font-medium">Siga uma volta completa do turno</span><span class="text-neutral-500 text-sm ml-2">- prompt.submit a turn.complete</span></div>
           </button>
           <div id="t2-2-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A ordem em que os eventos disparam: prompt.submit, turn.start, turn.step, tool.call, session.append e turn.complete.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber onde vocÃª estÃ¡ na volta diz o que jÃ¡ aconteceu e o que ainda dÃ¡ para mudar.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A ordem em que os eventos disparam: prompt.submit, turn.start, turn.step, tool.call, session.append e turn.complete.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Saber onde vocêÂª estêÂ¡ na volta diz o que jêÂ¡ aconteceu e o que ainda dêÂ¡ para mudar.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">turno, prompt.submit, turn.start, turn.step, turn.complete.</p></div>
             </div>
           </div>
@@ -369,13 +369,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-2-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸŽ¯</span>
+            <span class="text-lg">ê°Å¸Å½Â¯</span>
             <div><span class="font-medium">Use matchers para filtrar</span><span class="text-neutral-500 text-sm ml-2">- o segundo argumento do on</span></div>
           </button>
           <div id="t3-2-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O matcher filtra quais eventos chegam ao hook, como { tool: &#x27;Read&#x27; } ou { command: &#x27;readcount&#x27; }.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hook sem matcher roda em tudo e gasta orÃ§amento Ã  toa.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O matcher filtra quais eventos chegam ao hook, como { tool: &#x27;Read&#x27; } ou { command: &#x27;readcount&#x27; }.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hook sem matcher roda em tudo e gasta orêÂ§amento êÂ  toa.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">matcher, filtro, on(evento, matcher, hook).</p></div>
             </div>
           </div>
@@ -383,13 +383,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-2-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸŒŠ</span>
-            <div><span class="font-medium">Trate os eventos que sÃ£o stream</span><span class="text-neutral-500 text-sm ml-2">- turn.step e process.spawn</span></div>
+            <span class="text-lg">ê°Å¸ÅÅ </span>
+            <div><span class="font-medium">Trate os eventos que sêÂ£o stream</span><span class="text-neutral-500 text-sm ml-2">- turn.step e process.spawn</span></div>
           </button>
           <div id="t4-2-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Dois eventos sÃ£o stream: o hook Ã© um async generator, e yield* next(e) repassa os pedaÃ§os.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hook comum nesses eventos nÃ£o carrega; o erro sÃ³ aparece no --debug.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Dois eventos sêÂ£o stream: o hook êÂ© um async generator, e yield* next(e) repassa os pedaêÂ§os.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Hook comum nesses eventos nêÂ£o carrega; o erro sêÂ³ aparece no --debug.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">stream, async function*, yield* next(e), for await.</p></div>
             </div>
           </div>
@@ -397,28 +397,28 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-2-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸª</span>
-            <div><span class="font-medium">Pendure-se nos hooks clÃ¡ssicos</span><span class="text-neutral-500 text-sm ml-2">- classic.PreToolUse e cia.</span></div>
+            <span class="text-lg">ê°Å¸ÂªÂ</span>
+            <div><span class="font-medium">Pendure-se nos hooks clêÂ¡ssicos</span><span class="text-neutral-500 text-sm ml-2">- classic.PreToolUse e cia.</span></div>
           </button>
           <div id="t5-2-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Os hooks clÃ¡ssicos do settings.json aparecem para o mod como classic.&lt;Nome&gt;, com a mesma entrada que o hook receberia.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocÃª aproveita o que jÃ¡ conhece de hooks clÃ¡ssicos sem sair do mod.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">classic.PreToolUse, classic.Stop, hook clÃ¡ssico.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Os hooks clêÂ¡ssicos do settings.json aparecem para o mod como classic.&lt;Nome&gt;, com a mesma entrada que o hook receberia.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">VocêÂª aproveita o que jêÂ¡ conhece de hooks clêÂ¡ssicos sem sair do mod.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">classic.PreToolUse, classic.Stop, hook clêÂ¡ssico.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-2-1" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ“–</span>
+            <span class="text-lg">ê°Å¸ââ</span>
             <div><span class="font-medium">Ache qualquer evento nos tipos</span><span class="text-neutral-500 text-sm ml-2">- index.d.ts manda</span></div>
           </button>
           <div id="t6-2-1" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Procurar qualquer evento, entrada e resultado no arquivo de tipos da sua instalaÃ§Ã£o, .claude-plugin/types/claude-code/index.d.ts.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A API estÃ¡ em acesso antecipado e muda: o arquivo da sua versÃ£o Ã© a autoridade, nÃ£o a memÃ³ria.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">declaraÃ§Ã£o de tipos, index.d.ts, grep, versÃ£o.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Procurar qualquer evento, entrada e resultado no arquivo de tipos da sua instalaêÂ§êÂ£o, .claude-plugin/types/claude-code/index.d.ts.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">A API estêÂ¡ em acesso antecipado e muda: o arquivo da sua versêÂ£o êÂ© a autoridade, nêÂ£o a memêÂ³ria.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">declaraêÂ§êÂ£o de tipos, index.d.ts, grep, versêÂ£o.</p></div>
             </div>
           </div>
         </div>
@@ -430,27 +430,27 @@
     </div>
 
     <!-- ===== MODULO 2.2 ===== -->
-    <div id="modulo-2-2" data-ARCKHÉ-module="2-2" data-ARCKHÉ-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-2-2" data-ARCKHê-module="2-2" data-ARCKHê-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.2</span><span class="text-xs text-neutral-500">Fundamento Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">â›“ï¸ A cadeia: next, reescrever e responder</h3>
-        <p class="text-neutral-400 text-sm">A cadeia de plugins: observar, reescrever com next, responder sem next, .catch e o orÃ§amento de cada dispatch.</p>
-        <div data-ARCKHÉ-meter="modulo:2-2" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 2.2">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.2</span><span class="text-xs text-neutral-500">Fundamento êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê¢âºâê¯Â¸Â A cadeia: next, reescrever e responder</h3>
+        <p class="text-neutral-400 text-sm">A cadeia de plugins: observar, reescrever com next, responder sem next, .catch e o orêÂ§amento de cada dispatch.</p>
+        <div data-ARCKHê-meter="modulo:2-2" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 2.2">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-2-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">â›“ï¸</span>
+            <span class="text-lg">ê¢âºâê¯Â¸Â</span>
             <div><span class="font-medium">Entenda a cadeia de plugins</span><span class="text-neutral-500 text-sm ml-2">- todos os plugins + o engine</span></div>
           </button>
           <div id="t1-2-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Os hooks de todos os plugins e o comportamento do prÃ³prio Claude Code formam uma cadeia ligada por next.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Seu mod nÃ£o estÃ¡ sozinho: o que vocÃª devolve Ã© o que os outros e o engine recebem.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Os hooks de todos os plugins e o comportamento do prêÂ³prio Claude Code formam uma cadeia ligada por next.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Seu mod nêÂ£o estêÂ¡ sozinho: o que vocêÂª devolve êÂ© o que os outros e o engine recebem.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">cadeia, ordem, engine, plugins vizinhos.</p></div>
             </div>
           </div>
@@ -458,13 +458,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-2-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ‘€</span>
+            <span class="text-lg">ê°Å¸ââ¬</span>
             <div><span class="font-medium">Observe e passe adiante</span><span class="text-neutral-500 text-sm ml-2">- return next(e)</span></div>
           </button>
           <div id="t2-2-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O hook mais simples olha o evento, registra algo e devolve next(e) sem mudar nada.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o padrÃ£o seguro: medir sem interferir.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O hook mais simples olha o evento, registra algo e devolve next(e) sem mudar nada.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o padrêÂ£o seguro: medir sem interferir.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">observar, next(e), efeito colateral.</p></div>
             </div>
           </div>
@@ -472,13 +472,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-2-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">âœï¸</span>
+            <span class="text-lg">ê¢ÅÂê¯Â¸Â</span>
             <div><span class="font-medium">Reescreva o que vem depois</span><span class="text-neutral-500 text-sm ml-2">- next({ ...e, ... })</span></div>
           </button>
           <div id="t3-2-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Chamar next com um evento alterado muda o que o resto da cadeia vÃª, dentro do que aquele evento permite.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ como um mod corrige um caminho, acrescenta contexto ou troca um modelo.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Chamar next com um evento alterado muda o que o resto da cadeia vêÂª, dentro do que aquele evento permite.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° como um mod corrige um caminho, acrescenta contexto ou troca um modelo.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">reescrever, spread, campos permitidos.</p></div>
             </div>
           </div>
@@ -486,13 +486,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-2-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ›‘</span>
-            <div><span class="font-medium">Responda sem chamar next</span><span class="text-neutral-500 text-sm ml-2">- quem nÃ£o chama next decide</span></div>
+            <span class="text-lg">ê°Å¸âºâ</span>
+            <div><span class="font-medium">Responda sem chamar next</span><span class="text-neutral-500 text-sm ml-2">- quem nêÂ£o chama next decide</span></div>
           </button>
           <div id="t4-2-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Um hook que retorna sem chamar next responde pelo evento, e a cadeia abaixo dele nÃ£o roda.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o poder de negar uma ferramenta ou responder um comando, e tambÃ©m o maior risco do mod.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Um hook que retorna sem chamar next responde pelo evento, e a cadeia abaixo dele nêÂ£o roda.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o poder de negar uma ferramenta ou responder um comando, e tambêÂ©m o maior risco do mod.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">responder, deny, curto-circuito.</p></div>
             </div>
           </div>
@@ -500,28 +500,28 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-2-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸª‚</span>
-            <div><span class="font-medium">Use .catch para falhar com seguranÃ§a</span><span class="text-neutral-500 text-sm ml-2">- o registro tem .catch</span></div>
+            <span class="text-lg">ê°Å¸Âªâ</span>
+            <div><span class="font-medium">Use .catch para falhar com seguranêÂ§a</span><span class="text-neutral-500 text-sm ml-2">- o registro tem .catch</span></div>
           </button>
           <div id="t5-2-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O .catch encadeado no on responde no lugar do hook que falhou; sem ele, o hook Ã© pulado e a cadeia segue.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Falha silenciosa num mod de seguranÃ§a deixa passar o que devia barrar.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">.catch, hook pulado, padrÃ£o seguro.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O .catch encadeado no on responde no lugar do hook que falhou; sem ele, o hook êÂ© pulado e a cadeia segue.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Falha silenciosa num mod de seguranêÂ§a deixa passar o que devia barrar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">.catch, hook pulado, padrêÂ£o seguro.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-2-2" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">â³</span>
-            <div><span class="font-medium">Respeite o orÃ§amento e o next.signal</span><span class="text-neutral-500 text-sm ml-2">- tempo do dispatch</span></div>
+            <span class="text-lg">ê¢ÂÂ³</span>
+            <div><span class="font-medium">Respeite o orêÂ§amento e o next.signal</span><span class="text-neutral-500 text-sm ml-2">- tempo do dispatch</span></div>
           </button>
           <div id="t6-2-2" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Cada hook tem orÃ§amento de tempo dentro do dispatch, e next.signal aborta quando o dispatch Ã© abandonado.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Trabalho longo dentro do hook Ã© cortado; o que precisa durar vai para fora.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">dispatch, orÃ§amento, next.signal, abort.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Cada hook tem orêÂ§amento de tempo dentro do dispatch, e next.signal aborta quando o dispatch êÂ© abandonado.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Trabalho longo dentro do hook êÂ© cortado; o que precisa durar vai para fora.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">dispatch, orêÂ§amento, next.signal, abort.</p></div>
             </div>
           </div>
         </div>
@@ -533,40 +533,40 @@
     </div>
 
     <!-- ===== MODULO 2.3 ===== -->
-    <div id="modulo-2-3" data-ARCKHÉ-module="2-3" data-ARCKHÉ-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-2-3" data-ARCKHê-module="2-3" data-ARCKHê-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.3</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">ðŸ’¾ Estado que sobrevive</h3>
-        <p class="text-neutral-400 text-sm">Por que a variÃ¡vel de mÃ³dulo some, como declarar o contrato de estado e quando usar $.state ou $.store.</p>
-        <div data-ARCKHÉ-meter="modulo:2-3" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 2.3">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.3</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê°Å¸âÂ¾ Estado que sobrevive</h3>
+        <p class="text-neutral-400 text-sm">Por que a variêÂ¡vel de mêÂ³dulo some, como declarar o contrato de estado e quando usar $.state ou $.store.</p>
+        <div data-ARCKHê-meter="modulo:2-3" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 2.3">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-2-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸ’¨</span>
-            <div><span class="font-medium">Veja a variÃ¡vel de mÃ³dulo sumir</span><span class="text-neutral-500 text-sm ml-2">- reload limpa o mÃ³dulo</span></div>
+            <span class="text-lg">ê°Å¸âÂ¨</span>
+            <div><span class="font-medium">Veja a variêÂ¡vel de mêÂ³dulo sumir</span><span class="text-neutral-500 text-sm ml-2">- reload limpa o mêÂ³dulo</span></div>
           </button>
           <div id="t1-2-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Cada hot-reload roda o register num ambiente novo; a variÃ¡vel de mÃ³dulo volta ao valor inicial.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O contador que zera do nada Ã© o sintoma nÃºmero um de estado no lugar errado.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">variÃ¡vel de mÃ³dulo, hot-reload, ambiente novo.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Cada hot-reload roda o register num ambiente novo; a variêÂ¡vel de mêÂ³dulo volta ao valor inicial.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">O contador que zera do nada êÂ© o sintoma nêÂºmero um de estado no lugar errado.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">variêÂ¡vel de mêÂ³dulo, hot-reload, ambiente novo.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-2-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">ðŸ“œ</span>
+            <span class="text-lg">ê°Å¸âÅ</span>
             <div><span class="font-medium">Declare o contrato em types/index.d.ts</span><span class="text-neutral-500 text-sm ml-2">- PluginState no contrato</span></div>
           </button>
           <div id="t2-2-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">Declarar o formato do estado do plugin em types/index.d.ts e apontar o arquivo em &quot;types&quot; no plugin.json.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">Declarar o formato do estado do plugin em types/index.d.ts e apontar o arquivo em &quot;types&quot; no plugin.json.</p></div>
               <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Com o contrato, o editor e o tsc conferem cada leitura e escrita de estado.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">types/index.d.ts, PluginState, &quot;types&quot;, contrato.</p></div>
             </div>
@@ -575,13 +575,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-2-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">âš›ï¸</span>
+            <span class="text-lg">ê¢Å¡âºê¯Â¸Â</span>
             <div><span class="font-medium">Use atom, read e update</span><span class="text-neutral-500 text-sm ml-2">- a biblioteca de estado</span></div>
           </button>
           <div id="t3-2-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">atom, read e update vÃªm de import { ... } from &quot;claude-code&quot; e leem e gravam $.state com controle de versÃ£o.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">update nÃ£o perde clique: dois toques antes do redesenho contam os dois.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">atom, read e update vêÂªm de import { ... } from &quot;claude-code&quot; e leem e gravam $.state com controle de versêÂ£o.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">update nêÂ£o perde clique: dois toques antes do redesenho contam os dois.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">atom, read, update, $.state.get, $.state.set, ifVersion.</p></div>
             </div>
           </div>
@@ -589,42 +589,42 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-2-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ—„ï¸</span>
-            <div><span class="font-medium">Guarde entre sessÃµes com $.store</span><span class="text-neutral-500 text-sm ml-2">- para alÃ©m da sessÃ£o</span></div>
+            <span class="text-lg">ê°Å¸ââê¯Â¸Â</span>
+            <div><span class="font-medium">Guarde entre sessêÂµes com $.store</span><span class="text-neutral-500 text-sm ml-2">- para alêÂ©m da sessêÂ£o</span></div>
           </button>
           <div id="t4-2-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.store guarda valores entre sessÃµes com get, set, delete e keys.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">$.state vale para a sessÃ£o; o que precisa voltar amanhÃ£ vai para o store.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.store.get, $.store.set, persistÃªncia.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.store guarda valores entre sessêÂµes com get, set, delete e keys.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">$.state vale para a sessêÂ£o; o que precisa voltar amanhêÂ£ vai para o store.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.store.get, $.store.set, persistêÂªncia.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-2-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ•°ï¸</span>
-            <div><span class="font-medium">Use o relÃ³gio do engine</span><span class="text-neutral-500 text-sm ml-2">- $.clock, nÃ£o Date</span></div>
+            <span class="text-lg">ê°Å¸â¢Â°ê¯Â¸Â</span>
+            <div><span class="font-medium">Use o relêÂ³gio do engine</span><span class="text-neutral-500 text-sm ml-2">- $.clock, nêÂ£o Date</span></div>
           </button>
           <div id="t5-2-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O engine dÃ¡ o relÃ³gio do mod: now para a hora e timers que o teste pode controlar.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Usar o relÃ³gio do engine deixa o mod testÃ¡vel sem esperar tempo real.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.clock.now, relÃ³gio controlado, teste.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O engine dêÂ¡ o relêÂ³gio do mod: now para a hora e timers que o teste pode controlar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Usar o relêÂ³gio do engine deixa o mod testêÂ¡vel sem esperar tempo real.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.clock.now, relêÂ³gio controlado, teste.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-2-3" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ§­</span>
-            <div><span class="font-medium">Escolha onde cada dado mora</span><span class="text-neutral-500 text-sm ml-2">- mÃ³dulo, state ou store</span></div>
+            <span class="text-lg">ê°Å¸Â§Â­</span>
+            <div><span class="font-medium">Escolha onde cada dado mora</span><span class="text-neutral-500 text-sm ml-2">- mêÂ³dulo, state ou store</span></div>
           </button>
           <div id="t6-2-3" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">A regra de decisÃ£o: constante no mÃ³dulo, estado da sessÃ£o em $.state, o que sobrevive entre sessÃµes em $.store.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">A regra de decisêÂ£o: constante no mêÂ³dulo, estado da sessêÂ£o em $.state, o que sobrevive entre sessêÂµes em $.store.</p></div>
               <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Cada dado no lugar certo evita perda no reload e lixo acumulado no disco.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">decisÃ£o, escopo do dado, sessÃ£o, persistÃªncia.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">decisêÂ£o, escopo do dado, sessêÂ£o, persistêÂªncia.</p></div>
             </div>
           </div>
         </div>
@@ -636,41 +636,41 @@
     </div>
 
     <!-- ===== MODULO 2.4 ===== -->
-    <div id="modulo-2-4" data-ARCKHÉ-module="2-4" data-ARCKHÉ-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
+    <div id="modulo-2-4" data-ARCKHê-module="2-4" data-ARCKHê-track="2" class="bg-dark-800 rounded-xl border border-dark-600 mb-6">
       <div class="p-6 border-b border-dark-600">
-        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.4</span><span class="text-xs text-neutral-500">PrÃ¡tico Â· ~35 min</span></div>
-        <h3 class="text-2xl font-bold mb-2">â±ï¸ Trabalho fora do dispatch</h3>
-        <p class="text-neutral-400 text-sm">session.start, relÃ³gio do engine, arquivos, processos locais, acordar a sessÃ£o e decidir se o mod gasta modelo.</p>
-        <div data-ARCKHÉ-meter="modulo:2-4" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 2.4">
-          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-          <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+        <div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.4</span><span class="text-xs text-neutral-500">PrêÂ¡tico êÂ· ~35 min</span></div>
+        <h3 class="text-2xl font-bold mb-2">ê¢ÂÂ±ê¯Â¸Â Trabalho fora do dispatch</h3>
+        <p class="text-neutral-400 text-sm">session.start, relêÂ³gio do engine, arquivos, processos locais, acordar a sessêÂ£o e decidir se o mod gasta modelo.</p>
+        <div data-ARCKHê-meter="modulo:2-4" class="mt-4" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 2.4">
+          <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+          <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
         </div>
       </div>
       <div class="divide-y divide-dark-600">
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t1-2-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
-            <span class="text-lg">ðŸŒ…</span>
-            <div><span class="font-medium">Comece no session.start</span><span class="text-neutral-500 text-sm ml-2">- pronto antes do 1Âº prompt</span></div>
+            <span class="text-lg">ê°Å¸Åâ¦</span>
+            <div><span class="font-medium">Comece no session.start</span><span class="text-neutral-500 text-sm ml-2">- pronto antes do 1êÂº prompt</span></div>
           </button>
           <div id="t1-2-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O session.start dispara uma vez, quando a sessÃ£o fica pronta, e Ã© aguardado antes do primeiro prompt.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Ã‰ o lugar de registrar comandos e ferramentas e de acender o que roda em segundo plano.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">session.start, inicializaÃ§Ã£o, $.command.register, $.tool.register.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O session.start dispara uma vez, quando a sessêÂ£o fica pronta, e êÂ© aguardado antes do primeiro prompt.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">êâ° o lugar de registrar comandos e ferramentas e de acender o que roda em segundo plano.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">session.start, inicializaêÂ§êÂ£o, $.command.register, $.tool.register.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t2-2-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
-            <span class="text-lg">â²ï¸</span>
+            <span class="text-lg">ê¢ÂÂ²ê¯Â¸Â</span>
             <div><span class="font-medium">Agende com clock.every e clock.after</span><span class="text-neutral-500 text-sm ml-2">- timers do engine</span></div>
           </button>
           <div id="t2-2-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">clock.every repete e clock.after agenda uma vez; os timers duram atÃ© serem cancelados ou o mÃ³dulo recarregar.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Trabalho periÃ³dico fora do dispatch nÃ£o tem orÃ§amento cortando no meio.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">clock.every repete e clock.after agenda uma vez; os timers duram atêÂ© serem cancelados ou o mêÂ³dulo recarregar.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Trabalho periêÂ³dico fora do dispatch nêÂ£o tem orêÂ§amento cortando no meio.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.clock.every, $.clock.after, cancelamento, reload.</p></div>
             </div>
           </div>
@@ -678,13 +678,13 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t3-2-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
-            <span class="text-lg">ðŸ“</span>
+            <span class="text-lg">ê°Å¸âÂ</span>
             <div><span class="font-medium">Leia e escreva arquivos com $.fs</span><span class="text-neutral-500 text-sm ml-2">- ler, escrever, listar</span></div>
           </button>
           <div id="t3-2-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.fs lÃª texto ou bytes, escreve, lista e dÃ¡ stat de caminhos, com realPath para guardas robustas.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem Node, o $.fs Ã© a Ãºnica forma de o mod tocar arquivos.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.fs lêÂª texto ou bytes, escreve, lista e dêÂ¡ stat de caminhos, com realPath para guardas robustas.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Sem Node, o $.fs êÂ© a êÂºnica forma de o mod tocar arquivos.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.fs.read, $.fs.write, $.fs.stat, realPath.</p></div>
             </div>
           </div>
@@ -692,12 +692,12 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t4-2-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
-            <span class="text-lg">ðŸ› ï¸</span>
+            <span class="text-lg">ê°Å¸âºÂ ê¯Â¸Â</span>
             <div><span class="font-medium">Rode processos locais com $.process</span><span class="text-neutral-500 text-sm ml-2">- comando por argv</span></div>
           </button>
           <div id="t4-2-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.process.run roda um comando do sistema por argv, e $.process.spawn entrega a saÃ­da em pedaÃ§os.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.process.run roda um comando do sistema por argv, e $.process.spawn entrega a saêÂ­da em pedaêÂ§os.</p></div>
               <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">git status, contagem de linhas, scripts locais: tudo por argv, sem shell montado em string.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.process.run, $.process.spawn, argv.</p></div>
             </div>
@@ -706,27 +706,27 @@
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t5-2-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
-            <span class="text-lg">ðŸ””</span>
-            <div><span class="font-medium">Acorde a sessÃ£o com prompt.submit</span><span class="text-neutral-500 text-sm ml-2">- trabalho que vira turno</span></div>
+            <span class="text-lg">ê°Å¸ââ</span>
+            <div><span class="font-medium">Acorde a sessêÂ£o com prompt.submit</span><span class="text-neutral-500 text-sm ml-2">- trabalho que vira turno</span></div>
           </button>
           <div id="t5-2-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.prompt.submit pÃµe um prompt na fila que comeÃ§a um turno quando a sessÃ£o fica ociosa.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.prompt.submit pêÂµe um prompt na fila que comeêÂ§a um turno quando a sessêÂ£o fica ociosa.</p></div>
               <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Deixa um mod de segundo plano chamar o modelo na hora certa, sem atropelar o turno em curso.</p></div>
-              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.prompt.submit, fila, sessÃ£o ociosa.</p></div>
+              <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.prompt.submit, fila, sessêÂ£o ociosa.</p></div>
             </div>
           </div>
         </div>
         <div class="topic-item">
           <button onclick="toggleTopic(this)" aria-expanded="false" aria-controls="t6-2-4" class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left">
             <span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
-            <span class="text-lg">ðŸ’¸</span>
+            <span class="text-lg">ê°Å¸âÂ¸</span>
             <div><span class="font-medium">Decida se o mod pode gastar modelo</span><span class="text-neutral-500 text-sm ml-2">- model.complete custa</span></div>
           </button>
           <div id="t6-2-4" class="topic-explanation px-6 pb-4">
             <div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
-              <div><span class="text-blue-400 font-semibold">O que Ã©:</span><p class="text-neutral-300 text-sm">O $.model.complete e o $.model.fork chamam o modelo pelo cliente da sessÃ£o e consomem uso.</p></div>
-              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mod que gasta modelo escondido surpreende quem usa; a regra Ã© avisar e deixar desligar.</p></div>
+              <div><span class="text-blue-400 font-semibold">O que êÂ©:</span><p class="text-neutral-300 text-sm">O $.model.complete e o $.model.fork chamam o modelo pelo cliente da sessêÂ£o e consomem uso.</p></div>
+              <div><span class="text-blue-400 font-semibold">Por que aprender:</span><p class="text-neutral-300 text-sm">Mod que gasta modelo escondido surpreende quem usa; a regra êÂ© avisar e deixar desligar.</p></div>
               <div><span class="text-blue-400 font-semibold">Conceitos-chave:</span><p class="text-neutral-300 text-sm">$.model.complete, $.model.fork, uso, consentimento.</p></div>
             </div>
           </div>
@@ -739,8 +739,8 @@
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 mt-12">
-      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar ao inÃ­cio</a>
-      <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrÃ³xima trilha: Telas e comandos â†’</a>
+      <a href="../../index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">ê¢â Â Voltar ao inêÂ­cio</a>
+      <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">PrêÂ³xima trilha: Telas e comandos ê¢â â</a>
     </div>
   </main>
 
@@ -751,7 +751,7 @@
         <div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.1</span><span id="modal-2-1-title" class="font-semibold">O mapa de eventos</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-2-1.html" title="MÃ³dulo 2.1" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-2-1.html" title="MêÂ³dulo 2.1" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-2-2" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-2-2-title" onclick="if(event.target === this) closeModal()">
@@ -760,7 +760,7 @@
         <div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.2</span><span id="modal-2-2-title" class="font-semibold">A cadeia: next, reescrever e responder</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-2-2.html" title="MÃ³dulo 2.2" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-2-2.html" title="MêÂ³dulo 2.2" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-2-3" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-2-3-title" onclick="if(event.target === this) closeModal()">
@@ -769,7 +769,7 @@
         <div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.3</span><span id="modal-2-3-title" class="font-semibold">Estado que sobrevive</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-2-3.html" title="MÃ³dulo 2.3" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-2-3.html" title="MêÂ³dulo 2.3" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
   <div id="modal-2-4" class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" role="dialog" aria-modal="true" aria-labelledby="modal-2-4-title" onclick="if(event.target === this) closeModal()">
@@ -778,14 +778,14 @@
         <div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.4</span><span id="modal-2-4-title" class="font-semibold">Trabalho fora do dispatch</span></div>
         <button onclick="closeModal()" class="text-neutral-400 hover:text-neutral-100 text-2xl leading-none" aria-label="Fechar">&times;</button>
       </div>
-      <iframe src="modulo-2-4.html" title="MÃ³dulo 2.4" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
+      <iframe src="modulo-2-4.html" title="MêÂ³dulo 2.4" loading="lazy" class="flex-1 w-full rounded-b-xl"></iframe>
     </div>
   </div>
 
   <footer class="border-t border-dark-600 py-8 mt-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Mods do Claude Code â€” tÃ©cnico Â· 2026 | <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> - <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
-      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHÉ-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHÉ-mods</a> Â· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
+      <p>Mods do Claude Code ê¢â¬â têÂ©cnico êÂ· 2026 | <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> - <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
+      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHê-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHê-mods</a> êÂ· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
     </div>
   </footer>
 
@@ -797,7 +797,7 @@
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
+      if (window.ARCKHê && ARCKHê.setPref) { ARCKHê.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHê-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
@@ -818,7 +818,7 @@
   </script>
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
 </body>
 </html>

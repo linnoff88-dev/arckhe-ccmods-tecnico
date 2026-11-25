@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="ccmt">
-  <title>O mapa de eventos | Mods do Claude Code â€” tÃ©cnico</title>
-  <meta name="description" content="Curso tÃ©cnico gratuito do ARCKHÉ AI: escreva, teste e distribua mods do Claude Code â€” register, eventos, cadeia com next, estado, faixa, painÃ©is, comandos, guardas e claude plugin test.">
+  <meta name="ARCKHê-course" content="ccmt">
+  <title>O mapa de eventos | Mods do Claude Code ê¢â¬â têÂ©cnico</title>
+  <meta name="description" content="Curso têÂ©cnico gratuito do ARCKHê AI: escreva, teste e distribua mods do Claude Code ê¢â¬â register, eventos, cadeia com next, estado, faixa, painêÂ©is, comandos, guardas e claude plugin test.">
 
   <!-- ANTI-FOUC: bloqueante, ANTES do Tailwind -->
   <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('ARCKHÉ.prefs');
+        var raw = localStorage.getItem('ARCKHê.prefs');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
         } else {
           var legacy = localStorage.getItem('theme');
-          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark';
+          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark';
         }
       } catch (e) { p = clone(DEF); }
       var THEMES = {
-        'ARCKHÉ-dark': { dark: true,  attr: null,        cs: 'dark'  },
+        'ARCKHê-dark': { dark: true,  attr: null,        cs: 'dark'  },
         'claro':      { dark: false, attr: null,        cs: 'light' },
         'sepia':      { dark: false, attr: 'sepia',     cs: 'light' },
         'foco':       { dark: null,  attr: 'foco',      cs: null    },
         'contraste':  { dark: true,  attr: 'contraste', cs: 'dark'  }
       };
-      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+      var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style; var scale = (+p.fontScale || 100);
-      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHê-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -63,8 +63,8 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (OBRIGATORIO em TODA pagina, identico) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
-  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que Ã© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfÃ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainÃ©is e botÃµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraÃ§Ã£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
+  <script type="application/json" data-ARCKHê-manifest>
+  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que êÂ© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfêÂ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainêÂ©is e botêÂµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraêÂ§êÂ£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
   </script>
 
   <style>
@@ -155,7 +155,7 @@
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
     /* Alvos de ancora abaixo do nav sticky */
-    [data-ARCKHÉ-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
+    [data-ARCKHê-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
 
     /* SVG light mode + animacao */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
@@ -171,28 +171,28 @@
     /* Topicos expansiveis */
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    /* Popover de aparÃªncia ancorado Ã  direita e fora do layout quando fechado (sem transbordo) */
-    .ARCKHÉ-appearance-pop { right: 0; }
+    /* Popover de aparêÂªncia ancorado êÂ  direita e fora do layout quando fechado (sem transbordo) */
+    .ARCKHê-appearance-pop { right: 0; }
     main code, main pre { overflow-wrap: anywhere; }
     main .flex-1 { min-width: 0; }
-    .ARCKHÉ-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
+    .ARCKHê-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteÃºdo</a>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteêÂºdo</a>
 
   <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-1.5 sm:space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ§©</span>
-            <span class="font-bold text-lg hidden lg:inline">Mods tÃ©cnico</span>
+            <span class="text-2xl">ê°Å¸Â§Â©</span>
+            <span class="font-bold text-lg hidden lg:inline">Mods têÂ©cnico</span>
           </a>
           <span class="text-neutral-600 hidden sm:inline">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
         </div>
         <div class="flex items-center sm:space-x-1">
           <a href="../trilha1/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -207,40 +207,40 @@
           <a href="../trilha4/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
             <span class="xl:hidden">T4</span><span class="hidden xl:inline">Controlar e distribuir</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
-            <span aria-hidden="true">â—·</span><span class="hidden md:inline">Jornada</span>
-            <span class="ARCKHÉ-journey-badge" data-ARCKHÉ-journey-badge data-count="0"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
+            <span aria-hidden="true">ê¢âÂ·</span><span class="hidden md:inline">Jornada</span>
+            <span class="ARCKHê-journey-badge" data-ARCKHê-journey-badge data-count="0"></span>
           </button>
           <div class="relative">
-            <button type="button" data-ARCKHÉ-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparÃªncia">
-              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparÃªncia</span>
+            <button type="button" data-ARCKHê-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparêÂªncia">
+              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparêÂªncia</span>
             </button>
-            <div id="aparencia" data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop">
-              <div class="ARCKHÉ-segment" aria-label="Tema">
-                <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark">Escuro</button>
-                <button type="button" data-ARCKHÉ-set-theme="claro">Claro</button>
-                <button type="button" data-ARCKHÉ-set-theme="sepia">SÃ©pia</button>
-                <button type="button" data-ARCKHÉ-set-theme="foco">Foco</button>
-                <button type="button" data-ARCKHÉ-set-theme="contraste">Alto contraste</button>
+            <div id="aparencia" data-ARCKHê-appearance class="ARCKHê-appearance-pop">
+              <div class="ARCKHê-segment" aria-label="Tema">
+                <button type="button" data-ARCKHê-set-theme="ARCKHê-dark">Escuro</button>
+                <button type="button" data-ARCKHê-set-theme="claro">Claro</button>
+                <button type="button" data-ARCKHê-set-theme="sepia">SêÂ©pia</button>
+                <button type="button" data-ARCKHê-set-theme="foco">Foco</button>
+                <button type="button" data-ARCKHê-set-theme="contraste">Alto contraste</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Fonte">
-                <button type="button" data-ARCKHÉ-set-font="inter">Inter</button>
-                <button type="button" data-ARCKHÉ-set-font="system">Sistema</button>
-                <button type="button" data-ARCKHÉ-set-font="leitura">Leitura</button>
+              <div class="ARCKHê-segment" aria-label="Fonte">
+                <button type="button" data-ARCKHê-set-font="inter">Inter</button>
+                <button type="button" data-ARCKHê-set-font="system">Sistema</button>
+                <button type="button" data-ARCKHê-set-font="leitura">Leitura</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Tamanho do texto">
-                <button type="button" data-ARCKHÉ-set-fontscale="100">A</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="112">A+</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="125">A++</button>
+              <div class="ARCKHê-segment" aria-label="Tamanho do texto">
+                <button type="button" data-ARCKHê-set-fontscale="100">A</button>
+                <button type="button" data-ARCKHê-set-fontscale="112">A+</button>
+                <button type="button" data-ARCKHê-set-fontscale="125">A++</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Largura da linha">
-                <button type="button" data-ARCKHÉ-set-linewidth="60">Estreito</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="68">MÃ©dio</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="75">Largo</button>
+              <div class="ARCKHê-segment" aria-label="Largura da linha">
+                <button type="button" data-ARCKHê-set-linewidth="60">Estreito</button>
+                <button type="button" data-ARCKHê-set-linewidth="68">MêÂ©dio</button>
+                <button type="button" data-ARCKHê-set-linewidth="75">Largo</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Entrelinha">
-                <button type="button" data-ARCKHÉ-set-leading="1.45">Compacto</button>
-                <button type="button" data-ARCKHÉ-set-leading="1.7">ConfortÃ¡vel</button>
+              <div class="ARCKHê-segment" aria-label="Entrelinha">
+                <button type="button" data-ARCKHê-set-leading="1.45">Compacto</button>
+                <button type="button" data-ARCKHê-set-leading="1.7">ConfortêÂ¡vel</button>
               </div>
             </div>
           </div>
@@ -253,101 +253,101 @@
     </div>
   </nav>
 
-  <nav aria-label="Trilha de navegaÃ§Ã£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <nav aria-label="Trilha de navegaêÂ§êÂ£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span>
+      <a href="../../index.html" class="hover:text-blue-400">InêÂ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">MÃ³dulo 2.1</span>
+      <span class="text-blue-400">MêÂ³dulo 2.1</span>
     </div>
   </nav>
 
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-module="2-1" data-ARCKHÉ-track="2">
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-module="2-1" data-ARCKHê-track="2">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.1</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ—ºï¸ O mapa de eventos</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">Escolha o evento antes do cÃ³digo. Um mod bom comeÃ§a com uma pergunta simples: em que momento da sessÃ£o isso precisa acontecer? Este mÃ³dulo Ã© o mapa para responder.</p>
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MêâDULO 2.1</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸âÂºê¯Â¸Â O mapa de eventos</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">Escolha o evento antes do cêÂ³digo. Um mod bom comeêÂ§a com uma pergunta simples: em que momento da sessêÂ£o isso precisa acontecer? Este mêÂ³dulo êÂ© o mapa para responder.</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div>
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">MÃ©dio</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">MêÂ©dio</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Fundamento</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-ARCKHÉ-meter="modulo:2-1" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 2.1">
-        <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-        <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+      <div data-ARCKHê-meter="modulo:2-1" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 2.1">
+        <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+        <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
       </div>
     </div>
   </header>
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:grid lg:grid-cols-[1fr_220px] lg:gap-10">
-  <main id="conteudo" class="min-w-0" data-ARCKHÉ-module="2-1" data-ARCKHÉ-track="2">
+  <main id="conteudo" class="min-w-0" data-ARCKHê-module="2-1" data-ARCKHê-track="2">
 
     <div class="bg-amber-900/20 rounded-xl border border-amber-500/30 p-5 mb-10 text-sm text-neutral-300">
-      <strong class="text-amber-400">VersÃ£o conferida:</strong> os nomes de eventos deste mÃ³dulo foram conferidos no arquivo de tipos do <strong>Claude Code 2.1.289</strong>, em 05/10/2026. A API muda entre versÃµes; o tÃ³pico 6 mostra como conferir na sua instalaÃ§Ã£o.
+      <strong class="text-amber-400">VersêÂ£o conferida:</strong> os nomes de eventos deste mêÂ³dulo foram conferidos no arquivo de tipos do <strong>Claude Code 2.1.289</strong>, em 05/10/2026. A API muda entre versêÂµes; o têÂ³pico 6 mostra como conferir na sua instalaêÂ§êÂ£o.
     </div>
 
     <!-- ===================== TOPICO 1 ===================== -->
-    <section id="topico-1" data-ARCKHÉ-topic="modulo-2-1#topico-1" class="mb-16">
+    <section id="topico-1" data-ARCKHê-topic="modulo-2-1#topico-1" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
         <h2 class="text-2xl font-bold flex-1">Agrupe os eventos por noun</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-1-t1-p1" class="text-neutral-300 mb-4 leading-relaxed">O arquivo de tipos lista mais de cem eventos. Parece muito atÃ© vocÃª notar o padrÃ£o: todo nome Ã© <code>noun.aÃ§Ã£o</code>. O <strong class="text-blue-400">noun</strong> diz de que parte da sessÃ£o se trata. A aÃ§Ã£o diz o que aconteceu.</p>
-      <p data-ARCKHÉ-block="m2-1-t1-p2" class="text-neutral-300 mb-6 leading-relaxed">EntÃ£o a primeira pergunta nunca Ã© "qual evento?". Ã‰ "de que parte?". Ferramenta Ã© <code>tool.*</code>. Tela Ã© <code>ui.*</code>. O que vocÃª digitou Ã© <code>prompt.*</code>. Achou o noun, a lista encolhe para meia dÃºzia de nomes.</p>
+      <p data-ARCKHê-block="m2-1-t1-p1" class="text-neutral-300 mb-4 leading-relaxed">O arquivo de tipos lista mais de cem eventos. Parece muito atêÂ© vocêÂª notar o padrêÂ£o: todo nome êÂ© <code>noun.aêÂ§êÂ£o</code>. O <strong class="text-blue-400">noun</strong> diz de que parte da sessêÂ£o se trata. A aêÂ§êÂ£o diz o que aconteceu.</p>
+      <p data-ARCKHê-block="m2-1-t1-p2" class="text-neutral-300 mb-6 leading-relaxed">EntêÂ£o a primeira pergunta nunca êÂ© "qual evento?". êâ° "de que parte?". Ferramenta êÂ© <code>tool.*</code>. Tela êÂ© <code>ui.*</code>. O que vocêÂª digitou êÂ© <code>prompt.*</code>. Achou o noun, a lista encolhe para meia dêÂºzia de nomes.</p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">ðŸ†•</span> Novo aqui? Evento e chamada tÃªm o mesmo nome</h3>
+        <h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">ê°Å¸â â¢</span> Novo aqui? Evento e chamada têÂªm o mesmo nome</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Evento</strong> â€” algo que o Claude Code faz e anuncia, como <code>tool.call</code>. VocÃª pendura um hook nele com <code>on('tool.call', hook)</code>.</li>
-          <li><strong>Chamada</strong> â€” algo que o seu mod pede pelo <code>$</code>, como <code>$.fs.read</code>. Nos tipos, essa chamada tambÃ©m Ã© um evento (<code>fs.read</code>), que outro mod pode observar.</li>
-          <li><strong>noun.*</strong> â€” jeito curto de dizer "todos os eventos daquele noun", como <code>session.*</code>.</li>
+          <li><strong>Evento</strong> ê¢â¬â algo que o Claude Code faz e anuncia, como <code>tool.call</code>. VocêÂª pendura um hook nele com <code>on('tool.call', hook)</code>.</li>
+          <li><strong>Chamada</strong> ê¢â¬â algo que o seu mod pede pelo <code>$</code>, como <code>$.fs.read</code>. Nos tipos, essa chamada tambêÂ©m êÂ© um evento (<code>fs.read</code>), que outro mod pode observar.</li>
+          <li><strong>noun.*</strong> ê¢â¬â jeito curto de dizer "todos os eventos daquele noun", como <code>session.*</code>.</li>
         </ul>
       </div>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
-          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Noun</th><th class="px-4 py-3 font-semibold">Parte da sessÃ£o</th><th class="px-4 py-3 font-semibold">Eventos que vocÃª mais vai usar</th></tr></thead>
+          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Noun</th><th class="px-4 py-3 font-semibold">Parte da sessêÂ£o</th><th class="px-4 py-3 font-semibold">Eventos que vocêÂª mais vai usar</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>session.*</code></td><td class="px-4 py-3 text-neutral-300">a sessÃ£o inteira</td><td class="px-4 py-3 text-neutral-300"><code>session.start</code>, <code>session.end</code>, <code>session.append</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>session.*</code></td><td class="px-4 py-3 text-neutral-300">a sessêÂ£o inteira</td><td class="px-4 py-3 text-neutral-300"><code>session.start</code>, <code>session.end</code>, <code>session.append</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>prompt.*</code></td><td class="px-4 py-3 text-neutral-300">o que a pessoa manda</td><td class="px-4 py-3 text-neutral-300"><code>prompt.submit</code>, <code>prompt.context</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>turn.*</code></td><td class="px-4 py-3 text-neutral-300">uma resposta do modelo</td><td class="px-4 py-3 text-neutral-300"><code>turn.start</code>, <code>turn.step</code>, <code>turn.complete</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>tool.*</code></td><td class="px-4 py-3 text-neutral-300">as ferramentas</td><td class="px-4 py-3 text-neutral-300"><code>tool.call</code>, <code>tool.describe</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>ui.*</code></td><td class="px-4 py-3 text-neutral-300">a tela</td><td class="px-4 py-3 text-neutral-300"><code>ui.render</code>, <code>ui.press</code>, <code>ui.input</code>, <code>ui.select</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>command.*</code></td><td class="px-4 py-3 text-neutral-300">os comandos de barra</td><td class="px-4 py-3 text-neutral-300"><code>command.run</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>state.*</code></td><td class="px-4 py-3 text-neutral-300">valores guardados pelo host</td><td class="px-4 py-3 text-neutral-300"><code>state.set</code></td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>process.*</code></td><td class="px-4 py-3 text-neutral-300">programas da mÃ¡quina</td><td class="px-4 py-3 text-neutral-300"><code>process.run</code>, <code>process.spawn</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>process.*</code></td><td class="px-4 py-3 text-neutral-300">programas da mêÂ¡quina</td><td class="px-4 py-3 text-neutral-300"><code>process.run</code>, <code>process.spawn</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>classic.*</code></td><td class="px-4 py-3 text-neutral-300">os hooks do <code>settings.json</code></td><td class="px-4 py-3 text-neutral-300"><code>classic.Stop</code>, <code>classic.PreToolUse</code> e mais 31</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> nove nouns cobrem quase tudo o que um mod faz. Os outros (<code>agent</code>, <code>skill</code>, <code>telemetry</code>, <code>config</code>...) aparecem quando vocÃª precisar deles, e seguem a mesma regra de nome.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> nove nouns cobrem quase tudo o que um mod faz. Os outros (<code>agent</code>, <code>skill</code>, <code>telemetry</code>, <code>config</code>...) aparecem quando vocêÂª precisar deles, e seguem a mesma regra de nome.</p>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ”§</div><div class="text-sm font-semibold text-blue-400">tool</div><p class="text-xs text-neutral-400 mt-1">o que o Claude roda</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ”</div><div class="text-sm font-semibold text-blue-400">turn</div><p class="text-xs text-neutral-400 mt-1">cada resposta</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸŽ¨</div><div class="text-sm font-semibold text-blue-400">ui</div><p class="text-xs text-neutral-400 mt-1">o que aparece</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸª</div><div class="text-sm font-semibold text-blue-400">classic</div><p class="text-xs text-neutral-400 mt-1">hooks de settings</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ§</div><div class="text-sm font-semibold text-blue-400">tool</div><p class="text-xs text-neutral-400 mt-1">o que o Claude roda</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ</div><div class="text-sm font-semibold text-blue-400">turn</div><p class="text-xs text-neutral-400 mt-1">cada resposta</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Å½Â¨</div><div class="text-sm font-semibold text-blue-400">ui</div><p class="text-xs text-neutral-400 mt-1">o que aparece</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸ÂªÂ</div><div class="text-sm font-semibold text-blue-400">classic</div><p class="text-xs text-neutral-400 mt-1">hooks de settings</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 2 ===================== -->
-    <section id="topico-2" data-ARCKHÉ-topic="modulo-2-1#topico-2" class="mb-16">
+    <section id="topico-2" data-ARCKHê-topic="modulo-2-1#topico-2" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold flex-1">Siga uma volta completa do turno</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-1-t2-p1" class="text-neutral-300 mb-4 leading-relaxed">O Rafa digita "corrija o teste que quebrou" e aperta Enter. AtÃ© o Claude responder, cinco eventos passam pela cadeia, sempre <strong class="text-blue-400">na mesma ordem</strong>. Saber essa ordem Ã© saber onde pendurar cada coisa.</p>
-      <p data-ARCKHÉ-block="m2-1-t2-p2" class="text-neutral-300 mb-6 leading-relaxed">O miolo se repete: o modelo responde um pedaÃ§o (<code>turn.step</code>), pede uma ferramenta (<code>tool.call</code>), lÃª o resultado e responde de novo. Um turno de verdade dÃ¡ vÃ¡rias voltas nesse laÃ§o antes de terminar.</p>
+      <p data-ARCKHê-block="m2-1-t2-p1" class="text-neutral-300 mb-4 leading-relaxed">O Rafa digita "corrija o teste que quebrou" e aperta Enter. AtêÂ© o Claude responder, cinco eventos passam pela cadeia, sempre <strong class="text-blue-400">na mesma ordem</strong>. Saber essa ordem êÂ© saber onde pendurar cada coisa.</p>
+      <p data-ARCKHê-block="m2-1-t2-p2" class="text-neutral-300 mb-6 leading-relaxed">O miolo se repete: o modelo responde um pedaêÂ§o (<code>turn.step</code>), pede uma ferramenta (<code>tool.call</code>), lêÂª o resultado e responde de novo. Um turno de verdade dêÂ¡ vêÂ¡rias voltas nesse laêÂ§o antes de terminar.</p>
 
       <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-        <svg viewBox="0 0 800 260" class="w-full h-auto" role="img" aria-label="A volta do turno em cinco eventos. Da esquerda para a direita: prompt.submit quando a pessoa aperta Enter, turn.start antes da primeira chamada ao modelo, depois um laÃ§o entre turn.step, que Ã© cada resposta do modelo chegando em pedaÃ§os, e tool.call, cada ferramenta pedida. O laÃ§o repete atÃ© o modelo parar de pedir ferramentas. No fim, turn.complete com o texto da resposta.">
+        <svg viewBox="0 0 800 260" class="w-full h-auto" role="img" aria-label="A volta do turno em cinco eventos. Da esquerda para a direita: prompt.submit quando a pessoa aperta Enter, turn.start antes da primeira chamada ao modelo, depois um laêÂ§o entre turn.step, que êÂ© cada resposta do modelo chegando em pedaêÂ§os, e tool.call, cada ferramenta pedida. O laêÂ§o repete atêÂ© o modelo parar de pedir ferramentas. No fim, turn.complete com o texto da resposta.">
           <defs>
             <pattern id="m21a-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#60a5fa" opacity="0.10"/></pattern>
             <filter id="m21a-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -363,7 +363,7 @@
               <rect x="340" y="40" width="150" height="56" rx="12" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/>
               <rect x="340" y="150" width="150" height="56" rx="12" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/>
             </g>
-            <text x="415" y="64" fill="#60a5fa">turn.step</text><text x="415" y="83" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11">resposta em pedaÃ§os</text>
+            <text x="415" y="64" fill="#60a5fa">turn.step</text><text x="415" y="83" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11">resposta em pedaêÂ§os</text>
             <text x="415" y="174" fill="#60a5fa">tool.call</text><text x="415" y="193" fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11">Read, Edit, Bash...</text>
             <path d="M 495 70 C 545 70, 545 178, 495 178" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#m21a-arrow)"/>
             <path d="M 335 178 C 290 178, 290 70, 335 70" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#m21a-arrow)"/>
@@ -371,27 +371,27 @@
             <line class="wf-flow" x1="600" y1="120" x2="637" y2="120" stroke="#38bdf8" stroke-width="2" marker-end="url(#m21a-arrow)"/>
             <rect x="642" y="90" width="142" height="60" rx="12" fill="#1f2937" stroke="#6b7280" stroke-width="2"/><text x="713" y="116" fill="#e5e7eb">turn.complete</text><text x="713" y="135" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">texto da resposta</text>
           </g>
-          <text x="400" y="244" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">o laÃ§o azul Ã© onde o turno passa a maior parte do tempo</text>
+          <text x="400" y="244" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">o laêÂ§o azul êÂ© onde o turno passa a maior parte do tempo</text>
         </svg>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> leia da esquerda para a direita. Os dois blocos azuis formam o laÃ§o: cada pedido de ferramenta gera um <code>tool.call</code>, e o resultado volta para o modelo num novo <code>turn.step</code>. Quando o modelo para de pedir ferramentas, o turno termina.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> leia da esquerda para a direita. Os dois blocos azuis formam o laêÂ§o: cada pedido de ferramenta gera um <code>tool.call</code>, e o resultado volta para o modelo num novo <code>turn.step</code>. Quando o modelo para de pedir ferramentas, o turno termina.</p>
 
       <div class="space-y-5 mb-6">
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>prompt.submit</code></h4><p class="text-neutral-300 text-sm">O texto foi enviado e o turno ainda nÃ£o comeÃ§ou. Ã‰ aqui que se reescreve ou se barra um prompt.</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>prompt.submit</code></h4><p class="text-neutral-300 text-sm">O texto foi enviado e o turno ainda nêÂ£o comeêÂ§ou. êâ° aqui que se reescreve ou se barra um prompt.</p></div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">2</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>turn.start</code></h4><p class="text-neutral-300 text-sm">Antes da primeira chamada ao modelo. SÃ³ observa: <code>next(e)</code> devolve o <code>turnId</code>, e devolver outra coisa nÃ£o muda nada.</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>turn.start</code></h4><p class="text-neutral-300 text-sm">Antes da primeira chamada ao modelo. SêÂ³ observa: <code>next(e)</code> devolve o <code>turnId</code>, e devolver outra coisa nêÂ£o muda nada.</p></div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>turn.step</code></h4><p class="text-neutral-300 text-sm">Uma chamada ao modelo, chegando em pedaÃ§os. Ã‰ um stream (tÃ³pico 4).</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>turn.step</code></h4><p class="text-neutral-300 text-sm">Uma chamada ao modelo, chegando em pedaêÂ§os. êâ° um stream (têÂ³pico 4).</p></div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">4</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>tool.call</code></h4><p class="text-neutral-300 text-sm">O engine vai rodar uma ferramenta. <code>next(e)</code> passa pelos hooks de baixo e depois pelo pedido de permissÃ£o e pela ferramenta em si.</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1"><code>tool.call</code></h4><p class="text-neutral-300 text-sm">O engine vai rodar uma ferramenta. <code>next(e)</code> passa pelos hooks de baixo e depois pelo pedido de permissêÂ£o e pela ferramenta em si.</p></div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">5</span></div>
@@ -400,119 +400,119 @@
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ðŸ’¡</span> O exemplo oficial usa trÃªs desses cinco</h3>
-        <p class="text-neutral-300 text-sm">A faixa de exemplo da referÃªncia (<code>plugin-authoring/examples/band.tsx</code>) marca a hora em <code>prompt.submit</code>, conta ferramentas em <code>tool.call</code> e calcula a duraÃ§Ã£o em <code>turn.complete</code>. TrÃªs eventos, um dado: quanto tempo o turno levou. VocÃª vai abrir esse arquivo no mÃ³dulo 2.3.</p>
+        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> O exemplo oficial usa trêÂªs desses cinco</h3>
+        <p class="text-neutral-300 text-sm">A faixa de exemplo da referêÂªncia (<code>plugin-authoring/examples/band.tsx</code>) marca a hora em <code>prompt.submit</code>, conta ferramentas em <code>tool.call</code> e calcula a duraêÂ§êÂ£o em <code>turn.complete</code>. TrêÂªs eventos, um dado: quanto tempo o turno levou. VocêÂª vai abrir esse arquivo no mêÂ³dulo 2.3.</p>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 3 ===================== -->
-    <section id="topico-3" data-ARCKHÉ-topic="modulo-2-1#topico-3" class="mb-16">
+    <section id="topico-3" data-ARCKHê-topic="modulo-2-1#topico-3" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
         <h2 class="text-2xl font-bold flex-1">Use matchers para filtrar</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-1-t3-p1" class="text-neutral-300 mb-4 leading-relaxed">VocÃª jÃ¡ viu o matcher no mÃ³dulo 1.1: o objeto entre o nome do evento e o hook. Agora a regra completa. O matcher Ã© <strong class="text-blue-400">um pedaÃ§o do prÃ³prio <code>e</code></strong>: o hook sÃ³ roda quando os campos que vocÃª escreveu batem com os do evento.</p>
-      <p data-ARCKHÉ-block="m2-1-t3-p2" class="text-neutral-300 mb-6 leading-relaxed">Por isso o campo muda de evento para evento. No <code>tool.call</code>, o <code>e</code> tem <code>tool</code>. No <code>command.run</code>, tem <code>command</code>. No <code>ui.render</code>, tem <code>component</code>. O matcher usa os mesmos nomes.</p>
+      <p data-ARCKHê-block="m2-1-t3-p1" class="text-neutral-300 mb-4 leading-relaxed">VocêÂª jêÂ¡ viu o matcher no mêÂ³dulo 1.1: o objeto entre o nome do evento e o hook. Agora a regra completa. O matcher êÂ© <strong class="text-blue-400">um pedaêÂ§o do prêÂ³prio <code>e</code></strong>: o hook sêÂ³ roda quando os campos que vocêÂª escreveu batem com os do evento.</p>
+      <p data-ARCKHê-block="m2-1-t3-p2" class="text-neutral-300 mb-6 leading-relaxed">Por isso o campo muda de evento para evento. No <code>tool.call</code>, o <code>e</code> tem <code>tool</code>. No <code>command.run</code>, tem <code>command</code>. No <code>ui.render</code>, tem <code>component</code>. O matcher usa os mesmos nomes.</p>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ Matchers reais dos kits (cada linha com a origem)</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ Matchers reais dos kits (cada linha com a origem)</span></div>
         <div class="p-5">
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">// templates/starter-mod/hooks/starter.mjs
 on("tool.call", { tool: "Read" }, hook)
 
-// ARCKHÉ-mods/mods/recibo-sessao/hooks/register.tsx
+// ARCKHê-mods/mods/recibo-sessao/hooks/register.tsx
 on('command.run', { command: 'recibo' }, hook)
 on('ui.render', { component: 'Pane', requestId: PAINEL }, hook)
 
 // plugin-authoring/examples/band.tsx
 on('ui.render', { component: 'AbovePrompt' }, hook)</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o matcher do recibo tem dois campos. Os dois precisam bater: Ã© um painel (<code>Pane</code>) <strong>e</strong> Ã© o painel deste mod.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o matcher do recibo tem dois campos. Os dois precisam bater: êÂ© um painel (<code>Pane</code>) <strong>e</strong> êÂ© o painel deste mod.</div>
       </div>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
           <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Valor no matcher</th><th class="px-4 py-3 font-semibold">Como compara</th><th class="px-4 py-3 font-semibold">Exemplo</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">texto, nÃºmero, booleano</td><td class="px-4 py-3 text-neutral-300">igual, exatamente</td><td class="px-4 py-3 text-neutral-300"><code>{ tool: 'Edit' }</code></td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">expressÃ£o regular</td><td class="px-4 py-3 text-neutral-300">testa o valor como texto</td><td class="px-4 py-3 text-neutral-300"><code>{ command: /^p4 / }</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">texto, nêÂºmero, booleano</td><td class="px-4 py-3 text-neutral-300">igual, exatamente</td><td class="px-4 py-3 text-neutral-300"><code>{ tool: 'Edit' }</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">expressêÂ£o regular</td><td class="px-4 py-3 text-neutral-300">testa o valor como texto</td><td class="px-4 py-3 text-neutral-300"><code>{ command: /^p4 / }</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">lista</td><td class="px-4 py-3 text-neutral-300">basta um item bater</td><td class="px-4 py-3 text-neutral-300"><code>{ tool: ['Edit', 'Write'] }</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">objeto</td><td class="px-4 py-3 text-neutral-300">parte de um objeto de dentro</td><td class="px-4 py-3 text-neutral-300"><code>{ props: { origin: { kind: 'task-notification' } } }</code></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> as quatro formas vÃªm do comentÃ¡rio do tipo <code>Matcher</code> nos tipos. NÃ£o existe <code>startsWith</code> nem outra funÃ§Ã£o: para prefixo, use a expressÃ£o regular.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> as quatro formas vêÂªm do comentêÂ¡rio do tipo <code>Matcher</code> nos tipos. NêÂ£o existe <code>startsWith</code> nem outra funêÂ§êÂ£o: para prefixo, use a expressêÂ£o regular.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl p-6 border border-blue-500/30">
-          <h3 class="font-semibold text-blue-400 mb-3">âœ“ Bom uso</h3>
+          <h3 class="font-semibold text-blue-400 mb-3">ê¢Åâ Bom uso</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ“ Um <code>on</code> por ferramenta, cada um com seu matcher</li>
-            <li>âœ“ <code>classic.*</code> para ouvir todos os hooks clÃ¡ssicos</li>
-            <li>âœ“ Matcher no <code>ui.render</code> sempre: sem ele, o hook roda para cada linha da conversa</li>
+            <li>ê¢Åâ Um <code>on</code> por ferramenta, cada um com seu matcher</li>
+            <li>ê¢Åâ <code>classic.*</code> para ouvir todos os hooks clêÂ¡ssicos</li>
+            <li>ê¢Åâ Matcher no <code>ui.render</code> sempre: sem ele, o hook roda para cada linha da conversa</li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl p-6 border border-red-500/30">
-          <h3 class="font-semibold text-red-400 mb-3">âœ— Evite</h3>
+          <h3 class="font-semibold text-red-400 mb-3">ê¢Åâ Evite</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ— Hook sem matcher em <code>tool.call</code> com um <code>if</code> enorme por dentro</li>
-            <li>âœ— Inventar campo: o tipo recusa matcher com nome que o <code>e</code> nÃ£o tem</li>
-            <li>âœ— Contar com <code>{ startsWith: 'p4' }</code>: nunca casa</li>
+            <li>ê¢Åâ Hook sem matcher em <code>tool.call</code> com um <code>if</code> enorme por dentro</li>
+            <li>ê¢Åâ Inventar campo: o tipo recusa matcher com nome que o <code>e</code> nêÂ£o tem</li>
+            <li>ê¢Åâ Contar com <code>{ startsWith: 'p4' }</code>: nunca casa</li>
           </ul>
         </div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 4 ===================== -->
-    <section id="topico-4" data-ARCKHÉ-topic="modulo-2-1#topico-4" class="mb-16">
+    <section id="topico-4" data-ARCKHê-topic="modulo-2-1#topico-4" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold flex-1">Trate os eventos que sÃ£o stream</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Trate os eventos que sêÂ£o stream</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-1-t4-p1" class="text-neutral-300 mb-4 leading-relaxed">Dois eventos nÃ£o chegam inteiros: <code>turn.step</code> (a resposta do modelo, pedaÃ§o por pedaÃ§o) e <code>process.spawn</code> (a saÃ­da de um programa, pedaÃ§o por pedaÃ§o). Neles o hook tem <strong class="text-blue-400">outra forma</strong>.</p>
-      <p data-ARCKHÉ-block="m2-1-t4-p2" class="text-neutral-300 mb-6 leading-relaxed">Em vez de <code>async ($, e, next) =&gt;</code>, Ã© um gerador assÃ­ncrono: <code>async function* ($, e, next)</code>. Ã‰ a Ãºnica forma que carrega nesses dois eventos. Uma funÃ§Ã£o comum dÃ¡ erro de tipo, mesmo que sÃ³ devolva <code>next(e)</code>.</p>
+      <p data-ARCKHê-block="m2-1-t4-p1" class="text-neutral-300 mb-4 leading-relaxed">Dois eventos nêÂ£o chegam inteiros: <code>turn.step</code> (a resposta do modelo, pedaêÂ§o por pedaêÂ§o) e <code>process.spawn</code> (a saêÂ­da de um programa, pedaêÂ§o por pedaêÂ§o). Neles o hook tem <strong class="text-blue-400">outra forma</strong>.</p>
+      <p data-ARCKHê-block="m2-1-t4-p2" class="text-neutral-300 mb-6 leading-relaxed">Em vez de <code>async ($, e, next) =&gt;</code>, êÂ© um gerador assêÂ­ncrono: <code>async function* ($, e, next)</code>. êâ° a êÂºnica forma que carrega nesses dois eventos. Uma funêÂ§êÂ£o comum dêÂ¡ erro de tipo, mesmo que sêÂ³ devolva <code>next(e)</code>.</p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">ðŸ†•</span> Novo aqui? Stream e gerador assÃ­ncrono</h3>
+        <h3 class="text-base font-semibold text-blue-400 mb-3 flex items-center"><span class="mr-2">ê°Å¸â â¢</span> Novo aqui? Stream e gerador assêÂ­ncrono</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Stream</strong> â€” um evento que entrega vÃ¡rias partes ao longo do tempo e sÃ³ no fim tem um resultado.</li>
-          <li><strong><code>async function*</code></strong> â€” funÃ§Ã£o que entrega valores um a um com <code>yield</code> e pode esperar com <code>await</code>.</li>
-          <li><strong><code>yield* next(e)</code></strong> â€” repassa todas as partes de baixo, sem mexer, e no fim vale o resultado do evento.</li>
+          <li><strong>Stream</strong> ê¢â¬â um evento que entrega vêÂ¡rias partes ao longo do tempo e sêÂ³ no fim tem um resultado.</li>
+          <li><strong><code>async function*</code></strong> ê¢â¬â funêÂ§êÂ£o que entrega valores um a um com <code>yield</code> e pode esperar com <code>await</code>.</li>
+          <li><strong><code>yield* next(e)</code></strong> ê¢â¬â repassa todas as partes de baixo, sem mexer, e no fim vale o resultado do evento.</li>
         </ul>
       </div>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ ARCKHÉ-mods/mods/linha-do-tempo/hooks/register.tsx (trecho)</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ ARCKHê-mods/mods/linha-do-tempo/hooks/register.tsx (trecho)</span></div>
         <div class="p-5">
-          <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">// turn.step Ã© um fluxo: o hook Ã© um gerador assÃ­ncrono que repassa tudo e,
-// no fim, lÃª o resultado (modelo, esforÃ§o e ferramentas pedidas nesse passo).
+          <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">// turn.step êÂ© um fluxo: o hook êÂ© um gerador assêÂ­ncrono que repassa tudo e,
+// no fim, lêÂª o resultado (modelo, esforêÂ§o e ferramentas pedidas nesse passo).
 on('turn.step', async function* ($, e, next) {
   const r = yield* next(e)
   if (e.agentId !== undefined) return r
   const modelo = r.usage?.model ?? e.model
   const esforco = esforcoEmTexto(e.effort)
   const usadas = r.toolUses.map(u =&gt; tipoDaFerramenta(u.name))
-  // ... grava modelo, esforÃ§o e ferramentas no estado ...
+  // ... grava modelo, esforêÂ§o e ferramentas no estado ...
   return r
 })</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o mod nÃ£o toca nos pedaÃ§os. Ele repassa tudo com <code>yield*</code> e sÃ³ trabalha com o resultado final <code>r</code>. Ã‰ o caso mais comum.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o mod nêÂ£o toca nos pedaêÂ§os. Ele repassa tudo com <code>yield*</code> e sêÂ³ trabalha com o resultado final <code>r</code>. êâ° o caso mais comum.</div>
       </div>
 
       <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-        <svg viewBox="0 0 800 220" class="w-full h-auto" role="img" aria-label="TrÃªs jeitos de um hook tratar um stream. Em cima, repassar: os pedaÃ§os vindos de baixo atravessam o hook sem mudanÃ§a, com yield asterisco next. No meio, transformar: cada pedaÃ§o passa por um laÃ§o for await e sai alterado. Embaixo, responder sozinho: o hook entrega os prÃ³prios pedaÃ§os sem chamar next, e nada de baixo roda.">
+        <svg viewBox="0 0 800 220" class="w-full h-auto" role="img" aria-label="TrêÂªs jeitos de um hook tratar um stream. Em cima, repassar: os pedaêÂ§os vindos de baixo atravessam o hook sem mudanêÂ§a, com yield asterisco next. No meio, transformar: cada pedaêÂ§o passa por um laêÂ§o for await e sai alterado. Embaixo, responder sozinho: o hook entrega os prêÂ³prios pedaêÂ§os sem chamar next, e nada de baixo roda.">
           <defs>
             <pattern id="m21b-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#60a5fa" opacity="0.10"/></pattern>
             <marker id="m21b-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"/></marker>
@@ -534,148 +534,148 @@ on('turn.step', async function* ($, e, next) {
             <rect x="650" y="96" width="10" height="24" rx="3" fill="#60a5fa"/><rect x="670" y="96" width="10" height="24" rx="3" fill="#60a5fa"/><rect x="690" y="96" width="10" height="24" rx="3" fill="#60a5fa"/>
 
             <text x="20" y="184" fill="#bfdbfe">responder</text>
-            <rect x="160" y="166" width="60" height="24" rx="3" fill="none" stroke="#6b7280" stroke-dasharray="4 3"/><text x="190" y="183" text-anchor="middle" fill="#6b7280" font-size="10">nÃ£o roda</text>
+            <rect x="160" y="166" width="60" height="24" rx="3" fill="none" stroke="#6b7280" stroke-dasharray="4 3"/><text x="190" y="183" text-anchor="middle" fill="#6b7280" font-size="10">nêÂ£o roda</text>
             <rect x="335" y="160" width="200" height="36" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/><text x="435" y="183" text-anchor="middle" fill="#60a5fa">yield sem next</text>
             <line class="wf-flow" x1="537" y1="178" x2="640" y2="178" stroke="#38bdf8" stroke-width="2" marker-end="url(#m21b-arrow)"/>
             <rect x="650" y="166" width="10" height="24" rx="3" fill="#bfdbfe"/><rect x="670" y="166" width="10" height="24" rx="3" fill="#bfdbfe"/>
           </g>
         </svg>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> cada barrinha Ã© um pedaÃ§o do stream. Na primeira linha os pedaÃ§os saem iguais. Na segunda saem de outra cor: o hook mudou cada um. Na terceira, nada vem de baixo: o hook inventa os prÃ³prios pedaÃ§os e responde sozinho.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> cada barrinha êÂ© um pedaêÂ§o do stream. Na primeira linha os pedaêÂ§os saem iguais. Na segunda saem de outra cor: o hook mudou cada um. Na terceira, nada vem de baixo: o hook inventa os prêÂ³prios pedaêÂ§os e responde sozinho.</p>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">âš ï¸</span> PedaÃ§o entregue fica entregue</h3>
-        <p class="text-neutral-300 text-sm">Se o hook falha no meio do stream, o que ele jÃ¡ entregou com <code>yield</code> fica, e o resto vem direto de baixo. Os tipos mostram o jeito de transformar a saÃ­da de um <code>process.spawn</code>: <code>for await (const chunk of next(e)) yield { ...chunk, text: ... }</code>. FaÃ§a a transformaÃ§Ã£o ser segura pedaÃ§o a pedaÃ§o.</p>
+        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> PedaêÂ§o entregue fica entregue</h3>
+        <p class="text-neutral-300 text-sm">Se o hook falha no meio do stream, o que ele jêÂ¡ entregou com <code>yield</code> fica, e o resto vem direto de baixo. Os tipos mostram o jeito de transformar a saêÂ­da de um <code>process.spawn</code>: <code>for await (const chunk of next(e)) yield { ...chunk, text: ... }</code>. FaêÂ§a a transformaêÂ§êÂ£o ser segura pedaêÂ§o a pedaêÂ§o.</p>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 5 ===================== -->
-    <section id="topico-5" data-ARCKHÉ-topic="modulo-2-1#topico-5" class="mb-16">
+    <section id="topico-5" data-ARCKHê-topic="modulo-2-1#topico-5" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold flex-1">Pendure-se nos hooks clÃ¡ssicos</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Pendure-se nos hooks clêÂ¡ssicos</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-1-t5-p1" class="text-neutral-300 mb-4 leading-relaxed">Os hooks clÃ¡ssicos do <code>settings.json</code> tÃªm 33 eventos: <code>Stop</code>, <code>PreToolUse</code>, <code>FileChanged</code>, <code>PreCompact</code>... Um mod enxerga todos com o prefixo <code>classic.</code>, <strong class="text-blue-400">mesmo que nenhum hook clÃ¡ssico esteja configurado</strong>.</p>
-      <p data-ARCKHÉ-block="m2-1-t5-p2" class="text-neutral-300 mb-6 leading-relaxed">O <code>e</code> Ã© exatamente o JSON que um hook clÃ¡ssico receberia na entrada padrÃ£o, com <code>transcript_path</code>, <code>cwd</code> e os outros campos de base. A exceÃ§Ã£o Ã© <code>classic.PreToolUse</code>: ali o <code>e</code> Ã© o mesmo envelope do <code>tool.call</code>.</p>
+      <p data-ARCKHê-block="m2-1-t5-p1" class="text-neutral-300 mb-4 leading-relaxed">Os hooks clêÂ¡ssicos do <code>settings.json</code> têÂªm 33 eventos: <code>Stop</code>, <code>PreToolUse</code>, <code>FileChanged</code>, <code>PreCompact</code>... Um mod enxerga todos com o prefixo <code>classic.</code>, <strong class="text-blue-400">mesmo que nenhum hook clêÂ¡ssico esteja configurado</strong>.</p>
+      <p data-ARCKHê-block="m2-1-t5-p2" class="text-neutral-300 mb-6 leading-relaxed">O <code>e</code> êÂ© exatamente o JSON que um hook clêÂ¡ssico receberia na entrada padrêÂ£o, com <code>transcript_path</code>, <code>cwd</code> e os outros campos de base. A exceêÂ§êÂ£o êÂ© <code>classic.PreToolUse</code>: ali o <code>e</code> êÂ© o mesmo envelope do <code>tool.call</code>.</p>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ Exemplo curto: avisar quando o Claude para</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ Exemplo curto: avisar quando o Claude para</span></div>
         <div class="p-5">
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">import type { Register } from 'claude-code'
 
 export const register: Register = (on, options) =&gt; {
   on('classic.Stop', async ($, e, next) =&gt; {
-    // e Ã© o JSON do hook Stop: stop_hook_active, last_assistant_message...
+    // e êÂ© o JSON do hook Stop: stop_hook_active, last_assistant_message...
     if (!e.stop_hook_active) $.ui.toast('O Claude terminou. Confira o resultado.')
     return next(e)
   })
 }</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> os campos <code>stop_hook_active</code> e <code>last_assistant_message</code> vÃªm do tipo <code>StopHookInput</code> nos tipos. SÃ£o os mesmos que um script de shell leria.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> os campos <code>stop_hook_active</code> e <code>last_assistant_message</code> vêÂªm do tipo <code>StopHookInput</code> nos tipos. SêÂ£o os mesmos que um script de shell leria.</div>
       </div>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
-          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">VocÃª quer</th><th class="px-4 py-3 font-semibold">Evento nativo</th><th class="px-4 py-3 font-semibold">ClÃ¡ssico equivalente</th></tr></thead>
+          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">VocêÂª quer</th><th class="px-4 py-3 font-semibold">Evento nativo</th><th class="px-4 py-3 font-semibold">ClêÂ¡ssico equivalente</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">saber que o turno acabou</td><td class="px-4 py-3 text-neutral-300"><code>turn.complete</code></td><td class="px-4 py-3 text-neutral-300"><code>classic.Stop</code></td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">ver uma ferramenta antes de rodar</td><td class="px-4 py-3 text-neutral-300"><code>tool.call</code></td><td class="px-4 py-3 text-neutral-300"><code>classic.PreToolUse</code></td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">saber que um arquivo mudou fora</td><td class="px-4 py-3 text-neutral-300">nÃ£o hÃ¡</td><td class="px-4 py-3 text-neutral-300"><code>classic.FileChanged</code></td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">agir antes de compactar</td><td class="px-4 py-3 text-neutral-300">nÃ£o hÃ¡</td><td class="px-4 py-3 text-neutral-300"><code>classic.PreCompact</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">saber que um arquivo mudou fora</td><td class="px-4 py-3 text-neutral-300">nêÂ£o hêÂ¡</td><td class="px-4 py-3 text-neutral-300"><code>classic.FileChanged</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">agir antes de compactar</td><td class="px-4 py-3 text-neutral-300">nêÂ£o hêÂ¡</td><td class="px-4 py-3 text-neutral-300"><code>classic.PreCompact</code></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> quando existe evento nativo, prefira ele: o <code>e</code> Ã© mais rico e o resultado Ã© mais fÃ¡cil de usar. O clÃ¡ssico serve para o que sÃ³ os hooks de settings anunciam.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> quando existe evento nativo, prefira ele: o <code>e</code> êÂ© mais rico e o resultado êÂ© mais fêÂ¡cil de usar. O clêÂ¡ssico serve para o que sêÂ³ os hooks de settings anunciam.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl p-6 border border-blue-500/30">
-          <h3 class="font-semibold text-blue-400 mb-3">âœ“ Use classic.*</h3>
+          <h3 class="font-semibold text-blue-400 mb-3">ê¢Åâ Use classic.*</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ“ para o que sÃ³ os hooks de settings anunciam (<code>FileChanged</code>, <code>PreCompact</code>)</li>
-            <li>âœ“ quando quer ler os mesmos campos que um script de shell leria</li>
-            <li>âœ“ com matcher ou nome exato, para nÃ£o ouvir os 33 sem querer</li>
+            <li>ê¢Åâ para o que sêÂ³ os hooks de settings anunciam (<code>FileChanged</code>, <code>PreCompact</code>)</li>
+            <li>ê¢Åâ quando quer ler os mesmos campos que um script de shell leria</li>
+            <li>ê¢Åâ com matcher ou nome exato, para nêÂ£o ouvir os 33 sem querer</li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl p-6 border border-red-500/30">
-          <h3 class="font-semibold text-red-400 mb-3">âœ— Evite</h3>
+          <h3 class="font-semibold text-red-400 mb-3">ê¢Åâ Evite</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ— <code>classic.Stop</code> quando <code>turn.complete</code> jÃ¡ resolve</li>
-            <li>âœ— <code>classic.PreToolUse</code> no lugar de <code>tool.call</code> sem motivo</li>
-            <li>âœ— supor que o <code>e</code> do clÃ¡ssico tem o formato de um evento nativo</li>
+            <li>ê¢Åâ <code>classic.Stop</code> quando <code>turn.complete</code> jêÂ¡ resolve</li>
+            <li>ê¢Åâ <code>classic.PreToolUse</code> no lugar de <code>tool.call</code> sem motivo</li>
+            <li>ê¢Åâ supor que o <code>e</code> do clêÂ¡ssico tem o formato de um evento nativo</li>
           </ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ðŸ’¡</span> Onde o mod fica na fila dos clÃ¡ssicos</h3>
-        <p class="text-neutral-300 text-sm">Os tipos descrevem a ordem: primeiro os hooks clÃ¡ssicos gerenciados pela empresa, depois os mods, depois os outros hooks de settings. Um bloqueio gerenciado termina a cadeia antes de chegar ao seu mod. A cadeia Ã© o assunto do mÃ³dulo 2.2.</p>
+        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Onde o mod fica na fila dos clêÂ¡ssicos</h3>
+        <p class="text-neutral-300 text-sm">Os tipos descrevem a ordem: primeiro os hooks clêÂ¡ssicos gerenciados pela empresa, depois os mods, depois os outros hooks de settings. Um bloqueio gerenciado termina a cadeia antes de chegar ao seu mod. A cadeia êÂ© o assunto do mêÂ³dulo 2.2.</p>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 6 ===================== -->
-    <section id="topico-6" data-ARCKHÉ-topic="modulo-2-1#topico-6" class="mb-16">
+    <section id="topico-6" data-ARCKHê-topic="modulo-2-1#topico-6" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
         <h2 class="text-2xl font-bold flex-1">Ache qualquer evento nos tipos</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-1-t6-p1" class="text-neutral-300 mb-4 leading-relaxed">A lista deste mÃ³dulo vale para a 2.1.289. A da sua mÃ¡quina pode ser outra. A autoridade Ã© um arquivo que o prÃ³prio Claude Code escreve <strong class="text-blue-400">dentro da pasta do mod</strong>, a cada carga e recarga: <code>.claude-plugin/types/claude-code/index.d.ts</code>.</p>
-      <p data-ARCKHÉ-block="m2-1-t6-p2" class="text-neutral-300 mb-6 leading-relaxed">Ele tem cerca de 20 mil linhas. NinguÃ©m lÃª de cima a baixo. VocÃª busca o nome do evento entre aspas seguido de dois-pontos, por exemplo <code>'turn.step':</code>, no editor ou com <code>grep</code>. O comentÃ¡rio logo acima diz quando o evento dispara, o que <code>next(e)</code> devolve e o que vocÃª pode devolver.</p>
+      <p data-ARCKHê-block="m2-1-t6-p1" class="text-neutral-300 mb-4 leading-relaxed">A lista deste mêÂ³dulo vale para a 2.1.289. A da sua mêÂ¡quina pode ser outra. A autoridade êÂ© um arquivo que o prêÂ³prio Claude Code escreve <strong class="text-blue-400">dentro da pasta do mod</strong>, a cada carga e recarga: <code>.claude-plugin/types/claude-code/index.d.ts</code>.</p>
+      <p data-ARCKHê-block="m2-1-t6-p2" class="text-neutral-300 mb-6 leading-relaxed">Ele tem cerca de 20 mil linhas. NinguêÂ©m lêÂª de cima a baixo. VocêÂª busca o nome do evento entre aspas seguido de dois-pontos, por exemplo <code>'turn.step':</code>, no editor ou com <code>grep</code>. O comentêÂ¡rio logo acima diz quando o evento dispara, o que <code>next(e)</code> devolve e o que vocêÂª pode devolver.</p>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸŽ¯ Objetivo: achar os tipos da sua instalaÃ§Ã£o</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸Å½Â¯ Objetivo: achar os tipos da sua instalaêÂ§êÂ£o</span></div>
         <div class="p-5">
-          <p class="text-sm text-neutral-400 mb-3">Na pasta de um mod que jÃ¡ carregou ao menos uma vez com <code>claude --plugin-dir</code>:</p>
+          <p class="text-sm text-neutral-400 mb-3">Na pasta de um mod que jêÂ¡ carregou ao menos uma vez com <code>claude --plugin-dir</code>:</p>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">ls .claude-plugin/types/</pre>
-          <p class="text-sm text-neutral-400 mt-4 mb-3">Depois, cole no Claude Code (ele sÃ³ lÃª):</p>
-          <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">Leia .claude-plugin/types/claude-code/index.d.ts e me mostre o comentÃ¡rio
+          <p class="text-sm text-neutral-400 mt-4 mb-3">Depois, cole no Claude Code (ele sêÂ³ lêÂª):</p>
+          <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">Leia .claude-plugin/types/claude-code/index.d.ts e me mostre o comentêÂ¡rio
 do evento 'turn.complete': quando dispara, o que next(e) devolve e o que
-um hook pode devolver no lugar. NÃ£o edite nada.</pre>
+um hook pode devolver no lugar. NêÂ£o edite nada.</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">Resultado esperado:</strong> o <code>ls</code> lista <code>claude-code/</code>, <code>claude-code-tools/</code>, <code>claude-code-mcp/</code> e <code>tsconfig.json</code>. O Claude responde citando o comentÃ¡rio: dispara no fim do turno, <code>next(e)</code> devolve <code>{ text }</code>, e um <code>{ text }</code> diferente aparece abaixo da resposta sem mudar o registro.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">Resultado esperado:</strong> o <code>ls</code> lista <code>claude-code/</code>, <code>claude-code-tools/</code>, <code>claude-code-mcp/</code> e <code>tsconfig.json</code>. O Claude responde citando o comentêÂ¡rio: dispara no fim do turno, <code>next(e)</code> devolve <code>{ text }</code>, e um <code>{ text }</code> diferente aparece abaixo da resposta sem mudar o registro.</div>
       </div>
 
-      <p data-ARCKHÉ-block="m2-1-t6-p3" class="text-neutral-300 mb-4 leading-relaxed">Outro atalho: o <code>claude plugin validate</code> lista os eventos que o seu mod pendura, com o matcher entre chaves. Ã‰ a prova de que o engine leu o que vocÃª quis dizer.</p>
+      <p data-ARCKHê-block="m2-1-t6-p3" class="text-neutral-300 mb-4 leading-relaxed">Outro atalho: o <code>claude plugin validate</code> lista os eventos que o seu mod pendura, com o matcher entre chaves. êâ° a prova de que o engine leu o que vocêÂª quis dizer.</p>
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ SaÃ­da real de <code>claude plugin validate templates/starter-mod</code> (Claude Mods Starter Kit, da Prompt Advisers, MIT; 05/10/2026)</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ SaêÂ­da real de <code>claude plugin validate templates/starter-mod</code> (Claude Mods Starter Kit, da Prompt Advisers, MIT; 05/10/2026)</span></div>
         <div class="p-5">
-          <pre class="font-mono text-xs text-neutral-400 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">  â¯ ./starter.mjs hooks: session.start, tool.call{tool=Read}, command.run{command=readcount}
-  â¯ ./starter.mjs calls: $.command.register
+          <pre class="font-mono text-xs text-neutral-400 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">  ê¢ÂÂ¯ ./starter.mjs hooks: session.start, tool.call{tool=Read}, command.run{command=readcount}
+  ê¢ÂÂ¯ ./starter.mjs calls: $.command.register
 
-âœ” Validation passed</pre>
+ê¢Åâ Validation passed</pre>
         </div>
       </div>
 
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6" data-ARCKHÉ-check="modulo-2-1#q1">
-        <p class="font-medium mb-4">Teste rÃ¡pido (opcional): o Rafa quer contar os caracteres da resposta do modelo enquanto ela chega. Qual hook carrega?</p>
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6" data-ARCKHê-check="modulo-2-1#q1">
+        <p class="font-medium mb-4">Teste rêÂ¡pido (opcional): o Rafa quer contar os caracteres da resposta do modelo enquanto ela chega. Qual hook carrega?</p>
         <div class="space-y-2">
-          <button type="button" data-ARCKHÉ-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm"><code>on('turn.step', async ($, e, next) =&gt; next(e))</code></button>
-          <button type="button" data-ARCKHÉ-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm"><code>on('turn.complete', async ($, e, next) =&gt; next(e))</code></button>
-          <button type="button" data-ARCKHÉ-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm"><code>on('turn.step', async function* ($, e, next) { ... })</code></button>
+          <button type="button" data-ARCKHê-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm"><code>on('turn.step', async ($, e, next) =&gt; next(e))</code></button>
+          <button type="button" data-ARCKHê-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm"><code>on('turn.complete', async ($, e, next) =&gt; next(e))</code></button>
+          <button type="button" data-ARCKHê-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm"><code>on('turn.step', async function* ($, e, next) { ... })</code></button>
         </div>
-        <div data-ARCKHÉ-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
+        <div data-ARCKHê-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“</div><div class="text-sm font-semibold text-blue-400">.claude-plugin/types</div><p class="text-xs text-neutral-400 mt-1">escrito a cada carga</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ”Ž</div><div class="text-sm font-semibold text-blue-400">'evento':</div><p class="text-xs text-neutral-400 mt-1">o que buscar</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ’¬</div><div class="text-sm font-semibold text-blue-400">ComentÃ¡rio</div><p class="text-xs text-neutral-400 mt-1">quando, next, retorno</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">âœ”ï¸</div><div class="text-sm font-semibold text-blue-400">validate</div><p class="text-xs text-neutral-400 mt-1">lista seus hooks</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ</div><div class="text-sm font-semibold text-blue-400">.claude-plugin/types</div><p class="text-xs text-neutral-400 mt-1">escrito a cada carga</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÅ½</div><div class="text-sm font-semibold text-blue-400">'evento':</div><p class="text-xs text-neutral-400 mt-1">o que buscar</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ¬</div><div class="text-sm font-semibold text-blue-400">ComentêÂ¡rio</div><p class="text-xs text-neutral-400 mt-1">quando, next, retorno</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê¢Åâê¯Â¸Â</div><div class="text-sm font-semibold text-blue-400">validate</div><p class="text-xs text-neutral-400 mt-1">lista seus hooks</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
@@ -683,29 +683,29 @@ um hook pode devolver no lugar. NÃ£o edite nada.</pre>
     <!-- ===================== RESUMO ===================== -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸŽ“</span> Resumo do mÃ³dulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ê°Å¸Å½â</span> Resumo do mêÂ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Todo evento Ã© noun.aÃ§Ã£o</strong><span class="text-neutral-400"> â€” ache o noun e a lista encolhe.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">O turno tem ordem fixa</strong><span class="text-neutral-400"> â€” prompt.submit, turn.start, laÃ§o turn.step/tool.call, turn.complete.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">O matcher Ã© um pedaÃ§o do e</strong><span class="text-neutral-400"> â€” igual, regex, lista ou objeto parcial.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">turn.step e process.spawn sÃ£o stream</strong><span class="text-neutral-400"> â€” async function* e yield* next(e).</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">A verdade estÃ¡ no index.d.ts da sua pasta</strong><span class="text-neutral-400"> â€” classic.* incluÃ­dos.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Todo evento êÂ© noun.aêÂ§êÂ£o</strong><span class="text-neutral-400"> ê¢â¬â ache o noun e a lista encolhe.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">O turno tem ordem fixa</strong><span class="text-neutral-400"> ê¢â¬â prompt.submit, turn.start, laêÂ§o turn.step/tool.call, turn.complete.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">O matcher êÂ© um pedaêÂ§o do e</strong><span class="text-neutral-400"> ê¢â¬â igual, regex, lista ou objeto parcial.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">turn.step e process.spawn sêÂ£o stream</strong><span class="text-neutral-400"> ê¢â¬â async function* e yield* next(e).</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">A verdade estêÂ¡ no index.d.ts da sua pasta</strong><span class="text-neutral-400"> ê¢â¬â classic.* incluêÂ­dos.</span></div></div>
         </div>
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo mÃ³dulo:</h3>
-          <p class="text-neutral-300">2.2 â€” A cadeia: next, reescrever e responder</p>
+          <h3 class="font-semibold text-blue-400 mb-2">PrêÂ³ximo mêÂ³dulo:</h3>
+          <p class="text-neutral-300">2.2 ê¢â¬â A cadeia: next, reescrever e responder</p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar para a trilha</a>
-          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">MÃ³dulo 2.2 â†’</a>
+          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">ê¢â Â Voltar para a trilha</a>
+          <a href="modulo-2-2.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">MêÂ³dulo 2.2 ê¢â â</a>
         </div>
       </div>
     </section>
   </main>
 
   <aside class="hidden lg:block">
-    <nav data-ARCKHÉ-toc aria-label="Ãndice da pÃ¡gina" class="sticky top-24">
-      <p class="text-sm text-neutral-400 mb-3"><span data-ARCKHÉ-section-counter>SeÃ§Ã£o 1 de 6</span></p>
+    <nav data-ARCKHê-toc aria-label="êÂndice da pêÂ¡gina" class="sticky top-24">
+      <p class="text-sm text-neutral-400 mb-3"><span data-ARCKHê-section-counter>SeêÂ§êÂ£o 1 de 6</span></p>
       <ol class="space-y-2 text-sm">
         <li><a href="#topico-1" class="text-neutral-400 hover:text-blue-400">1. Por noun</a></li>
         <li><a href="#topico-2" class="text-neutral-400 hover:text-blue-400">2. Volta do turno</a></li>
@@ -720,8 +720,8 @@ um hook pode devolver no lugar. NÃ£o edite nada.</pre>
 
   <footer class="border-t border-dark-600 py-8 mt-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Mods do Claude Code â€” tÃ©cnico Â· 2026 | <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> - <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
-      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHÉ-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHÉ-mods</a> Â· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
+      <p>Mods do Claude Code ê¢â¬â têÂ©cnico êÂ· 2026 | <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> - <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
+      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHê-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHê-mods</a> êÂ· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
     </div>
   </footer>
 
@@ -733,7 +733,7 @@ um hook pode devolver no lugar. NÃ£o edite nada.</pre>
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
+      if (window.ARCKHê && ARCKHê.setPref) { ARCKHê.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHê-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
@@ -754,16 +754,16 @@ um hook pode devolver no lugar. NÃ£o edite nada.</pre>
   </script>
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
   <script>
     window.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && ARCKHÉ.registerCheck) {
+      if (window.ARCKHê && ARCKHê.registerCheck) {
 
-        ARCKHÉ.registerCheck('modulo-2-1#q1', { answer: 2, explain: {
-          '0': 'turn.step Ã© stream: uma funÃ§Ã£o comum ali dÃ¡ erro de tipo e nÃ£o carrega, mesmo devolvendo next(e).',
-          '1': 'turn.complete chega uma vez, no fim. Serve para o total, nÃ£o para contar enquanto a resposta chega.',
-          '2': 'Isso. Em turn.step o hook Ã© um gerador assÃ­ncrono: com for await sobre next(e) ele vÃª cada pedaÃ§o e repassa com yield.'
+        ARCKHê.registerCheck('modulo-2-1#q1', { answer: 2, explain: {
+          '0': 'turn.step êÂ© stream: uma funêÂ§êÂ£o comum ali dêÂ¡ erro de tipo e nêÂ£o carrega, mesmo devolvendo next(e).',
+          '1': 'turn.complete chega uma vez, no fim. Serve para o total, nêÂ£o para contar enquanto a resposta chega.',
+          '2': 'Isso. Em turn.step o hook êÂ© um gerador assêÂ­ncrono: com for await sobre next(e) ele vêÂª cada pedaêÂ§o e repassa com yield.'
         } });
       }
     });

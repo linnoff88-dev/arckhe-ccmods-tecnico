@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="ccmt">
-  <title>Trabalho fora do dispatch | Mods do Claude Code â€” tÃ©cnico</title>
-  <meta name="description" content="Curso tÃ©cnico gratuito do ARCKHÉ AI: escreva, teste e distribua mods do Claude Code â€” register, eventos, cadeia com next, estado, faixa, painÃ©is, comandos, guardas e claude plugin test.">
+  <meta name="ARCKHê-course" content="ccmt">
+  <title>Trabalho fora do dispatch | Mods do Claude Code ê¢â¬â têÂ©cnico</title>
+  <meta name="description" content="Curso têÂ©cnico gratuito do ARCKHê AI: escreva, teste e distribua mods do Claude Code ê¢â¬â register, eventos, cadeia com next, estado, faixa, painêÂ©is, comandos, guardas e claude plugin test.">
 
   <!-- ANTI-FOUC: bloqueante, ANTES do Tailwind -->
   <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('ARCKHÉ.prefs');
+        var raw = localStorage.getItem('ARCKHê.prefs');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
         } else {
           var legacy = localStorage.getItem('theme');
-          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark';
+          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark';
         }
       } catch (e) { p = clone(DEF); }
       var THEMES = {
-        'ARCKHÉ-dark': { dark: true,  attr: null,        cs: 'dark'  },
+        'ARCKHê-dark': { dark: true,  attr: null,        cs: 'dark'  },
         'claro':      { dark: false, attr: null,        cs: 'light' },
         'sepia':      { dark: false, attr: 'sepia',     cs: 'light' },
         'foco':       { dark: null,  attr: 'foco',      cs: null    },
         'contraste':  { dark: true,  attr: 'contraste', cs: 'dark'  }
       };
-      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+      var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style; var scale = (+p.fontScale || 100);
-      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHê-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -63,8 +63,8 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (OBRIGATORIO em TODA pagina, identico) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
-  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que Ã© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfÃ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainÃ©is e botÃµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraÃ§Ã£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
+  <script type="application/json" data-ARCKHê-manifest>
+  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que êÂ© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfêÂ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainêÂ©is e botêÂµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraêÂ§êÂ£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
   </script>
 
   <style>
@@ -155,7 +155,7 @@
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
     /* Alvos de ancora abaixo do nav sticky */
-    [data-ARCKHÉ-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
+    [data-ARCKHê-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
 
     /* SVG light mode + animacao */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
@@ -171,28 +171,28 @@
     /* Topicos expansiveis */
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    /* Popover de aparÃªncia ancorado Ã  direita e fora do layout quando fechado (sem transbordo) */
-    .ARCKHÉ-appearance-pop { right: 0; }
+    /* Popover de aparêÂªncia ancorado êÂ  direita e fora do layout quando fechado (sem transbordo) */
+    .ARCKHê-appearance-pop { right: 0; }
     main code, main pre { overflow-wrap: anywhere; }
     main .flex-1 { min-width: 0; }
-    .ARCKHÉ-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
+    .ARCKHê-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteÃºdo</a>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteêÂºdo</a>
 
   <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-1.5 sm:space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ§©</span>
-            <span class="font-bold text-lg hidden lg:inline">Mods tÃ©cnico</span>
+            <span class="text-2xl">ê°Å¸Â§Â©</span>
+            <span class="font-bold text-lg hidden lg:inline">Mods têÂ©cnico</span>
           </a>
           <span class="text-neutral-600 hidden sm:inline">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
         </div>
         <div class="flex items-center sm:space-x-1">
           <a href="../trilha1/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors">
@@ -207,40 +207,40 @@
           <a href="../trilha4/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
             <span class="xl:hidden">T4</span><span class="hidden xl:inline">Controlar e distribuir</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
-            <span aria-hidden="true">â—·</span><span class="hidden md:inline">Jornada</span>
-            <span class="ARCKHÉ-journey-badge" data-ARCKHÉ-journey-badge data-count="0"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
+            <span aria-hidden="true">ê¢âÂ·</span><span class="hidden md:inline">Jornada</span>
+            <span class="ARCKHê-journey-badge" data-ARCKHê-journey-badge data-count="0"></span>
           </button>
           <div class="relative">
-            <button type="button" data-ARCKHÉ-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparÃªncia">
-              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparÃªncia</span>
+            <button type="button" data-ARCKHê-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparêÂªncia">
+              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparêÂªncia</span>
             </button>
-            <div id="aparencia" data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop">
-              <div class="ARCKHÉ-segment" aria-label="Tema">
-                <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark">Escuro</button>
-                <button type="button" data-ARCKHÉ-set-theme="claro">Claro</button>
-                <button type="button" data-ARCKHÉ-set-theme="sepia">SÃ©pia</button>
-                <button type="button" data-ARCKHÉ-set-theme="foco">Foco</button>
-                <button type="button" data-ARCKHÉ-set-theme="contraste">Alto contraste</button>
+            <div id="aparencia" data-ARCKHê-appearance class="ARCKHê-appearance-pop">
+              <div class="ARCKHê-segment" aria-label="Tema">
+                <button type="button" data-ARCKHê-set-theme="ARCKHê-dark">Escuro</button>
+                <button type="button" data-ARCKHê-set-theme="claro">Claro</button>
+                <button type="button" data-ARCKHê-set-theme="sepia">SêÂ©pia</button>
+                <button type="button" data-ARCKHê-set-theme="foco">Foco</button>
+                <button type="button" data-ARCKHê-set-theme="contraste">Alto contraste</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Fonte">
-                <button type="button" data-ARCKHÉ-set-font="inter">Inter</button>
-                <button type="button" data-ARCKHÉ-set-font="system">Sistema</button>
-                <button type="button" data-ARCKHÉ-set-font="leitura">Leitura</button>
+              <div class="ARCKHê-segment" aria-label="Fonte">
+                <button type="button" data-ARCKHê-set-font="inter">Inter</button>
+                <button type="button" data-ARCKHê-set-font="system">Sistema</button>
+                <button type="button" data-ARCKHê-set-font="leitura">Leitura</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Tamanho do texto">
-                <button type="button" data-ARCKHÉ-set-fontscale="100">A</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="112">A+</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="125">A++</button>
+              <div class="ARCKHê-segment" aria-label="Tamanho do texto">
+                <button type="button" data-ARCKHê-set-fontscale="100">A</button>
+                <button type="button" data-ARCKHê-set-fontscale="112">A+</button>
+                <button type="button" data-ARCKHê-set-fontscale="125">A++</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Largura da linha">
-                <button type="button" data-ARCKHÉ-set-linewidth="60">Estreito</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="68">MÃ©dio</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="75">Largo</button>
+              <div class="ARCKHê-segment" aria-label="Largura da linha">
+                <button type="button" data-ARCKHê-set-linewidth="60">Estreito</button>
+                <button type="button" data-ARCKHê-set-linewidth="68">MêÂ©dio</button>
+                <button type="button" data-ARCKHê-set-linewidth="75">Largo</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Entrelinha">
-                <button type="button" data-ARCKHÉ-set-leading="1.45">Compacto</button>
-                <button type="button" data-ARCKHÉ-set-leading="1.7">ConfortÃ¡vel</button>
+              <div class="ARCKHê-segment" aria-label="Entrelinha">
+                <button type="button" data-ARCKHê-set-leading="1.45">Compacto</button>
+                <button type="button" data-ARCKHê-set-leading="1.7">ConfortêÂ¡vel</button>
               </div>
             </div>
           </div>
@@ -253,87 +253,87 @@
     </div>
   </nav>
 
-  <nav aria-label="Trilha de navegaÃ§Ã£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <nav aria-label="Trilha de navegaêÂ§êÂ£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-blue-400">InÃ­cio</a><span>/</span>
+      <a href="../../index.html" class="hover:text-blue-400">InêÂ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-blue-400">Trilha 2</a><span>/</span>
-      <span class="text-blue-400">MÃ³dulo 2.4</span>
+      <span class="text-blue-400">MêÂ³dulo 2.4</span>
     </div>
   </nav>
 
-  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-module="2-4" data-ARCKHÉ-track="2">
+  <header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-module="2-4" data-ARCKHê-track="2">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 2.4</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">â±ï¸ Trabalho fora do dispatch</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">O <code>session.start</code> acende, o relÃ³gio mantÃ©m. Um hook tem 10 segundos por dispatch. O que precisa durar mais (vigiar um arquivo, atualizar um painel, rodar um programa) comeÃ§a em outro lugar. Este mÃ³dulo mostra onde, e o que o mod pode tocar fora do Claude.</p>
+      <span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MêâDULO 2.4</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê¢ÂÂ±ê¯Â¸Â Trabalho fora do dispatch</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">O <code>session.start</code> acende, o relêÂ³gio mantêÂ©m. Um hook tem 10 segundos por dispatch. O que precisa durar mais (vigiar um arquivo, atualizar um painel, rodar um programa) comeêÂ§a em outro lugar. Este mêÂ³dulo mostra onde, e o que o mod pode tocar fora do Claude.</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div>
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">MÃ©dio</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrÃ¡tico</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">MêÂ©dio</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">PrêÂ¡tico</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-ARCKHÉ-meter="modulo:2-4" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 2.4">
-        <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-        <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+      <div data-ARCKHê-meter="modulo:2-4" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 2.4">
+        <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+        <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
       </div>
     </div>
   </header>
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:grid lg:grid-cols-[1fr_220px] lg:gap-10">
-  <main id="conteudo" class="min-w-0" data-ARCKHÉ-module="2-4" data-ARCKHÉ-track="2">
+  <main id="conteudo" class="min-w-0" data-ARCKHê-module="2-4" data-ARCKHê-track="2">
 
     <!-- ===================== TOPICO 1 ===================== -->
-    <section id="topico-1" data-ARCKHÉ-topic="modulo-2-4#topico-1" class="mb-16">
+    <section id="topico-1" data-ARCKHê-topic="modulo-2-4#topico-1" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span>
         <h2 class="text-2xl font-bold flex-1">Comece no session.start</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-4-t1-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>session.start</code> dispara uma vez por mod quando a sessÃ£o fica pronta, <strong class="text-blue-400">antes do primeiro prompt</strong>, e o engine espera por ele. Tudo o que vocÃª registra ali jÃ¡ existe no turno 1: um comando, uma ferramenta para o modelo, um timer.</p>
-      <p data-ARCKHÉ-block="m2-4-t1-p2" class="text-neutral-300 mb-6 leading-relaxed">Ele dispara de novo quando o mod Ã© ligado no meio da sessÃ£o e quando ele recarrega (sÃ³ os mÃ³dulos que mudaram). NÃ£o dispara no <code>/clear</code>: ali chega um <code>session.end</code> com <code>reason: 'clear'</code>, e nenhum <code>session.start</code> depois.</p>
+      <p data-ARCKHê-block="m2-4-t1-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>session.start</code> dispara uma vez por mod quando a sessêÂ£o fica pronta, <strong class="text-blue-400">antes do primeiro prompt</strong>, e o engine espera por ele. Tudo o que vocêÂª registra ali jêÂ¡ existe no turno 1: um comando, uma ferramenta para o modelo, um timer.</p>
+      <p data-ARCKHê-block="m2-4-t1-p2" class="text-neutral-300 mb-6 leading-relaxed">Ele dispara de novo quando o mod êÂ© ligado no meio da sessêÂ£o e quando ele recarrega (sêÂ³ os mêÂ³dulos que mudaram). NêÂ£o dispara no <code>/clear</code>: ali chega um <code>session.end</code> com <code>reason: 'clear'</code>, e nenhum <code>session.start</code> depois.</p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">ðŸ†•</span> Novo aqui? Fora do dispatch</h3>
-        <p class="text-neutral-300 text-sm">Um dispatch Ã© uma passagem de evento pela cadeia, com orÃ§amento de 10 s (mÃ³dulo 2.2). "Fora do dispatch" Ã© o trabalho que nÃ£o cabe nisso: comeÃ§a num hook, mas segue rodando depois que o hook devolveu. Quem mantÃ©m esse trabalho vivo Ã© o relÃ³gio (<code>$.clock</code>), nÃ£o o hook.</p>
+        <h3 class="text-base font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">ê°Å¸â â¢</span> Novo aqui? Fora do dispatch</h3>
+        <p class="text-neutral-300 text-sm">Um dispatch êÂ© uma passagem de evento pela cadeia, com orêÂ§amento de 10 s (mêÂ³dulo 2.2). "Fora do dispatch" êÂ© o trabalho que nêÂ£o cabe nisso: comeêÂ§a num hook, mas segue rodando depois que o hook devolveu. Quem mantêÂ©m esse trabalho vivo êÂ© o relêÂ³gio (<code>$.clock</code>), nêÂ£o o hook.</p>
       </div>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ Do comentÃ¡rio de <code>'session.start'</code> nos tipos</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ Do comentêÂ¡rio de <code>'session.start'</code> nos tipos</span></div>
         <div class="p-5">
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">on("session.start", ($, e, next) =&gt; $.tool.register(t).then(() =&gt; next(e)))</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> a ferramenta Ã© registrada e sÃ³ depois o hook passa adiante. Como o primeiro <code>session.start</code> Ã© aguardado, o modelo jÃ¡ vÃª essa ferramenta na primeira resposta. Ferramentas do mod sÃ£o o assunto do mÃ³dulo 3.4.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> a ferramenta êÂ© registrada e sêÂ³ depois o hook passa adiante. Como o primeiro <code>session.start</code> êÂ© aguardado, o modelo jêÂ¡ vêÂª essa ferramenta na primeira resposta. Ferramentas do mod sêÂ£o o assunto do mêÂ³dulo 3.4.</div>
       </div>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸŽ¯ Objetivo: provar que o comando nasce no session.start</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸Å½Â¯ Objetivo: provar que o comando nasce no session.start</span></div>
         <div class="p-5">
-          <p class="text-sm text-neutral-400 mb-3">Na pasta do Claude Mods Starter Kit (da Prompt Advisers, licenÃ§a MIT; o comando responde sem chamar o modelo):</p>
+          <p class="text-sm text-neutral-400 mb-3">Na pasta do Claude Mods Starter Kit (da Prompt Advisers, licenêÂ§a MIT; o comando responde sem chamar o modelo):</p>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">claude -p "/readcount" --plugin-dir templates/starter-mod</pre>
-          <p class="text-xs text-neutral-500 mt-4 mb-2">SaÃ­da real (05/10/2026):</p>
+          <p class="text-xs text-neutral-500 mt-4 mb-2">SaêÂ­da real (05/10/2026):</p>
           <pre class="font-mono text-xs text-neutral-400 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">read-counter-example: Successful reads observed: 0</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">Como verificar:</strong> a resposta aparece mesmo sendo o primeiro (e Ãºnico) prompt da sessÃ£o. O <code>/readcount</code> sÃ³ existe porque o <code>session.start</code> do starter-mod chamou <code>$.command.register</code> antes desse prompt.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">Como verificar:</strong> a resposta aparece mesmo sendo o primeiro (e êÂºnico) prompt da sessêÂ£o. O <code>/readcount</code> sêÂ³ existe porque o <code>session.start</code> do starter-mod chamou <code>$.command.register</code> antes desse prompt.</div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 2 ===================== -->
-    <section id="topico-2" data-ARCKHÉ-topic="modulo-2-4#topico-2" class="mb-16">
+    <section id="topico-2" data-ARCKHê-topic="modulo-2-4#topico-2" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold flex-1">Agende com clock.every e clock.after</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-4-t2-p1" class="text-neutral-300 mb-4 leading-relaxed">Dois timers. <code>$.clock.every(ms, fn)</code> chama <code>fn</code> a cada perÃ­odo. <code>$.clock.after(ms, fn)</code> chama uma vez. Os dois devolvem um objeto com <code>cancel()</code>. Eles <strong class="text-blue-400">rodam atÃ© vocÃª cancelar ou atÃ© o mod recarregar</strong>.</p>
-      <p data-ARCKHÉ-block="m2-4-t2-p2" class="text-neutral-300 mb-6 leading-relaxed">No reload os timers morrem junto com o ambiente antigo. Como o <code>session.start</code> dispara de novo para o mÃ³dulo que mudou (segundo os tipos), quem liga o timer ali o religa sozinho. Esse Ã© o motivo de nÃ£o ligar timer em nenhum outro lugar.</p>
+      <p data-ARCKHê-block="m2-4-t2-p1" class="text-neutral-300 mb-4 leading-relaxed">Dois timers. <code>$.clock.every(ms, fn)</code> chama <code>fn</code> a cada perêÂ­odo. <code>$.clock.after(ms, fn)</code> chama uma vez. Os dois devolvem um objeto com <code>cancel()</code>. Eles <strong class="text-blue-400">rodam atêÂ© vocêÂª cancelar ou atêÂ© o mod recarregar</strong>.</p>
+      <p data-ARCKHê-block="m2-4-t2-p2" class="text-neutral-300 mb-6 leading-relaxed">No reload os timers morrem junto com o ambiente antigo. Como o <code>session.start</code> dispara de novo para o mêÂ³dulo que mudou (segundo os tipos), quem liga o timer ali o religa sozinho. Esse êÂ© o motivo de nêÂ£o ligar timer em nenhum outro lugar.</p>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ ARCKHÉ-mods/mods/painel-longrun/hooks/register.tsx (trecho)</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ ARCKHê-mods/mods/painel-longrun/hooks/register.tsx (trecho)</span></div>
         <div class="p-5">
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">export const register: Register = (on, options) =&gt; {
   const fixa = String(options.pasta ?? '').trim()
@@ -344,7 +344,7 @@
     await update($, cwdAtom, () =&gt; e.cwd)
     await $.command.register({
       name: 'longrun',
-      description: 'Painel da execuÃ§Ã£o longa (args: todas | atualizar)',
+      description: 'Painel da execuêÂ§êÂ£o longa (args: todas | atualizar)',
     })
     await atualizar($, fixa).catch(() =&gt; null)
     $.clock.every(intervalo, () =&gt; {
@@ -353,11 +353,11 @@
     return next(e)
   })</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o intervalo vem do <code>/config</code> e tem piso de 5 s. A primeira atualizaÃ§Ã£o Ã© aguardada; as seguintes rodam com <code>void</code>, cada uma num dispatch de <code>clock.every</code> sÃ³ seu. O <code>.catch</code> garante que uma falha num ciclo nÃ£o derrube os prÃ³ximos.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o intervalo vem do <code>/config</code> e tem piso de 5 s. A primeira atualizaêÂ§êÂ£o êÂ© aguardada; as seguintes rodam com <code>void</code>, cada uma num dispatch de <code>clock.every</code> sêÂ³ seu. O <code>.catch</code> garante que uma falha num ciclo nêÂ£o derrube os prêÂ³ximos.</div>
       </div>
 
       <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-        <svg viewBox="0 0 800 210" class="w-full h-auto" role="img" aria-label="Linha do tempo de um timer. O session.start liga um clock.every, que faz ticks regulares. Um reload apaga o ambiente e os ticks param. O session.start dispara de novo para o mÃ³dulo que mudou e liga um timer novo, que volta a fazer ticks.">
+        <svg viewBox="0 0 800 210" class="w-full h-auto" role="img" aria-label="Linha do tempo de um timer. O session.start liga um clock.every, que faz ticks regulares. Um reload apaga o ambiente e os ticks param. O session.start dispara de novo para o mêÂ³dulo que mudou e liga um timer novo, que volta a fazer ticks.">
           <defs>
             <pattern id="m24a-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#60a5fa" opacity="0.10"/></pattern>
             <filter id="m24a-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -368,46 +368,46 @@
             <g filter="url(#m24a-glow)"><rect x="30" y="86" width="110" height="48" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/></g>
             <text x="85" y="108" fill="#60a5fa">session.start</text><text x="85" y="124" fill="#bfdbfe" font-family="Inter,sans-serif">liga o every</text>
             <circle cx="180" cy="110" r="7" fill="#38bdf8"/><circle cx="230" cy="110" r="7" fill="#38bdf8"/><circle cx="280" cy="110" r="7" fill="#38bdf8"/><circle cx="330" cy="110" r="7" fill="#38bdf8"/>
-            <text x="255" y="80" fill="#bae6fd">tick Â· tick Â· tick</text>
+            <text x="255" y="80" fill="#bae6fd">tick êÂ· tick êÂ· tick</text>
             <line x1="380" y1="50" x2="380" y2="170" stroke="#fbbf24" stroke-width="2" stroke-dasharray="5 4"/><text x="380" y="40" fill="#fde68a">reload</text><text x="380" y="190" fill="#fde68a" font-family="Inter,sans-serif">timer morre</text>
             <g filter="url(#m24a-glow)"><rect x="420" y="86" width="110" height="48" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/></g>
             <text x="475" y="108" fill="#60a5fa">session.start</text><text x="475" y="124" fill="#bfdbfe" font-family="Inter,sans-serif">liga de novo</text>
             <circle cx="570" cy="110" r="7" fill="#38bdf8"/><circle cx="620" cy="110" r="7" fill="#38bdf8"/><circle cx="670" cy="110" r="7" fill="#38bdf8"/><circle cx="720" cy="110" r="7" fill="#38bdf8"/>
-            <text x="645" y="80" fill="#bae6fd">tick Â· tick Â· tick</text>
+            <text x="645" y="80" fill="#bae6fd">tick êÂ· tick êÂ· tick</text>
           </g>
         </svg>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> os pontos sÃ£o as chamadas de <code>fn</code>. Na linha amarela tudo para. O segundo bloco azul Ã© o mesmo hook rodando outra vez, no ambiente novo, e por isso os ticks voltam.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> os pontos sêÂ£o as chamadas de <code>fn</code>. Na linha amarela tudo para. O segundo bloco azul êÂ© o mesmo hook rodando outra vez, no ambiente novo, e por isso os ticks voltam.</p>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">âš ï¸</span> Confira o religamento numa sessÃ£o real</h3>
-        <p class="text-neutral-300 text-sm">O guia do kit ARCKHÉ marca esse ponto como "nÃ£o confirmado ao vivo" (pegadinha 17): os tipos dizem que o <code>session.start</code> volta no reload, um agente observou o contrÃ¡rio. Ao fazer um mod com timer, salve o arquivo com o mod carregado e veja se o painel continua atualizando. Outro uso do <code>after</code>: <code>$.command.run</code> dentro de um hook que o turno espera Ã© recusado; dispare com <code>$.clock.after(0, ...)</code> (pegadinha 16).</p>
+        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> Confira o religamento numa sessêÂ£o real</h3>
+        <p class="text-neutral-300 text-sm">O guia do kit ARCKHê marca esse ponto como "nêÂ£o confirmado ao vivo" (pegadinha 17): os tipos dizem que o <code>session.start</code> volta no reload, um agente observou o contrêÂ¡rio. Ao fazer um mod com timer, salve o arquivo com o mod carregado e veja se o painel continua atualizando. Outro uso do <code>after</code>: <code>$.command.run</code> dentro de um hook que o turno espera êÂ© recusado; dispare com <code>$.clock.after(0, ...)</code> (pegadinha 16).</p>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 3 ===================== -->
-    <section id="topico-3" data-ARCKHÉ-topic="modulo-2-4#topico-3" class="mb-16">
+    <section id="topico-3" data-ARCKHê-topic="modulo-2-4#topico-3" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span>
         <h2 class="text-2xl font-bold flex-1">Leia e escreva arquivos com $.fs</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-4-t3-p1" class="text-neutral-300 mb-4 leading-relaxed">O mod nÃ£o tem <code>fs</code> do Node. Tem o <code>$.fs</code>, que lÃª, escreve, lista e examina caminhos. Caminho relativo Ã© relativo Ã  pasta de trabalho da sessÃ£o. <strong class="text-blue-400">Quase todo mÃ©todo rejeita quando o arquivo nÃ£o existe</strong>, entÃ£o o <code>.catch</code> Ã© parte da chamada.</p>
-      <p data-ARCKHÉ-block="m2-4-t3-p2" class="text-neutral-300 mb-6 leading-relaxed">O painel de execuÃ§Ã£o longa do Rafa lÃª os arquivos de uma pasta <code>longrun/</code> a cada ciclo. Repare que nenhuma leitura derruba o painel: faltou o arquivo, vira texto vazio ou lista vazia.</p>
+      <p data-ARCKHê-block="m2-4-t3-p1" class="text-neutral-300 mb-4 leading-relaxed">O mod nêÂ£o tem <code>fs</code> do Node. Tem o <code>$.fs</code>, que lêÂª, escreve, lista e examina caminhos. Caminho relativo êÂ© relativo êÂ  pasta de trabalho da sessêÂ£o. <strong class="text-blue-400">Quase todo mêÂ©todo rejeita quando o arquivo nêÂ£o existe</strong>, entêÂ£o o <code>.catch</code> êÂ© parte da chamada.</p>
+      <p data-ARCKHê-block="m2-4-t3-p2" class="text-neutral-300 mb-6 leading-relaxed">O painel de execuêÂ§êÂ£o longa do Rafa lêÂª os arquivos de uma pasta <code>longrun/</code> a cada ciclo. Repare que nenhuma leitura derruba o painel: faltou o arquivo, vira texto vazio ou lista vazia.</p>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ ARCKHÉ-mods/mods/painel-longrun/hooks/register.tsx (trecho)</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ ARCKHê-mods/mods/painel-longrun/hooks/register.tsx (trecho)</span></div>
         <div class="p-5">
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">async function lerTexto($: EngineInterface, caminho: string) {
   return $.fs.read(caminho).catch(() =&gt; '')
 }
 
-/** A pasta da execuÃ§Ã£o: a fixada nas opÃ§Ãµes, ou a mais recente (pelo nome) em &lt;cwd&gt;/longrun/. */
+/** A pasta da execuêÂ§êÂ£o: a fixada nas opêÂ§êÂµes, ou a mais recente (pelo nome) em &lt;cwd&gt;/longrun/. */
 async function acharPasta($: EngineInterface, cwd: string, fixa: string): Promise&lt;string | null&gt; {
   const base = fixa !== '' ? fixa : cwd
   if (fixa !== '' &amp;&amp; (await $.fs.exists(juntar(fixa, 'goal.md')).catch(() =&gt; false))) return fixa
@@ -415,7 +415,7 @@ async function acharPasta($: EngineInterface, cwd: string, fixa: string): Promis
   const itens = await $.fs.list(dir).catch(() =&gt; [])
   // ... filtra kind === 'dir' e escolhe a mais recente pelo nome ...</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> as duas funÃ§Ãµes recebem <code>$</code> e estÃ£o no topo do arquivo. Cada item de <code>$.fs.list</code> traz <code>name</code>, <code>kind</code>, <code>size</code>, <code>mtimeMs</code> e <code>isLink</code>.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> as duas funêÂ§êÂµes recebem <code>$</code> e estêÂ£o no topo do arquivo. Cada item de <code>$.fs.list</code> traz <code>name</code>, <code>kind</code>, <code>size</code>, <code>mtimeMs</code> e <code>isLink</code>.</div>
       </div>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
@@ -423,8 +423,8 @@ async function acharPasta($: EngineInterface, cwd: string, fixa: string): Promis
           <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Chamada</th><th class="px-4 py-3 font-semibold">Devolve</th><th class="px-4 py-3 font-semibold">Detalhe dos tipos</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.read(p)</code> </td><td class="px-4 py-3 text-neutral-300">o texto</td><td class="px-4 py-3 text-neutral-300">rejeita se faltar ou passar de 4 MiB</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.read(p, { as: 'bytes' })</code> </td><td class="px-4 py-3 text-neutral-300"><code>{ base64 }</code></td><td class="px-4 py-3 text-neutral-300">para arquivo binÃ¡rio</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.write(p, texto)</code> </td><td class="px-4 py-3 text-neutral-300">nada</td><td class="px-4 py-3 text-neutral-300">cria o arquivo e as pastas; troca o conteÃºdo inteiro</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.read(p, { as: 'bytes' })</code> </td><td class="px-4 py-3 text-neutral-300"><code>{ base64 }</code></td><td class="px-4 py-3 text-neutral-300">para arquivo binêÂ¡rio</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.write(p, texto)</code> </td><td class="px-4 py-3 text-neutral-300">nada</td><td class="px-4 py-3 text-neutral-300">cria o arquivo e as pastas; troca o conteêÂºdo inteiro</td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.list(p)</code> </td><td class="px-4 py-3 text-neutral-300">as entradas</td><td class="px-4 py-3 text-neutral-300">sem <code>p</code>, a pasta de trabalho</td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.fs.stat(p, { resolve: true })</code> </td><td class="px-4 py-3 text-neutral-300"><code>kind</code>, <code>size</code>, <code>mtimeMs</code>, <code>isLink</code> e <code>realPath</code></td><td class="px-4 py-3 text-neutral-300"><code>realPath</code> com links e <code>..</code> resolvidos</td></tr>
           </tbody>
@@ -433,112 +433,112 @@ async function acharPasta($: EngineInterface, cwd: string, fixa: string): Promis
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl p-6 border border-blue-500/30">
-          <h3 class="font-semibold text-blue-400 mb-3">âœ“ Leitura que nÃ£o derruba</h3>
+          <h3 class="font-semibold text-blue-400 mb-3">ê¢Åâ Leitura que nêÂ£o derruba</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ“ <code>.catch</code> em toda chamada de <code>$.fs</code></li>
-            <li>âœ“ padrÃ£o claro quando falta: texto vazio, lista vazia</li>
-            <li>âœ“ caminho relativo pensado a partir da pasta de trabalho</li>
+            <li>ê¢Åâ <code>.catch</code> em toda chamada de <code>$.fs</code></li>
+            <li>ê¢Åâ padrêÂ£o claro quando falta: texto vazio, lista vazia</li>
+            <li>ê¢Åâ caminho relativo pensado a partir da pasta de trabalho</li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl p-6 border border-red-500/30">
-          <h3 class="font-semibold text-red-400 mb-3">âœ— Leitura frÃ¡gil</h3>
+          <h3 class="font-semibold text-red-400 mb-3">ê¢Åâ Leitura frêÂ¡gil</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ— supor que o arquivo existe</li>
-            <li>âœ— ler arquivo grande inteiro (passa de 4 MiB, rejeita)</li>
-            <li>âœ— guardar por lista de nomes proibidos sem <code>realPath</code></li>
+            <li>ê¢Åâ supor que o arquivo existe</li>
+            <li>ê¢Åâ ler arquivo grande inteiro (passa de 4 MiB, rejeita)</li>
+            <li>ê¢Åâ guardar por lista de nomes proibidos sem <code>realPath</code></li>
           </ul>
         </div>
       </div>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ðŸ’¡</span> Guarda de caminho: lista do que pode, sobre realPath</h3>
-        <p class="text-neutral-300 text-sm">Para um mod que barra escrita fora do projeto, a referÃªncia diz qual Ã© a forma robusta: resolver o caminho com <code>stat(..., { resolve: true })</code> e aceitar sÃ³ o que fica dentro de uma raiz resolvida do mesmo jeito. Uma lista do que Ã© proibido, comparando texto do caminho, Ã© "melhor esforÃ§o": um link simbÃ³lico passa por ela.</p>
+        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Guarda de caminho: lista do que pode, sobre realPath</h3>
+        <p class="text-neutral-300 text-sm">Para um mod que barra escrita fora do projeto, a referêÂªncia diz qual êÂ© a forma robusta: resolver o caminho com <code>stat(..., { resolve: true })</code> e aceitar sêÂ³ o que fica dentro de uma raiz resolvida do mesmo jeito. Uma lista do que êÂ© proibido, comparando texto do caminho, êÂ© "melhor esforêÂ§o": um link simbêÂ³lico passa por ela.</p>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 4 ===================== -->
-    <section id="topico-4" data-ARCKHÉ-topic="modulo-2-4#topico-4" class="mb-16">
+    <section id="topico-4" data-ARCKHê-topic="modulo-2-4#topico-4" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span>
         <h2 class="text-2xl font-bold flex-1">Rode processos locais com $.process</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-4-t4-p1" class="text-neutral-300 mb-4 leading-relaxed"><code>$.process.run</code> roda um programa da mÃ¡quina, como o usuÃ¡rio da sessÃ£o, e devolve <code>{ exitCode, stdout, stderr }</code> quando ele termina. O comando vai como <strong class="text-blue-400">lista de argumentos (argv)</strong>, sem shell no meio.</p>
-      <p data-ARCKHÉ-block="m2-4-t4-p2" class="text-neutral-300 mb-6 leading-relaxed">Sem shell quer dizer: nada de <code>|</code>, <code>&amp;&amp;</code> ou <code>*</code> interpretados, e nada de um texto do modelo virar comando por engano. Cada argumento chega ao programa exatamente como vocÃª escreveu.</p>
+      <p data-ARCKHê-block="m2-4-t4-p1" class="text-neutral-300 mb-4 leading-relaxed"><code>$.process.run</code> roda um programa da mêÂ¡quina, como o usuêÂ¡rio da sessêÂ£o, e devolve <code>{ exitCode, stdout, stderr }</code> quando ele termina. O comando vai como <strong class="text-blue-400">lista de argumentos (argv)</strong>, sem shell no meio.</p>
+      <p data-ARCKHê-block="m2-4-t4-p2" class="text-neutral-300 mb-6 leading-relaxed">Sem shell quer dizer: nada de <code>|</code>, <code>&amp;&amp;</code> ou <code>*</code> interpretados, e nada de um texto do modelo virar comando por engano. Cada argumento chega ao programa exatamente como vocêÂª escreveu.</p>
 
       <div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">ðŸ†•</span> Novo aqui? argv</h3>
-        <p class="text-neutral-300 text-sm">O <strong>argv</strong> Ã© a lista que um programa recebe ao iniciar: o nome do programa e depois cada argumento separado. <code>['git', 'status', '--short']</code> Ã© o mesmo que digitar <code>git status --short</code>, mas sem o shell decidir onde cortar as palavras.</p>
+        <h3 class="text-base font-semibold text-blue-400 mb-2 flex items-center"><span class="mr-2">ê°Å¸â â¢</span> Novo aqui? argv</h3>
+        <p class="text-neutral-300 text-sm">O <strong>argv</strong> êÂ© a lista que um programa recebe ao iniciar: o nome do programa e depois cada argumento separado. <code>['git', 'status', '--short']</code> êÂ© o mesmo que digitar <code>git status --short</code>, mas sem o shell decidir onde cortar as palavras.</p>
       </div>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ ARCKHÉ-mods/mods/faixa-publicacao/hooks/register.tsx (trecho)</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ ARCKHê-mods/mods/faixa-publicacao/hooks/register.tsx (trecho)</span></div>
         <div class="p-5">
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">async function git($: EngineInterface, cwd: string, args: string[]) {
   const r = await $.process.run(['git', ...args], { cwd, timeoutMs: 5_000 }).catch(() =&gt; undefined)
   return r &amp;&amp; r.exitCode === 0 ? r.stdout.trim() : ''
 }</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> tempo-limite curto, <code>.catch</code> para o caso de o <code>git</code> nem existir, e saÃ­da vazia quando o cÃ³digo de saÃ­da nÃ£o Ã© 0. O mod nunca fica preso esperando um programa.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> tempo-limite curto, <code>.catch</code> para o caso de o <code>git</code> nem existir, e saêÂ­da vazia quando o cêÂ³digo de saêÂ­da nêÂ£o êÂ© 0. O mod nunca fica preso esperando um programa.</div>
       </div>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
-          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">OpÃ§Ã£o ou limite</th><th class="px-4 py-3 font-semibold">Valor nos tipos</th></tr></thead>
+          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">OpêÂ§êÂ£o ou limite</th><th class="px-4 py-3 font-semibold">Valor nos tipos</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>cwd</code>, <code>env</code>, <code>stdin</code></td><td class="px-4 py-3 text-neutral-300">opcionais; <code>cwd</code> padrÃ£o Ã© o da sessÃ£o</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>timeoutMs</code></td><td class="px-4 py-3 text-neutral-300">30 s por padrÃ£o, 10 minutos no mÃ¡ximo</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">saÃ­da</td><td class="px-4 py-3 text-neutral-300">atÃ© 4 MiB por stream; <code>isStdoutTruncated</code> avisa o corte</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">quando rejeita</td><td class="px-4 py-3 text-neutral-300">nÃ£o conseguiu iniciar, ou ainda rodava no fim do prazo</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>git</code></td><td class="px-4 py-3 text-neutral-300">roda com os hooks do repositÃ³rio desligados</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>cwd</code>, <code>env</code>, <code>stdin</code></td><td class="px-4 py-3 text-neutral-300">opcionais; <code>cwd</code> padrêÂ£o êÂ© o da sessêÂ£o</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>timeoutMs</code></td><td class="px-4 py-3 text-neutral-300">30 s por padrêÂ£o, 10 minutos no mêÂ¡ximo</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">saêÂ­da</td><td class="px-4 py-3 text-neutral-300">atêÂ© 4 MiB por stream; <code>isStdoutTruncated</code> avisa o corte</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100">quando rejeita</td><td class="px-4 py-3 text-neutral-300">nêÂ£o conseguiu iniciar, ou ainda rodava no fim do prazo</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>git</code></td><td class="px-4 py-3 text-neutral-300">roda com os hooks do repositêÂ³rio desligados</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl p-6 border border-blue-500/30">
-          <h3 class="font-semibold text-blue-400 mb-3">âœ“ Bom uso</h3>
+          <h3 class="font-semibold text-blue-400 mb-3">ê¢Åâ Bom uso</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ“ Programas de leitura: <code>git status</code>, <code>git log</code></li>
-            <li>âœ“ Abrir uma pasta (o <code>abridor</code> do recibo, vindo do <code>/config</code>)</li>
-            <li>âœ“ SaÃ­da longa e contÃ­nua: <code>$.process.spawn</code>, que Ã© stream</li>
+            <li>ê¢Åâ Programas de leitura: <code>git status</code>, <code>git log</code></li>
+            <li>ê¢Åâ Abrir uma pasta (o <code>abridor</code> do recibo, vindo do <code>/config</code>)</li>
+            <li>ê¢Åâ SaêÂ­da longa e contêÂ­nua: <code>$.process.spawn</code>, que êÂ© stream</li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl p-6 border border-red-500/30">
-          <h3 class="font-semibold text-red-400 mb-3">âœ— Evite</h3>
+          <h3 class="font-semibold text-red-400 mb-3">ê¢Åâ Evite</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ— Montar um <code>sh -c</code> com texto vindo do modelo</li>
-            <li>âœ— Programa que fica rodando em segundo plano com <code>run</code></li>
-            <li>âœ— Chamar algo que acessa a rede (regra do kit ARCKHÉ)</li>
+            <li>ê¢Åâ Montar um <code>sh -c</code> com texto vindo do modelo</li>
+            <li>ê¢Åâ Programa que fica rodando em segundo plano com <code>run</code></li>
+            <li>ê¢Åâ Chamar algo que acessa a rede (regra do kit ARCKHê)</li>
           </ul>
         </div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 5 ===================== -->
-    <section id="topico-5" data-ARCKHÉ-topic="modulo-2-4#topico-5" class="mb-16">
+    <section id="topico-5" data-ARCKHê-topic="modulo-2-4#topico-5" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold flex-1">Acorde a sessÃ£o com prompt.submit</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Acorde a sessêÂ£o com prompt.submit</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-4-t5-p1" class="text-neutral-300 mb-4 leading-relaxed">Um timer descobriu algo e o Claude estÃ¡ parado esperando. O mod pode <strong class="text-blue-400">acordar a sessÃ£o</strong>: <code>$.prompt.submit({ text })</code> pÃµe um prompt na fila, que vira um turno prÃ³prio assim que a sessÃ£o fica livre.</p>
-      <p data-ARCKHÉ-block="m2-4-t5-p2" class="text-neutral-300 mb-6 leading-relaxed">Ele nunca entra no meio de um turno que estÃ¡ rodando. E a promessa resolve quando o turno <strong>comeÃ§a</strong>, nÃ£o quando termina. Por isso os tipos usam <code>void</code> na frente: o mod pede e segue.</p>
+      <p data-ARCKHê-block="m2-4-t5-p1" class="text-neutral-300 mb-4 leading-relaxed">Um timer descobriu algo e o Claude estêÂ¡ parado esperando. O mod pode <strong class="text-blue-400">acordar a sessêÂ£o</strong>: <code>$.prompt.submit({ text })</code> pêÂµe um prompt na fila, que vira um turno prêÂ³prio assim que a sessêÂ£o fica livre.</p>
+      <p data-ARCKHê-block="m2-4-t5-p2" class="text-neutral-300 mb-6 leading-relaxed">Ele nunca entra no meio de um turno que estêÂ¡ rodando. E a promessa resolve quando o turno <strong>comeêÂ§a</strong>, nêÂ£o quando termina. Por isso os tipos usam <code>void</code> na frente: o mod pede e segue.</p>
 
       <div class="space-y-5 mb-6">
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">1</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1">O mod chama <code>$.prompt.submit</code> </h4><p class="text-neutral-300 text-sm">De um timer, de um comando ou de um botÃ£o. O prompt entra na fila.</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1">O mod chama <code>$.prompt.submit</code> </h4><p class="text-neutral-300 text-sm">De um timer, de um comando ou de um botêÂ£o. O prompt entra na fila.</p></div>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">2</span></div>
@@ -546,57 +546,57 @@ async function acharPasta($: EngineInterface, cwd: string, fixa: string): Promis
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center"><span class="text-blue-400 font-bold">3</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1">A sessÃ£o fica livre e o turno comeÃ§a</h4><p class="text-neutral-300 text-sm">Aqui a promessa resolve. O modelo lÃª o texto como mensagem enviada pelo mod.</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1">A sessêÂ£o fica livre e o turno comeêÂ§a</h4><p class="text-neutral-300 text-sm">Aqui a promessa resolve. O modelo lêÂª o texto como mensagem enviada pelo mod.</p></div>
         </div>
       </div>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸ“„ Duas formas: o exemplo dos tipos e a alternativa que nÃ£o gasta modelo</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸ââ Duas formas: o exemplo dos tipos e a alternativa que nêÂ£o gasta modelo</span></div>
         <div class="p-5">
-          <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">// do comentÃ¡rio de prompt.submit nos tipos: comeÃ§a um turno (gasta modelo)
+          <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">// do comentêÂ¡rio de prompt.submit nos tipos: comeêÂ§a um turno (gasta modelo)
 void $.prompt.submit({ text: "List the TODOs you just mentioned." })
 
-// da referÃªncia (comando /quote): sÃ³ preenche a caixa; a pessoa decide
+// da referêÂªncia (comando /quote): sêÂ³ preenche a caixa; a pessoa decide
 await $.prompt.fill({ text: quoted + '\n\n', mode: 'insert' })</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o <code>submit</code> dispara um turno sozinho. O <code>fill</code> sÃ³ escreve na caixa do prompt e espera o Enter da pessoa. No kit ARCKHÉ, a segunda Ã© o padrÃ£o: o mod sugere, a pessoa decide gastar.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">O que olhar:</strong> o <code>submit</code> dispara um turno sozinho. O <code>fill</code> sêÂ³ escreve na caixa do prompt e espera o Enter da pessoa. No kit ARCKHê, a segunda êÂ© o padrêÂ£o: o mod sugere, a pessoa decide gastar.</div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">âš ï¸</span> Timer + submit = gasto sem ninguÃ©m olhando</h3>
-        <p class="text-neutral-300 text-sm">Um <code>$.clock.every</code> que chama <code>$.prompt.submit</code> faz o Claude trabalhar sozinho, em laÃ§o, enquanto a pessoa estÃ¡ fora. Se usar, ponha um limite claro, mostre na tela que estÃ¡ ligado e deixe um comando para desligar.</p>
+        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> Timer + submit = gasto sem ninguêÂ©m olhando</h3>
+        <p class="text-neutral-300 text-sm">Um <code>$.clock.every</code> que chama <code>$.prompt.submit</code> faz o Claude trabalhar sozinho, em laêÂ§o, enquanto a pessoa estêÂ¡ fora. Se usar, ponha um limite claro, mostre na tela que estêÂ¡ ligado e deixe um comando para desligar.</p>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 6 ===================== -->
-    <section id="topico-6" data-ARCKHÉ-topic="modulo-2-4#topico-6" class="mb-16">
+    <section id="topico-6" data-ARCKHê-topic="modulo-2-4#topico-6" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span>
         <h2 class="text-2xl font-bold flex-1">Decida se o mod pode gastar modelo</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m2-4-t6-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>$</code> tem um noun <code>model</code>. <code>$.model.complete({ model, prompt })</code> faz uma pergunta avulsa, sem histÃ³rico. <code>$.model.fork({ prompt })</code> pergunta sobre a prÃ³pria conversa, aproveitando o cache. As duas usam o cliente da sessÃ£o: <strong class="text-blue-400">gastam a cota da pessoa</strong>.</p>
-      <p data-ARCKHÉ-block="m2-4-t6-p2" class="text-neutral-300 mb-6 leading-relaxed">Elas sempre resolvem com um resultado, nunca com texto solto: <code>isAnswered</code> com <code>text</code> e <code>usage</code>, ou <code>isAnswered: false</code> com um <code>reason</code> (<code>api-error</code>, <code>empty-reply</code>, <code>aborted</code>; no <code>fork</code>, tambÃ©m <code>nothing-to-fork</code>).</p>
+      <p data-ARCKHê-block="m2-4-t6-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>$</code> tem um noun <code>model</code>. <code>$.model.complete({ model, prompt })</code> faz uma pergunta avulsa, sem histêÂ³rico. <code>$.model.fork({ prompt })</code> pergunta sobre a prêÂ³pria conversa, aproveitando o cache. As duas usam o cliente da sessêÂ£o: <strong class="text-blue-400">gastam a cota da pessoa</strong>.</p>
+      <p data-ARCKHê-block="m2-4-t6-p2" class="text-neutral-300 mb-6 leading-relaxed">Elas sempre resolvem com um resultado, nunca com texto solto: <code>isAnswered</code> com <code>text</code> e <code>usage</code>, ou <code>isAnswered: false</code> com um <code>reason</code> (<code>api-error</code>, <code>empty-reply</code>, <code>aborted</code>; no <code>fork</code>, tambêÂ©m <code>nothing-to-fork</code>).</p>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
-          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Chamada</th><th class="px-4 py-3 font-semibold">Gasta cota?</th><th class="px-4 py-3 font-semibold">Kit ARCKHÉ</th></tr></thead>
+          <thead class="bg-dark-700/60 text-blue-400"><tr><th class="px-4 py-3 font-semibold">Chamada</th><th class="px-4 py-3 font-semibold">Gasta cota?</th><th class="px-4 py-3 font-semibold">Kit ARCKHê</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.model.complete</code>, <code>$.model.fork</code> </td><td class="px-4 py-3 text-neutral-300">sim</td><td class="px-4 py-3 text-neutral-300">proibido</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.http.fetch</code> </td><td class="px-4 py-3 text-neutral-300">rede, pode ser serviÃ§o pago</td><td class="px-4 py-3 text-neutral-300">proibido</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.prompt.submit</code> </td><td class="px-4 py-3 text-neutral-300">sim, um turno inteiro</td><td class="px-4 py-3 text-neutral-300">sÃ³ a pedido da pessoa</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.prompt.fill</code>, <code>$.fs</code>, <code>$.process</code> local, <code>$.ui</code></td><td class="px-4 py-3 text-neutral-300">nÃ£o</td><td class="px-4 py-3 text-neutral-300">liberado</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.http.fetch</code> </td><td class="px-4 py-3 text-neutral-300">rede, pode ser serviêÂ§o pago</td><td class="px-4 py-3 text-neutral-300">proibido</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.prompt.submit</code> </td><td class="px-4 py-3 text-neutral-300">sim, um turno inteiro</td><td class="px-4 py-3 text-neutral-300">sêÂ³ a pedido da pessoa</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>$.prompt.fill</code>, <code>$.fs</code>, <code>$.process</code> local, <code>$.ui</code></td><td class="px-4 py-3 text-neutral-300">nêÂ£o</td><td class="px-4 py-3 text-neutral-300">liberado</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-        <svg viewBox="0 0 800 230" class="w-full h-auto" role="img" aria-label="Ãrvore de decisÃ£o. Pergunta inicial: isso precisa do modelo? NÃ£o: resolva com arquivos, processos locais e a tela, sem gasto. Sim: a pessoa pediu agora? NÃ£o: nÃ£o faÃ§a, ou sugira com prompt.fill. Sim: um comando dela pode disparar prompt.submit. Um ramo separado marca model.complete e model.fork como fora do kit ARCKHÉ.">
+        <svg viewBox="0 0 800 230" class="w-full h-auto" role="img" aria-label="êÂrvore de decisêÂ£o. Pergunta inicial: isso precisa do modelo? NêÂ£o: resolva com arquivos, processos locais e a tela, sem gasto. Sim: a pessoa pediu agora? NêÂ£o: nêÂ£o faêÂ§a, ou sugira com prompt.fill. Sim: um comando dela pode disparar prompt.submit. Um ramo separado marca model.complete e model.fork como fora do kit ARCKHê.">
           <defs>
             <pattern id="m24b-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#60a5fa" opacity="0.10"/></pattern>
             <marker id="m24b-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"/></marker>
@@ -604,50 +604,50 @@ await $.prompt.fill({ text: quoted + '\n\n', mode: 'insert' })</pre>
           <rect x="0" y="0" width="800" height="230" fill="url(#m24b-grid)"/>
           <g font-family="Inter,sans-serif" font-size="12" text-anchor="middle">
             <rect x="300" y="14" width="200" height="44" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/><text x="400" y="41" fill="#60a5fa" font-weight="600">Precisa do modelo?</text>
-            <line class="wf-flow" x1="340" y1="60" x2="170" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#m24b-arrow)"/><text x="235" y="72" fill="#bae6fd">nÃ£o</text>
+            <line class="wf-flow" x1="340" y1="60" x2="170" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#m24b-arrow)"/><text x="235" y="72" fill="#bae6fd">nêÂ£o</text>
             <line class="wf-flow" x1="460" y1="60" x2="600" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#m24b-arrow)"/><text x="550" y="72" fill="#bae6fd">sim</text>
-            <rect x="30" y="104" width="260" height="56" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/><text x="160" y="128" fill="#e5e7eb">$.fs Â· $.process Â· $.ui</text><text x="160" y="147" fill="#9ca3af" font-size="11">sem gasto: o normal de um mod</text>
+            <rect x="30" y="104" width="260" height="56" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/><text x="160" y="128" fill="#e5e7eb">$.fs êÂ· $.process êÂ· $.ui</text><text x="160" y="147" fill="#9ca3af" font-size="11">sem gasto: o normal de um mod</text>
             <rect x="500" y="104" width="200" height="44" rx="10" fill="#0f1b33" stroke="#60a5fa" stroke-width="2"/><text x="600" y="131" fill="#60a5fa" font-weight="600">A pessoa pediu agora?</text>
-            <line x1="550" y1="150" x2="470" y2="180" stroke="#38bdf8" stroke-width="2" marker-end="url(#m24b-arrow)"/><text x="490" y="160" fill="#bae6fd" font-size="11">nÃ£o</text>
+            <line x1="550" y1="150" x2="470" y2="180" stroke="#38bdf8" stroke-width="2" marker-end="url(#m24b-arrow)"/><text x="490" y="160" fill="#bae6fd" font-size="11">nêÂ£o</text>
             <line x1="650" y1="150" x2="700" y2="180" stroke="#38bdf8" stroke-width="2" marker-end="url(#m24b-arrow)"/><text x="690" y="160" fill="#bae6fd" font-size="11">sim</text>
             <rect x="350" y="184" width="200" height="36" rx="10" fill="#1f2937" stroke="#6b7280" stroke-width="2"/><text x="450" y="207" fill="#e5e7eb" font-size="11">sugira com prompt.fill</text>
-            <rect class="wf-a" x="590" y="184" width="200" height="36" rx="10" fill="#0b1f2e" stroke="#38bdf8" stroke-width="2"/><text x="690" y="207" fill="#bae6fd" font-size="11">comando dela â†’ prompt.submit</text>
-            <text x="160" y="200" fill="#fca5a5" font-size="11">model.complete / fork: fora do kit ARCKHÉ</text>
+            <rect class="wf-a" x="590" y="184" width="200" height="36" rx="10" fill="#0b1f2e" stroke="#38bdf8" stroke-width="2"/><text x="690" y="207" fill="#bae6fd" font-size="11">comando dela ê¢â â prompt.submit</text>
+            <text x="160" y="200" fill="#fca5a5" font-size="11">model.complete / fork: fora do kit ARCKHê</text>
           </g>
         </svg>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> comece em cima. A maior parte dos mods para no ramo da esquerda. Gastar modelo sÃ³ aparece quando a pessoa pediu, e mesmo assim por um caminho que ela vÃª. A linha vermelha Ã© a regra do kit ARCKHÉ: um mod nunca chama o modelo por conta prÃ³pria.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> comece em cima. A maior parte dos mods para no ramo da esquerda. Gastar modelo sêÂ³ aparece quando a pessoa pediu, e mesmo assim por um caminho que ela vêÂª. A linha vermelha êÂ© a regra do kit ARCKHê: um mod nunca chama o modelo por conta prêÂ³pria.</p>
 
       <div class="bg-dark-800 rounded-xl border border-blue-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ðŸŽ¯ Objetivo: ver o que um mod chama antes de ligar</span></div>
+        <div class="px-5 py-3 bg-blue-900/20 border-b border-blue-500/30"><span class="text-blue-400 font-semibold text-sm">ê°Å¸Å½Â¯ Objetivo: ver o que um mod chama antes de ligar</span></div>
         <div class="p-5">
           <p class="text-sm text-neutral-400 mb-3">Na pasta do Claude Mods Starter Kit:</p>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">claude plugin validate templates/starter-mod</pre>
-          <p class="text-xs text-neutral-500 mt-4 mb-2">SaÃ­da real (05/10/2026):</p>
+          <p class="text-xs text-neutral-500 mt-4 mb-2">SaêÂ­da real (05/10/2026):</p>
           <pre class="font-mono text-xs text-neutral-400 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">Validating plugin manifest: .../templates/starter-mod/.claude-plugin/plugin.json
 
 Validating hooks: .../templates/starter-mod/hooks/hooks.json
 
-  â¯ ./starter.mjs hooks: session.start, tool.call{tool=Read}, command.run{command=readcount}
-  â¯ ./starter.mjs calls: $.command.register
+  ê¢ÂÂ¯ ./starter.mjs hooks: session.start, tool.call{tool=Read}, command.run{command=readcount}
+  ê¢ÂÂ¯ ./starter.mjs calls: $.command.register
 
-âœ” Validation passed</pre>
+ê¢Åâ Validation passed</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">Como verificar:</strong> a linha <code>calls:</code> lista tudo o que o mod pede ao engine. Aqui sÃ³ aparece <code>$.command.register</code>: nada de <code>model</code>, <code>http</code> ou <code>prompt.submit</code>. Rode o mesmo comando na pasta de qualquer mod de terceiro antes de instalar.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-blue-400">Como verificar:</strong> a linha <code>calls:</code> lista tudo o que o mod pede ao engine. Aqui sêÂ³ aparece <code>$.command.register</code>: nada de <code>model</code>, <code>http</code> ou <code>prompt.submit</code>. Rode o mesmo comando na pasta de qualquer mod de terceiro antes de instalar.</div>
       </div>
 
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6" data-ARCKHÉ-check="modulo-2-4#q1">
-        <p class="font-medium mb-4">Teste rÃ¡pido (opcional): o Rafa quer que um painel releia um arquivo a cada 30 segundos, a sessÃ£o inteira. Onde ele liga isso?</p>
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6" data-ARCKHê-check="modulo-2-4#q1">
+        <p class="font-medium mb-4">Teste rêÂ¡pido (opcional): o Rafa quer que um painel releia um arquivo a cada 30 segundos, a sessêÂ£o inteira. Onde ele liga isso?</p>
         <div class="space-y-2">
-          <button type="button" data-ARCKHÉ-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">No <code>session.start</code>, com <code>$.clock.every(30_000, ...)</code>.</button>
-          <button type="button" data-ARCKHÉ-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Num laÃ§o com <code>$.clock.sleep</code> dentro do hook de <code>tool.call</code>.</button>
-          <button type="button" data-ARCKHÉ-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">No <code>ui.render</code> do painel, lendo o arquivo a cada desenho.</button>
+          <button type="button" data-ARCKHê-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">No <code>session.start</code>, com <code>$.clock.every(30_000, ...)</code>.</button>
+          <button type="button" data-ARCKHê-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Num laêÂ§o com <code>$.clock.sleep</code> dentro do hook de <code>tool.call</code>.</button>
+          <button type="button" data-ARCKHê-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">No <code>ui.render</code> do painel, lendo o arquivo a cada desenho.</button>
         </div>
-        <div data-ARCKHÉ-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
+        <div data-ARCKHê-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/20 border border-blue-500/30 text-blue-400 hover:bg-blue-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
@@ -655,29 +655,29 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
     <!-- ===================== RESUMO ===================== -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸŽ“</span> Resumo do mÃ³dulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ê°Å¸Å½â</span> Resumo do mêÂ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">session.start acende</strong><span class="text-neutral-400"> â€” aguardado antes do 1Âº prompt; volta no reload, nÃ£o no /clear.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">clock.every e clock.after mantÃªm</strong><span class="text-neutral-400"> â€” atÃ© cancel() ou reload.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">$.fs com .catch</strong><span class="text-neutral-400"> â€” read, write, list, stat; realPath para guardas.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">$.process.run por argv</strong><span class="text-neutral-400"> â€” sem shell, com tempo-limite.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Modelo custa</strong><span class="text-neutral-400"> â€” prompt.fill sugere; no kit ARCKHÉ, mod nÃ£o chama modelo nem rede.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">session.start acende</strong><span class="text-neutral-400"> ê¢â¬â aguardado antes do 1êÂº prompt; volta no reload, nêÂ£o no /clear.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">clock.every e clock.after mantêÂªm</strong><span class="text-neutral-400"> ê¢â¬â atêÂ© cancel() ou reload.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">$.fs com .catch</strong><span class="text-neutral-400"> ê¢â¬â read, write, list, stat; realPath para guardas.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">$.process.run por argv</strong><span class="text-neutral-400"> ê¢â¬â sem shell, com tempo-limite.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Modelo custa</strong><span class="text-neutral-400"> ê¢â¬â prompt.fill sugere; no kit ARCKHê, mod nêÂ£o chama modelo nem rede.</span></div></div>
         </div>
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-blue-400 mb-2">PrÃ³ximo mÃ³dulo:</h3>
-          <p class="text-neutral-300">3.1 â€” ui.render e as superfÃ­cies (Trilha 3: Telas e comandos)</p>
+          <h3 class="font-semibold text-blue-400 mb-2">PrêÂ³ximo mêÂ³dulo:</h3>
+          <p class="text-neutral-300">3.1 ê¢â¬â ui.render e as superfêÂ­cies (Trilha 3: Telas e comandos)</p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar para a trilha</a>
-          <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Trilha 3 â†’</a>
+          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">ê¢â Â Voltar para a trilha</a>
+          <a href="../trilha3/index.html" class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors">Trilha 3 ê¢â â</a>
         </div>
       </div>
     </section>
   </main>
 
   <aside class="hidden lg:block">
-    <nav data-ARCKHÉ-toc aria-label="Ãndice da pÃ¡gina" class="sticky top-24">
-      <p class="text-sm text-neutral-400 mb-3"><span data-ARCKHÉ-section-counter>SeÃ§Ã£o 1 de 6</span></p>
+    <nav data-ARCKHê-toc aria-label="êÂndice da pêÂ¡gina" class="sticky top-24">
+      <p class="text-sm text-neutral-400 mb-3"><span data-ARCKHê-section-counter>SeêÂ§êÂ£o 1 de 6</span></p>
       <ol class="space-y-2 text-sm">
         <li><a href="#topico-1" class="text-neutral-400 hover:text-blue-400">1. session.start</a></li>
         <li><a href="#topico-2" class="text-neutral-400 hover:text-blue-400">2. Timers</a></li>
@@ -692,8 +692,8 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
 
   <footer class="border-t border-dark-600 py-8 mt-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Mods do Claude Code â€” tÃ©cnico Â· 2026 | <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> - <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
-      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHÉ-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHÉ-mods</a> Â· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
+      <p>Mods do Claude Code ê¢â¬â têÂ©cnico êÂ· 2026 | <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> - <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
+      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHê-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHê-mods</a> êÂ· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
     </div>
   </footer>
 
@@ -705,7 +705,7 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
+      if (window.ARCKHê && ARCKHê.setPref) { ARCKHê.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHê-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
@@ -726,16 +726,16 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
   </script>
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
   <script>
     window.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && ARCKHÉ.registerCheck) {
+      if (window.ARCKHê && ARCKHê.registerCheck) {
 
-        ARCKHÉ.registerCheck('modulo-2-4#q1', { answer: 0, explain: {
-          '0': 'Isso. O session.start roda antes do primeiro prompt e de novo no reload, entÃ£o o timer Ã© religado junto com o cÃ³digo novo.',
-          '1': 'O $.clock.sleep conta no orÃ§amento de 10 s do hook; o laÃ§o seria cortado no primeiro dispatch.',
-          '2': 'O ui.render sÃ³ desenha e roda quando o engine quer. Ler o arquivo ali nÃ£o garante o ritmo, e escrever estado ali Ã© negado.'
+        ARCKHê.registerCheck('modulo-2-4#q1', { answer: 0, explain: {
+          '0': 'Isso. O session.start roda antes do primeiro prompt e de novo no reload, entêÂ£o o timer êÂ© religado junto com o cêÂ³digo novo.',
+          '1': 'O $.clock.sleep conta no orêÂ§amento de 10 s do hook; o laêÂ§o seria cortado no primeiro dispatch.',
+          '2': 'O ui.render sêÂ³ desenha e roda quando o engine quer. Ler o arquivo ali nêÂ£o garante o ritmo, e escrever estado ali êÂ© negado.'
         } });
       }
     });

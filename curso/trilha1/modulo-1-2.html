@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="ARCKHÉ-course" content="ccmt">
-  <title>Estrutura de arquivos e manifesto | Mods do Claude Code â€” tÃ©cnico</title>
-  <meta name="description" content="Curso tÃ©cnico gratuito do ARCKHÉ AI: escreva, teste e distribua mods do Claude Code â€” register, eventos, cadeia com next, estado, faixa, painÃ©is, comandos, guardas e claude plugin test.">
+  <meta name="ARCKHê-course" content="ccmt">
+  <title>Estrutura de arquivos e manifesto | Mods do Claude Code ê¢â¬â têÂ©cnico</title>
+  <meta name="description" content="Curso têÂ©cnico gratuito do ARCKHê AI: escreva, teste e distribua mods do Claude Code ê¢â¬â register, eventos, cadeia com next, estado, faixa, painêÂ©is, comandos, guardas e claude plugin test.">
 
   <!-- ANTI-FOUC: bloqueante, ANTES do Tailwind -->
   <script>
   (function () {
     try {
       var html = document.documentElement;
-      var DEF = { theme: 'ARCKHÉ-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
+      var DEF = { theme: 'ARCKHê-dark', font: 'inter', fontScale: 100, lineWidth: 68, leading: 1.7, accent: 'emerald' };
       function clone(o) { var r = {}; for (var x in o) r[x] = o[x]; return r; }
       var p = clone(DEF);
       try {
-        var raw = localStorage.getItem('ARCKHÉ.prefs');
+        var raw = localStorage.getItem('ARCKHê.prefs');
         if (raw) {
           var parsed = JSON.parse(raw);
           if (parsed && typeof parsed === 'object') { for (var k in DEF) if (parsed[k] != null) p[k] = parsed[k]; }
         } else {
           var legacy = localStorage.getItem('theme');
-          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHÉ-dark';
+          if (legacy === 'light') p.theme = 'claro'; else if (legacy === 'dark') p.theme = 'ARCKHê-dark';
         }
       } catch (e) { p = clone(DEF); }
       var THEMES = {
-        'ARCKHÉ-dark': { dark: true,  attr: null,        cs: 'dark'  },
+        'ARCKHê-dark': { dark: true,  attr: null,        cs: 'dark'  },
         'claro':      { dark: false, attr: null,        cs: 'light' },
         'sepia':      { dark: false, attr: 'sepia',     cs: 'light' },
         'foco':       { dark: null,  attr: 'foco',      cs: null    },
         'contraste':  { dark: true,  attr: 'contraste', cs: 'dark'  }
       };
-      var t = THEMES[p.theme] || THEMES['ARCKHÉ-dark'];
+      var t = THEMES[p.theme] || THEMES['ARCKHê-dark'];
       if (t.dark === true) html.classList.add('dark'); else if (t.dark === false) html.classList.remove('dark');
       if (t.attr) html.setAttribute('data-theme', t.attr); else html.removeAttribute('data-theme');
       html.style.colorScheme = (t.cs ? t.cs : (html.classList.contains('dark') ? 'dark' : 'light'));
       html.setAttribute('data-font', p.font || 'inter');
       html.setAttribute('data-accent', p.accent || 'emerald');
       var s = html.style; var scale = (+p.fontScale || 100);
-      s.setProperty('--ARCKHÉ-font-scale', (scale / 100).toString());
+      s.setProperty('--ARCKHê-font-scale', (scale / 100).toString());
       s.setProperty('font-size', scale + '%');
       s.setProperty('--measure', (+p.lineWidth || 68) + 'ch');
       s.setProperty('--lh-body', (+p.leading || 1.7).toString());
@@ -63,8 +63,8 @@
   <link rel="stylesheet" href="../../assets/learn.css">
 
   <!-- Manifesto do curso (OBRIGATORIO em TODA pagina, identico) -->
-  <script type="application/json" data-ARCKHÉ-manifest>
-  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que Ã© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfÃ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainÃ©is e botÃµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraÃ§Ã£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
+  <script type="application/json" data-ARCKHê-manifest>
+  {"course":"ccmt","tracks":[{"n":"1","title":"Anatomia","modules":[{"id":"1-1","title":"O que êÂ© um mod por dentro","topics":6,"href":"curso/trilha1/modulo-1-1.html"},{"id":"1-2","title":"Estrutura de arquivos e manifesto","topics":6,"href":"curso/trilha1/modulo-1-2.html"},{"id":"1-3","title":"Carregar, recarregar e instalar","topics":6,"href":"curso/trilha1/modulo-1-3.html"},{"id":"1-4","title":"Seu primeiro mod: comando e contador","topics":6,"href":"curso/trilha1/modulo-1-4.html"}]},{"n":"2","title":"Eventos e estado","modules":[{"id":"2-1","title":"O mapa de eventos","topics":6,"href":"curso/trilha2/modulo-2-1.html"},{"id":"2-2","title":"A cadeia: next, reescrever e responder","topics":6,"href":"curso/trilha2/modulo-2-2.html"},{"id":"2-3","title":"Estado que sobrevive","topics":6,"href":"curso/trilha2/modulo-2-3.html"},{"id":"2-4","title":"Trabalho fora do dispatch","topics":6,"href":"curso/trilha2/modulo-2-4.html"}]},{"n":"3","title":"Telas e comandos","modules":[{"id":"3-1","title":"ui.render e as superfêÂ­cies","topics":6,"href":"curso/trilha3/modulo-3-1.html"},{"id":"3-2","title":"Faixa, status e avisos","topics":6,"href":"curso/trilha3/modulo-3-2.html"},{"id":"3-3","title":"PainêÂ©is e botêÂµes","topics":6,"href":"curso/trilha3/modulo-3-3.html"},{"id":"3-4","title":"Comandos, ferramentas e configuraêÂ§êÂ£o","topics":6,"href":"curso/trilha3/modulo-3-4.html"}]},{"n":"4","title":"Controlar e distribuir","modules":[{"id":"4-1","title":"Mods que mudam o fluxo","topics":6,"href":"curso/trilha4/modulo-4-1.html"},{"id":"4-2","title":"Testar com claude plugin test","topics":6,"href":"curso/trilha4/modulo-4-2.html"},{"id":"4-3","title":"Depurar e as pegadinhas","topics":6,"href":"curso/trilha4/modulo-4-3.html"},{"id":"4-4","title":"Distribuir e projeto final","topics":6,"href":"curso/trilha4/modulo-4-4.html"}]}]}
   </script>
 
   <style>
@@ -155,7 +155,7 @@
     .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
 
     /* Alvos de ancora abaixo do nav sticky */
-    [data-ARCKHÉ-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
+    [data-ARCKHê-topic], [id^="modulo-"], [id^="topico-"] { scroll-margin-top: 72px; }
 
     /* SVG light mode + animacao */
     html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
@@ -171,28 +171,28 @@
     /* Topicos expansiveis */
     .topic-explanation { display: none; }
     .topic-explanation.active { display: block; }
-    /* Popover de aparÃªncia ancorado Ã  direita e fora do layout quando fechado (sem transbordo) */
-    .ARCKHÉ-appearance-pop { right: 0; }
+    /* Popover de aparêÂªncia ancorado êÂ  direita e fora do layout quando fechado (sem transbordo) */
+    .ARCKHê-appearance-pop { right: 0; }
     main code, main pre { overflow-wrap: anywhere; }
     main .flex-1 { min-width: 0; }
-    .ARCKHÉ-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
+    .ARCKHê-appearance-pop:not([data-open="true"]) { visibility: hidden; display: none; }
   </style>
 </head>
 <body class="bg-dark-900 text-neutral-100 min-h-screen">
-  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteÃºdo</a>
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary focus:text-black focus:rounded-lg">Pular para o conteêÂºdo</a>
 
   <nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-14">
         <div class="flex items-center space-x-1.5 sm:space-x-3">
           <a href="../../index.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300">
-            <span class="text-2xl">ðŸ§©</span>
-            <span class="font-bold text-lg hidden lg:inline">Mods tÃ©cnico</span>
+            <span class="text-2xl">ê°Å¸Â§Â©</span>
+            <span class="font-bold text-lg hidden lg:inline">Mods têÂ©cnico</span>
           </a>
           <span class="text-neutral-600 hidden sm:inline">|</span>
-          <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHÉ AI</a>
+          <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300 text-sm font-medium">ARCKHê AI</a>
           <span class="text-neutral-600">-</span>
-          <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
+          <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200 text-sm font-medium">PRO</a>
         </div>
         <div class="flex items-center sm:space-x-1">
           <a href="index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10">
@@ -207,40 +207,40 @@
           <a href="../trilha4/index.html" class="px-1.5 sm:px-2.5 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors">
             <span class="xl:hidden">T4</span><span class="hidden xl:inline">Controlar e distribuir</span>
           </a>
-          <button type="button" data-ARCKHÉ-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
-            <span aria-hidden="true">â—·</span><span class="hidden md:inline">Jornada</span>
-            <span class="ARCKHÉ-journey-badge" data-ARCKHÉ-journey-badge data-count="0"></span>
+          <button type="button" data-ARCKHê-journey-open class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-neutral-300 hover:text-neutral-100 transition-colors" title="Minha jornada">
+            <span aria-hidden="true">ê¢âÂ·</span><span class="hidden md:inline">Jornada</span>
+            <span class="ARCKHê-journey-badge" data-ARCKHê-journey-badge data-count="0"></span>
           </button>
           <div class="relative">
-            <button type="button" data-ARCKHÉ-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparÃªncia">
-              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparÃªncia</span>
+            <button type="button" data-ARCKHê-appearance-toggle="#aparencia" aria-expanded="false" aria-controls="aparencia" class="p-2 rounded-lg text-neutral-300 hover:text-neutral-100 transition-colors" title="AparêÂªncia">
+              <span aria-hidden="true" class="text-sm font-semibold">Aa</span><span class="sr-only">AparêÂªncia</span>
             </button>
-            <div id="aparencia" data-ARCKHÉ-appearance class="ARCKHÉ-appearance-pop">
-              <div class="ARCKHÉ-segment" aria-label="Tema">
-                <button type="button" data-ARCKHÉ-set-theme="ARCKHÉ-dark">Escuro</button>
-                <button type="button" data-ARCKHÉ-set-theme="claro">Claro</button>
-                <button type="button" data-ARCKHÉ-set-theme="sepia">SÃ©pia</button>
-                <button type="button" data-ARCKHÉ-set-theme="foco">Foco</button>
-                <button type="button" data-ARCKHÉ-set-theme="contraste">Alto contraste</button>
+            <div id="aparencia" data-ARCKHê-appearance class="ARCKHê-appearance-pop">
+              <div class="ARCKHê-segment" aria-label="Tema">
+                <button type="button" data-ARCKHê-set-theme="ARCKHê-dark">Escuro</button>
+                <button type="button" data-ARCKHê-set-theme="claro">Claro</button>
+                <button type="button" data-ARCKHê-set-theme="sepia">SêÂ©pia</button>
+                <button type="button" data-ARCKHê-set-theme="foco">Foco</button>
+                <button type="button" data-ARCKHê-set-theme="contraste">Alto contraste</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Fonte">
-                <button type="button" data-ARCKHÉ-set-font="inter">Inter</button>
-                <button type="button" data-ARCKHÉ-set-font="system">Sistema</button>
-                <button type="button" data-ARCKHÉ-set-font="leitura">Leitura</button>
+              <div class="ARCKHê-segment" aria-label="Fonte">
+                <button type="button" data-ARCKHê-set-font="inter">Inter</button>
+                <button type="button" data-ARCKHê-set-font="system">Sistema</button>
+                <button type="button" data-ARCKHê-set-font="leitura">Leitura</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Tamanho do texto">
-                <button type="button" data-ARCKHÉ-set-fontscale="100">A</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="112">A+</button>
-                <button type="button" data-ARCKHÉ-set-fontscale="125">A++</button>
+              <div class="ARCKHê-segment" aria-label="Tamanho do texto">
+                <button type="button" data-ARCKHê-set-fontscale="100">A</button>
+                <button type="button" data-ARCKHê-set-fontscale="112">A+</button>
+                <button type="button" data-ARCKHê-set-fontscale="125">A++</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Largura da linha">
-                <button type="button" data-ARCKHÉ-set-linewidth="60">Estreito</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="68">MÃ©dio</button>
-                <button type="button" data-ARCKHÉ-set-linewidth="75">Largo</button>
+              <div class="ARCKHê-segment" aria-label="Largura da linha">
+                <button type="button" data-ARCKHê-set-linewidth="60">Estreito</button>
+                <button type="button" data-ARCKHê-set-linewidth="68">MêÂ©dio</button>
+                <button type="button" data-ARCKHê-set-linewidth="75">Largo</button>
               </div>
-              <div class="ARCKHÉ-segment" aria-label="Entrelinha">
-                <button type="button" data-ARCKHÉ-set-leading="1.45">Compacto</button>
-                <button type="button" data-ARCKHÉ-set-leading="1.7">ConfortÃ¡vel</button>
+              <div class="ARCKHê-segment" aria-label="Entrelinha">
+                <button type="button" data-ARCKHê-set-leading="1.45">Compacto</button>
+                <button type="button" data-ARCKHê-set-leading="1.7">ConfortêÂ¡vel</button>
               </div>
             </div>
           </div>
@@ -253,55 +253,55 @@
     </div>
   </nav>
 
-  <nav aria-label="Trilha de navegaÃ§Ã£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <nav aria-label="Trilha de navegaêÂ§êÂ£o" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center space-x-2 text-sm text-neutral-400">
-      <a href="../../index.html" class="hover:text-emerald-400">InÃ­cio</a><span>/</span>
+      <a href="../../index.html" class="hover:text-emerald-400">InêÂ­cio</a><span>/</span>
       <a href="index.html" class="hover:text-emerald-400">Trilha 1</a><span>/</span>
-      <span class="text-emerald-400">MÃ³dulo 1.2</span>
+      <span class="text-emerald-400">MêÂ³dulo 1.2</span>
     </div>
   </nav>
 
-  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHÉ-module="1-2" data-ARCKHÉ-track="1">
+  <header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600" data-ARCKHê-module="1-2" data-ARCKHê-track="1">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MÃ“DULO 1.2</span>
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ðŸ—‚ï¸ Estrutura de arquivos e manifesto</h1>
-      <p class="text-lg text-neutral-400 max-w-3xl">O Claude Code sÃ³ acha o seu mod se a pasta tiver a forma certa. TrÃªs arquivos bastam: o manifesto, o Ã­ndice de mÃ³dulos e o mÃ³dulo. Aqui vocÃª monta cada um, entende cada campo e valida antes de carregar.</p>
+      <span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">MêâDULO 1.2</span>
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4">ê°Å¸ââê¯Â¸Â Estrutura de arquivos e manifesto</h1>
+      <p class="text-lg text-neutral-400 max-w-3xl">O Claude Code sêÂ³ acha o seu mod se a pasta tiver a forma certa. TrêÂªs arquivos bastam: o manifesto, o êÂ­ndice de mêÂ³dulos e o mêÂ³dulo. Aqui vocêÂª monta cada um, entende cada campo e valida antes de carregar.</p>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 max-w-2xl">
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">TÃ³picos</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">6</div><div class="text-xs text-neutral-400">TêÂ³picos</div></div>
         <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~35</div><div class="text-xs text-neutral-400">Minutos</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Base</div><div class="text-xs text-neutral-400">NÃ­vel</div></div>
-        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">PrÃ¡tico</div><div class="text-xs text-neutral-400">Tipo</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Base</div><div class="text-xs text-neutral-400">NêÂ­vel</div></div>
+        <div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">PrêÂ¡tico</div><div class="text-xs text-neutral-400">Tipo</div></div>
       </div>
-      <div data-ARCKHÉ-meter="modulo:1-2" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mÃ³dulo 1.2">
-        <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHÉ-meter-frac>0 de 6</span><span data-ARCKHÉ-meter-pct>0%</span></div>
-        <div class="ARCKHÉ-bar"><div class="ARCKHÉ-bar__fill" data-ARCKHÉ-meter-fill></div></div>
+      <div data-ARCKHê-meter="modulo:1-2" class="mt-6 max-w-2xl" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso do mêÂ³dulo 1.2">
+        <div class="flex justify-between text-xs text-neutral-400 mb-1"><span data-ARCKHê-meter-frac>0 de 6</span><span data-ARCKHê-meter-pct>0%</span></div>
+        <div class="ARCKHê-bar"><div class="ARCKHê-bar__fill" data-ARCKHê-meter-fill></div></div>
       </div>
     </div>
   </header>
 
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:grid lg:grid-cols-[1fr_220px] lg:gap-10">
-  <main id="conteudo" class="min-w-0" data-ARCKHÉ-module="1-2" data-ARCKHÉ-track="1">
+  <main id="conteudo" class="min-w-0" data-ARCKHê-module="1-2" data-ARCKHê-track="1">
 
     <!-- ===================== TOPICO 1 ===================== -->
-    <section id="topico-1" data-ARCKHÉ-topic="modulo-1-2#topico-1" class="mb-16">
+    <section id="topico-1" data-ARCKHê-topic="modulo-1-2#topico-1" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">1</span>
-        <h2 class="text-2xl font-bold flex-1">Monte a Ã¡rvore mÃ­nima de pastas</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Monte a êÂ¡rvore mêÂ­nima de pastas</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m1-2-t1-p1" class="text-neutral-300 mb-4 leading-relaxed">Um mod Ã© uma pasta. O nome da pasta Ã© livre. O que o Claude Code procura dentro dela Ã© fixo: <strong class="text-emerald-400"><code>.claude-plugin/plugin.json</code></strong> e <strong class="text-emerald-400"><code>hooks/hooks.json</code></strong>.</p>
-      <p data-ARCKHÉ-block="m1-2-t1-p2" class="text-neutral-300 mb-6 leading-relaxed">O terceiro arquivo Ã© o mÃ³dulo, com a funÃ§Ã£o <code>register</code>. Ele mora em <code>hooks/</code>, ao lado do <code>hooks.json</code>. Testes, tipos e README sÃ£o extras: ajudam, mas o mod carrega sem eles.</p>
+      <p data-ARCKHê-block="m1-2-t1-p1" class="text-neutral-300 mb-4 leading-relaxed">Um mod êÂ© uma pasta. O nome da pasta êÂ© livre. O que o Claude Code procura dentro dela êÂ© fixo: <strong class="text-emerald-400"><code>.claude-plugin/plugin.json</code></strong> e <strong class="text-emerald-400"><code>hooks/hooks.json</code></strong>.</p>
+      <p data-ARCKHê-block="m1-2-t1-p2" class="text-neutral-300 mb-6 leading-relaxed">O terceiro arquivo êÂ© o mêÂ³dulo, com a funêÂ§êÂ£o <code>register</code>. Ele mora em <code>hooks/</code>, ao lado do <code>hooks.json</code>. Testes, tipos e README sêÂ£o extras: ajudam, mas o mod carrega sem eles.</p>
 
       <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">ðŸ†•</span> Novo aqui? Manifesto e mÃ³dulo</h3>
+        <h3 class="text-base font-semibold text-emerald-400 mb-3 flex items-center"><span class="mr-2">ê°Å¸â â¢</span> Novo aqui? Manifesto e mêÂ³dulo</h3>
         <ul class="space-y-2 text-neutral-300 text-sm">
-          <li><strong>Manifesto</strong> â€” o <code>plugin.json</code>. Diz o nome do plugin, a versÃ£o e as opÃ§Ãµes. Sem ele, a pasta nÃ£o Ã© um plugin.</li>
-          <li><strong>MÃ³dulo de hooks</strong> â€” o arquivo de cÃ³digo que exporta <code>register</code>. O <code>hooks.json</code> aponta para ele.</li>
+          <li><strong>Manifesto</strong> ê¢â¬â o <code>plugin.json</code>. Diz o nome do plugin, a versêÂ£o e as opêÂ§êÂµes. Sem ele, a pasta nêÂ£o êÂ© um plugin.</li>
+          <li><strong>MêÂ³dulo de hooks</strong> ê¢â¬â o arquivo de cêÂ³digo que exporta <code>register</code>. O <code>hooks.json</code> aponta para ele.</li>
         </ul>
       </div>
 
       <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-        <svg viewBox="0 0 800 260" class="w-full h-auto" role="img" aria-label="Ãrvore da pasta starter-mod. Dentro dela, a pasta .claude-plugin com plugin.json, que Ã© o manifesto. A pasta hooks com hooks.json, que aponta para starter.mjs, o mÃ³dulo. Uma seta liga hooks.json a starter.mjs. Ã€ direita, em cinza, os extras: tests e tsconfig.json.">
+        <svg viewBox="0 0 800 260" class="w-full h-auto" role="img" aria-label="êÂrvore da pasta starter-mod. Dentro dela, a pasta .claude-plugin com plugin.json, que êÂ© o manifesto. A pasta hooks com hooks.json, que aponta para starter.mjs, o mêÂ³dulo. Uma seta liga hooks.json a starter.mjs. êâ¬ direita, em cinza, os extras: tests e tsconfig.json.">
           <defs>
             <pattern id="m12a-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#34d399" opacity="0.10"/></pattern>
             <filter id="m12a-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -315,57 +315,57 @@
             <line x1="60" y1="200" x2="100" y2="200" stroke="#6b7280" stroke-width="2"/>
             <g filter="url(#m12a-glow)"><rect x="100" y="80" width="300" height="40" rx="10" fill="#0e2018" stroke="#34d399" stroke-width="2"/></g>
             <text x="115" y="105" fill="#a7f3d0">.claude-plugin/plugin.json</text>
-            <text x="420" y="105" fill="#34d399" font-family="Inter,sans-serif" font-size="12">manifesto: nome, versÃ£o, opÃ§Ãµes</text>
+            <text x="420" y="105" fill="#34d399" font-family="Inter,sans-serif" font-size="12">manifesto: nome, versêÂ£o, opêÂ§êÂµes</text>
             <g filter="url(#m12a-glow)"><rect x="100" y="140" width="190" height="40" rx="10" fill="#0e2018" stroke="#34d399" stroke-width="2"/></g>
             <text x="115" y="165" fill="#a7f3d0">hooks/hooks.json</text>
             <line class="wf-flow" x1="292" y1="160" x2="335" y2="190" stroke="#38bdf8" stroke-width="2" marker-end="url(#m12a-arrow)"/>
             <g filter="url(#m12a-glow)"><rect x="340" y="180" width="190" height="40" rx="10" fill="#0b1f2e" stroke="#38bdf8" stroke-width="2"/></g>
             <text x="355" y="205" fill="#bae6fd">hooks/starter.mjs</text>
-            <text x="545" y="205" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="12">mÃ³dulo: export register</text>
+            <text x="545" y="205" fill="#7dd3fc" font-family="Inter,sans-serif" font-size="12">mêÂ³dulo: export register</text>
             <rect x="620" y="20" width="160" height="60" rx="10" fill="#111827" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="4 4"/>
             <text x="700" y="45" text-anchor="middle" fill="#9ca3af" font-size="12">tests/</text><text x="700" y="64" text-anchor="middle" fill="#9ca3af" font-size="12">tsconfig.json</text>
           </g>
-          <text x="400" y="248" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">verde = obrigatÃ³rio Â· tracejado = extra</text>
+          <text x="400" y="248" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">verde = obrigatêÂ³rio êÂ· tracejado = extra</text>
         </svg>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> os dois quadros verdes sÃ£o os nomes que o Claude Code procura. A seta azul mostra que o <code>hooks.json</code> nÃ£o tem cÃ³digo: ele sÃ³ diz qual arquivo carregar. O quadro tracejado Ã© o que vocÃª acrescenta para testar e tipar.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> os dois quadros verdes sêÂ£o os nomes que o Claude Code procura. A seta azul mostra que o <code>hooks.json</code> nêÂ£o tem cêÂ³digo: ele sêÂ³ diz qual arquivo carregar. O quadro tracejado êÂ© o que vocêÂª acrescenta para testar e tipar.</p>
 
       <div class="bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ðŸŽ¯ Objetivo: ter a Ã¡rvore do starter-mod na sua mÃ¡quina</span></div>
+        <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ê°Å¸Å½Â¯ Objetivo: ter a êÂ¡rvore do starter-mod na sua mêÂ¡quina</span></div>
         <div class="p-5">
-          <p class="text-sm text-neutral-400 mb-3">No terminal, na pasta onde vocÃª guarda projetos (uma linha de cada vez):</p>
+          <p class="text-sm text-neutral-400 mb-3">No terminal, na pasta onde vocêÂª guarda projetos (uma linha de cada vez):</p>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">git clone https://github.com/linnoff88-dev/claude-mods-starter-kit
 cd claude-mods-starter-kit</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-emerald-400">Como verificar:</strong> abra <code>templates/starter-mod</code> no editor. TÃªm de estar lÃ¡ <code>.claude-plugin/plugin.json</code>, <code>hooks/hooks.json</code>, <code>hooks/starter.mjs</code> e <code>tests/starter.test.ts</code>. A pasta <code>.claude-plugin</code> comeÃ§a com ponto: no gerenciador de arquivos, mostre os ocultos.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-emerald-400">Como verificar:</strong> abra <code>templates/starter-mod</code> no editor. TêÂªm de estar lêÂ¡ <code>.claude-plugin/plugin.json</code>, <code>hooks/hooks.json</code>, <code>hooks/starter.mjs</code> e <code>tests/starter.test.ts</code>. A pasta <code>.claude-plugin</code> comeêÂ§a com ponto: no gerenciador de arquivos, mostre os ocultos.</div>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“‡</div><div class="text-sm font-semibold text-emerald-400">plugin.json</div><p class="text-xs text-neutral-400 mt-1">quem Ã© o plugin</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ§­</div><div class="text-sm font-semibold text-emerald-400">hooks.json</div><p class="text-xs text-neutral-400 mt-1">qual mÃ³dulo carregar</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">âš™ï¸</div><div class="text-sm font-semibold text-emerald-400">mÃ³dulo</div><p class="text-xs text-neutral-400 mt-1">a funÃ§Ã£o register</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ§ª</div><div class="text-sm font-semibold text-emerald-400">extras</div><p class="text-xs text-neutral-400 mt-1">testes, tipos, README</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸ââ¡</div><div class="text-sm font-semibold text-emerald-400">plugin.json</div><p class="text-xs text-neutral-400 mt-1">quem êÂ© o plugin</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Â§Â­</div><div class="text-sm font-semibold text-emerald-400">hooks.json</div><p class="text-xs text-neutral-400 mt-1">qual mêÂ³dulo carregar</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê¢Å¡â¢ê¯Â¸Â</div><div class="text-sm font-semibold text-emerald-400">mêÂ³dulo</div><p class="text-xs text-neutral-400 mt-1">a funêÂ§êÂ£o register</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Â§Âª</div><div class="text-sm font-semibold text-emerald-400">extras</div><p class="text-xs text-neutral-400 mt-1">testes, tipos, README</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 2 ===================== -->
-    <section id="topico-2" data-ARCKHÉ-topic="modulo-1-2#topico-2" class="mb-16">
+    <section id="topico-2" data-ARCKHê-topic="modulo-1-2#topico-2" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">2</span>
         <h2 class="text-2xl font-bold flex-1">Escreva o plugin.json</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m1-2-t2-p1" class="text-neutral-300 mb-4 leading-relaxed">O manifesto do starter-mod tem quatro campos. O mais importante Ã© <code>name</code>: ele <strong class="text-emerald-400">identifica o plugin em todo lugar</strong>, do prefixo da saÃ­da de um comando Ã  chave das opÃ§Ãµes guardadas.</p>
-      <p data-ARCKHÉ-block="m1-2-t2-p2" class="text-neutral-300 mb-6 leading-relaxed">Compare com o <code>recibo-sessao</code>, do kit ARCKHÉ. Ele acrescenta <code>types</code> (o contrato de tipos do estado) e <code>userConfig</code> (uma opÃ§Ã£o que aparece no <code>/config</code>).</p>
+      <p data-ARCKHê-block="m1-2-t2-p1" class="text-neutral-300 mb-4 leading-relaxed">O manifesto do starter-mod tem quatro campos. O mais importante êÂ© <code>name</code>: ele <strong class="text-emerald-400">identifica o plugin em todo lugar</strong>, do prefixo da saêÂ­da de um comando êÂ  chave das opêÂ§êÂµes guardadas.</p>
+      <p data-ARCKHê-block="m1-2-t2-p2" class="text-neutral-300 mb-6 leading-relaxed">Compare com o <code>recibo-sessao</code>, do kit ARCKHê. Ele acrescenta <code>types</code> (o contrato de tipos do estado) e <code>userConfig</code> (uma opêÂ§êÂ£o que aparece no <code>/config</code>).</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden">
-          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ðŸ“„ templates/starter-mod/.claude-plugin/plugin.json</span></div>
+          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ê°Å¸ââ templates/starter-mod/.claude-plugin/plugin.json</span></div>
           <pre class="font-mono text-xs text-neutral-200 whitespace-pre-wrap bg-dark-900/60 p-4">{
   "name": "read-counter-example",
   "version": "0.1.0",
@@ -376,12 +376,12 @@ cd claude-mods-starter-kit</pre>
 }</pre>
         </div>
         <div class="bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden">
-          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ðŸ“„ ARCKHÉ-mods/mods/recibo-sessao/.claude-plugin/plugin.json</span></div>
+          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ê°Å¸ââ ARCKHê-mods/mods/recibo-sessao/.claude-plugin/plugin.json</span></div>
           <pre class="font-mono text-xs text-neutral-200 whitespace-pre-wrap bg-dark-900/60 p-4">{
   "name": "recibo-sessao",
   "version": "0.1.0",
-  "description": "Recibo da sessÃ£o: lista o que o Claude criou ou alterou, com botÃ£o para abrir a pasta (/recibo, /recibo ultimo, /recibo limpar)",
-  "author": { "name": "ARCKHÉ", "email": "linnoff88-dev@gmail.com" },
+  "description": "Recibo da sessêÂ£o: lista o que o Claude criou ou alterou, com botêÂ£o para abrir a pasta (/recibo, /recibo ultimo, /recibo limpar)",
+  "author": { "name": "ARCKHê", "email": "linnoff88-dev@gmail.com" },
   "types": "./types/index.d.ts",
   "userConfig": {
     "abridor": {
@@ -398,159 +398,159 @@ cd claude-mods-starter-kit</pre>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
-          <thead class="bg-dark-700/60 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Campo</th><th class="px-4 py-3 font-semibold">Para quÃª</th><th class="px-4 py-3 font-semibold">Onde vocÃª vÃª de novo</th></tr></thead>
+          <thead class="bg-dark-700/60 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">Campo</th><th class="px-4 py-3 font-semibold">Para quêÂª</th><th class="px-4 py-3 font-semibold">Onde vocêÂª vêÂª de novo</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>name</code></td><td class="px-4 py-3 text-neutral-300">identidade do plugin</td><td class="px-4 py-3 text-neutral-300">saÃ­da do comando (<code>read-counter-example: ...</code>), <code>pluginConfigs</code>, instalaÃ§Ã£o <code>nome@marketplace</code></td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>version</code></td><td class="px-4 py-3 text-neutral-300">versÃ£o publicada</td><td class="px-4 py-3 text-neutral-300">atualizaÃ§Ã£o por marketplace (mÃ³dulo 4.4)</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>description</code>, <code>author</code></td><td class="px-4 py-3 text-neutral-300">o que Ã© e de quem Ã©</td><td class="px-4 py-3 text-neutral-300">listas de plugins</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>types</code></td><td class="px-4 py-3 text-neutral-300">aponta o contrato de tipos do mod</td><td class="px-4 py-3 text-neutral-300">mÃ³dulo 2.3</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>userConfig</code></td><td class="px-4 py-3 text-neutral-300">opÃ§Ãµes que a pessoa escolhe</td><td class="px-4 py-3 text-neutral-300">tÃ³pico 5 e <code>/config</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>name</code></td><td class="px-4 py-3 text-neutral-300">identidade do plugin</td><td class="px-4 py-3 text-neutral-300">saêÂ­da do comando (<code>read-counter-example: ...</code>), <code>pluginConfigs</code>, instalaêÂ§êÂ£o <code>nome@marketplace</code></td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>version</code></td><td class="px-4 py-3 text-neutral-300">versêÂ£o publicada</td><td class="px-4 py-3 text-neutral-300">atualizaêÂ§êÂ£o por marketplace (mêÂ³dulo 4.4)</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>description</code>, <code>author</code></td><td class="px-4 py-3 text-neutral-300">o que êÂ© e de quem êÂ©</td><td class="px-4 py-3 text-neutral-300">listas de plugins</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>types</code></td><td class="px-4 py-3 text-neutral-300">aponta o contrato de tipos do mod</td><td class="px-4 py-3 text-neutral-300">mêÂ³dulo 2.3</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>userConfig</code></td><td class="px-4 py-3 text-neutral-300">opêÂ§êÂµes que a pessoa escolhe</td><td class="px-4 py-3 text-neutral-300">têÂ³pico 5 e <code>/config</code></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> sÃ³ <code>name</code> aparece em trÃªs lugares diferentes. Trocar o nome depois muda a chave das opÃ§Ãµes guardadas e o nome de instalaÃ§Ã£o. Escolha cedo (mÃ³dulo 1.4, tÃ³pico 6).</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> sêÂ³ <code>name</code> aparece em trêÂªs lugares diferentes. Trocar o nome depois muda a chave das opêÂ§êÂµes guardadas e o nome de instalaêÂ§êÂ£o. Escolha cedo (mêÂ³dulo 1.4, têÂ³pico 6).</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="bg-dark-800 rounded-xl p-6 border border-emerald-500/30">
-          <h3 class="font-semibold text-emerald-400 mb-3">âœ“ Bom nome</h3>
+          <h3 class="font-semibold text-emerald-400 mb-3">ê¢Åâ Bom nome</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ“ <code>contador-rafa</code>: minÃºsculas e hÃ­fen</li>
-            <li>âœ“ diz o que o mod faz</li>
-            <li>âœ“ Ãºnico entre os plugins que vocÃª usa</li>
+            <li>ê¢Åâ <code>contador-rafa</code>: minêÂºsculas e hêÂ­fen</li>
+            <li>ê¢Åâ diz o que o mod faz</li>
+            <li>ê¢Åâ êÂºnico entre os plugins que vocêÂª usa</li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl p-6 border border-red-500/30">
-          <h3 class="font-semibold text-red-400 mb-3">âœ— Nome que dÃ¡ trabalho</h3>
+          <h3 class="font-semibold text-red-400 mb-3">ê¢Åâ Nome que dêÂ¡ trabalho</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ— manter <code>read-counter-example</code> numa cÃ³pia</li>
-            <li>âœ— <code>Meu Mod</code>, com espaÃ§o e maiÃºscula</li>
-            <li>âœ— trocar o nome depois de publicar</li>
+            <li>ê¢Åâ manter <code>read-counter-example</code> numa cêÂ³pia</li>
+            <li>ê¢Åâ <code>Meu Mod</code>, com espaêÂ§o e maiêÂºscula</li>
+            <li>ê¢Åâ trocar o nome depois de publicar</li>
           </ul>
         </div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 3 ===================== -->
-    <section id="topico-3" data-ARCKHÉ-topic="modulo-1-2#topico-3" class="mb-16">
+    <section id="topico-3" data-ARCKHê-topic="modulo-1-2#topico-3" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">3</span>
-        <h2 class="text-2xl font-bold flex-1">Aponte o mÃ³dulo no hooks.json</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Aponte o mêÂ³dulo no hooks.json</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m1-2-t3-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>hooks/hooks.json</code> tem uma chave sÃ³: <code>modules</code>, com <strong class="text-emerald-400">um caminho</strong>. O caminho Ã© relativo ao prÃ³prio <code>hooks.json</code>, nÃ£o Ã  raiz do plugin.</p>
-      <p data-ARCKHÉ-block="m1-2-t3-p2" class="text-neutral-300 mb-6 leading-relaxed">Por isso o starter-mod escreve <code>./starter.mjs</code>, e nÃ£o <code>./hooks/starter.mjs</code>. O mÃ³dulo apontado pode importar outros arquivos do mod com <code>import</code> normal; esses nÃ£o entram no <code>hooks.json</code>.</p>
+      <p data-ARCKHê-block="m1-2-t3-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>hooks/hooks.json</code> tem uma chave sêÂ³: <code>modules</code>, com <strong class="text-emerald-400">um caminho</strong>. O caminho êÂ© relativo ao prêÂ³prio <code>hooks.json</code>, nêÂ£o êÂ  raiz do plugin.</p>
+      <p data-ARCKHê-block="m1-2-t3-p2" class="text-neutral-300 mb-6 leading-relaxed">Por isso o starter-mod escreve <code>./starter.mjs</code>, e nêÂ£o <code>./hooks/starter.mjs</code>. O mêÂ³dulo apontado pode importar outros arquivos do mod com <code>import</code> normal; esses nêÂ£o entram no <code>hooks.json</code>.</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden">
-          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ðŸ“„ templates/starter-mod/hooks/hooks.json</span></div>
+          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ê°Å¸ââ templates/starter-mod/hooks/hooks.json</span></div>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 p-4">{"modules":["./starter.mjs"]}</pre>
         </div>
         <div class="bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden">
-          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ðŸ“„ ARCKHÉ-mods/mods/recibo-sessao/hooks/hooks.json</span></div>
+          <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ê°Å¸ââ ARCKHê-mods/mods/recibo-sessao/hooks/hooks.json</span></div>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 p-4">{ "modules": ["./register.tsx"] }</pre>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div class="bg-dark-800 rounded-xl p-6 border border-emerald-500/30">
-          <h3 class="font-semibold text-emerald-400 mb-3">âœ“ Carrega</h3>
+          <h3 class="font-semibold text-emerald-400 mb-3">ê¢Åâ Carrega</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ“ <code>"./starter.mjs"</code> com o arquivo em <code>hooks/</code></li>
-            <li>âœ“ mÃ³dulo que faz <code>import { x } from "./util.mjs"</code></li>
-            <li>âœ“ um mÃ³dulo sÃ³, que pendura todos os hooks</li>
+            <li>ê¢Åâ <code>"./starter.mjs"</code> com o arquivo em <code>hooks/</code></li>
+            <li>ê¢Åâ mêÂ³dulo que faz <code>import { x } from "./util.mjs"</code></li>
+            <li>ê¢Åâ um mêÂ³dulo sêÂ³, que pendura todos os hooks</li>
           </ul>
         </div>
         <div class="bg-red-900/20 rounded-xl p-6 border border-red-500/30">
-          <h3 class="font-semibold text-red-400 mb-3">âœ— NÃ£o carrega</h3>
+          <h3 class="font-semibold text-red-400 mb-3">ê¢Åâ NêÂ£o carrega</h3>
           <ul class="space-y-2 text-neutral-300 text-sm">
-            <li>âœ— <code>"./hooks/starter.mjs"</code> (vira <code>hooks/hooks/...</code>)</li>
-            <li>âœ— mÃ³dulo com <code>import()</code> dinÃ¢mico</li>
-            <li>âœ— mÃ³dulo sem <code>export</code> de <code>register</code></li>
+            <li>ê¢Åâ <code>"./hooks/starter.mjs"</code> (vira <code>hooks/hooks/...</code>)</li>
+            <li>ê¢Åâ mêÂ³dulo com <code>import()</code> dinêÂ¢mico</li>
+            <li>ê¢Åâ mêÂ³dulo sem <code>export</code> de <code>register</code></li>
           </ul>
         </div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">âš ï¸</span> import() derruba o mÃ³dulo inteiro</h3>
-        <p class="text-neutral-300 text-sm">A referÃªncia oficial Ã© direta: um mÃ³dulo que contÃ©m <code>import()</code> nÃ£o carrega. NÃ£o adianta o <code>import()</code> estar num caminho que nunca roda. Use sempre <code>import ... from "./arquivo"</code> no topo.</p>
+        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> import() derruba o mêÂ³dulo inteiro</h3>
+        <p class="text-neutral-300 text-sm">A referêÂªncia oficial êÂ© direta: um mêÂ³dulo que contêÂ©m <code>import()</code> nêÂ£o carrega. NêÂ£o adianta o <code>import()</code> estar num caminho que nunca roda. Use sempre <code>import ... from "./arquivo"</code> no topo.</p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">1ï¸âƒ£</div><div class="text-sm font-semibold text-emerald-400">um caminho</div><p class="text-xs text-neutral-400 mt-1">em modules</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“</div><div class="text-sm font-semibold text-emerald-400">relativo</div><p class="text-xs text-neutral-400 mt-1">ao hooks.json</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ”—</div><div class="text-sm font-semibold text-emerald-400">import</div><p class="text-xs text-neutral-400 mt-1">traz o resto</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸš«</div><div class="text-sm font-semibold text-emerald-400">import()</div><p class="text-xs text-neutral-400 mt-1">nunca</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">1ê¯Â¸Âê¢ÆÂ£</div><div class="text-sm font-semibold text-emerald-400">um caminho</div><p class="text-xs text-neutral-400 mt-1">em modules</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ</div><div class="text-sm font-semibold text-emerald-400">relativo</div><p class="text-xs text-neutral-400 mt-1">ao hooks.json</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸ââ</div><div class="text-sm font-semibold text-emerald-400">import</div><p class="text-xs text-neutral-400 mt-1">traz o resto</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Å¡Â«</div><div class="text-sm font-semibold text-emerald-400">import()</div><p class="text-xs text-neutral-400 mt-1">nunca</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 4 ===================== -->
-    <section id="topico-4" data-ARCKHÉ-topic="modulo-1-2#topico-4" class="mb-16">
+    <section id="topico-4" data-ARCKHê-topic="modulo-1-2#topico-4" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">4</span>
-        <h2 class="text-2xl font-bold flex-1">Escolha a extensÃ£o do arquivo</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Escolha a extensêÂ£o do arquivo</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m1-2-t4-p1" class="text-neutral-300 mb-4 leading-relaxed">O mÃ³dulo e todo arquivo que ele importa precisam ter uma destas extensÃµes: <code>.ts</code>, <code>.tsx</code>, <code>.jsx</code>, <code>.js</code>, <code>.mjs</code>, <code>.cjs</code>, <code>.mts</code> ou <code>.cts</code>. Arquivo com outro nome nÃ£o Ã© carregado.</p>
-      <p data-ARCKHÉ-block="m1-2-t4-p2" class="text-neutral-300 mb-6 leading-relaxed">E tem um detalhe que engana: <strong class="text-emerald-400">Ã© sempre ES module</strong>, qualquer que seja a extensÃ£o. Um <code>.cjs</code> aqui nÃ£o vira CommonJS. Nada de <code>require</code> nem <code>module.exports</code>: use <code>import</code> e <code>export</code>.</p>
+      <p data-ARCKHê-block="m1-2-t4-p1" class="text-neutral-300 mb-4 leading-relaxed">O mêÂ³dulo e todo arquivo que ele importa precisam ter uma destas extensêÂµes: <code>.ts</code>, <code>.tsx</code>, <code>.jsx</code>, <code>.js</code>, <code>.mjs</code>, <code>.cjs</code>, <code>.mts</code> ou <code>.cts</code>. Arquivo com outro nome nêÂ£o êÂ© carregado.</p>
+      <p data-ARCKHê-block="m1-2-t4-p2" class="text-neutral-300 mb-6 leading-relaxed">E tem um detalhe que engana: <strong class="text-emerald-400">êÂ© sempre ES module</strong>, qualquer que seja a extensêÂ£o. Um <code>.cjs</code> aqui nêÂ£o vira CommonJS. Nada de <code>require</code> nem <code>module.exports</code>: use <code>import</code> e <code>export</code>.</p>
 
       <div class="overflow-x-auto mb-6 rounded-xl border border-dark-600">
         <table class="w-full text-sm text-left">
-          <thead class="bg-dark-700/60 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">ExtensÃ£o</th><th class="px-4 py-3 font-semibold">Quem usa</th><th class="px-4 py-3 font-semibold">Quando escolher</th></tr></thead>
+          <thead class="bg-dark-700/60 text-emerald-400"><tr><th class="px-4 py-3 font-semibold">ExtensêÂ£o</th><th class="px-4 py-3 font-semibold">Quem usa</th><th class="px-4 py-3 font-semibold">Quando escolher</th></tr></thead>
           <tbody class="divide-y divide-dark-600">
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.mjs</code></td><td class="px-4 py-3 text-neutral-300">Starter Kit (<code>starter.mjs</code>)</td><td class="px-4 py-3 text-neutral-300">primeiro mod, sem tipos, sem passo de compilaÃ§Ã£o (trilha 1)</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.tsx</code></td><td class="px-4 py-3 text-neutral-300">ARCKHÉ-mods (<code>register.tsx</code>)</td><td class="px-4 py-3 text-neutral-300">mod tipado que desenha com JSX (trilhas 2 a 4)</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.mjs</code></td><td class="px-4 py-3 text-neutral-300">Starter Kit (<code>starter.mjs</code>)</td><td class="px-4 py-3 text-neutral-300">primeiro mod, sem tipos, sem passo de compilaêÂ§êÂ£o (trilha 1)</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.tsx</code></td><td class="px-4 py-3 text-neutral-300">ARCKHê-mods (<code>register.tsx</code>)</td><td class="px-4 py-3 text-neutral-300">mod tipado que desenha com JSX (trilhas 2 a 4)</td></tr>
             <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.ts</code></td><td class="px-4 py-3 text-neutral-300">testes (<code>*.test.ts</code>)</td><td class="px-4 py-3 text-neutral-300">mod tipado sem tela</td></tr>
-            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.js .jsx .cjs .mts .cts</code></td><td class="px-4 py-3 text-neutral-300">aceitas</td><td class="px-4 py-3 text-neutral-300">se o seu editor ou hÃ¡bito pedir; o comportamento Ã© o mesmo</td></tr>
+            <tr class="bg-dark-800"><td class="px-4 py-3 text-neutral-100"><code>.js .jsx .cjs .mts .cts</code></td><td class="px-4 py-3 text-neutral-300">aceitas</td><td class="px-4 py-3 text-neutral-300">se o seu editor ou hêÂ¡bito pedir; o comportamento êÂ© o mesmo</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> a escolha Ã© sobre conforto, nÃ£o sobre poder. O Claude Code lÃª TypeScript direto. Os tipos servem ao seu editor e ao <code>tsc</code>, nÃ£o ao carregamento.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">O que olhar na tabela:</strong> a escolha êÂ© sobre conforto, nêÂ£o sobre poder. O Claude Code lêÂª TypeScript direto. Os tipos servem ao seu editor e ao <code>tsc</code>, nêÂ£o ao carregamento.</p>
 
       <div class="bg-primary/10 rounded-xl border border-primary/30 p-6 mb-6">
-        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ðŸ’¡</span> Por que o curso comeÃ§a em .mjs</h3>
-        <p class="text-neutral-300 text-sm">Na trilha 1 vocÃª quer ver o mod carregar, sem brigar com tipos. Na trilha 2 o Rafa passa para <code>.tsx</code> com <code>import type { Register } from 'claude-code'</code>, e o editor comeÃ§a a apontar nome errado antes de rodar.</p>
+        <h3 class="text-lg font-semibold text-primary mb-2 flex items-center"><span class="mr-2">ê°Å¸âÂ¡</span> Por que o curso comeêÂ§a em .mjs</h3>
+        <p class="text-neutral-300 text-sm">Na trilha 1 vocêÂª quer ver o mod carregar, sem brigar com tipos. Na trilha 2 o Rafa passa para <code>.tsx</code> com <code>import type { Register } from 'claude-code'</code>, e o editor comeêÂ§a a apontar nome errado antes de rodar.</p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“œ</div><div class="text-sm font-semibold text-emerald-400">8 extensÃµes</div><p class="text-xs text-neutral-400 mt-1">as outras nÃ£o carregam</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“¦</div><div class="text-sm font-semibold text-emerald-400">ES module</div><p class="text-xs text-neutral-400 mt-1">sempre</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸŸ¨</div><div class="text-sm font-semibold text-emerald-400">.mjs</div><p class="text-xs text-neutral-400 mt-1">trilha 1</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸŸ¦</div><div class="text-sm font-semibold text-emerald-400">.tsx</div><p class="text-xs text-neutral-400 mt-1">trilhas 2 a 4</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÅ</div><div class="text-sm font-semibold text-emerald-400">8 extensêÂµes</div><p class="text-xs text-neutral-400 mt-1">as outras nêÂ£o carregam</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ¦</div><div class="text-sm font-semibold text-emerald-400">ES module</div><p class="text-xs text-neutral-400 mt-1">sempre</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Å¸Â¨</div><div class="text-sm font-semibold text-emerald-400">.mjs</div><p class="text-xs text-neutral-400 mt-1">trilha 1</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Å¸Â¦</div><div class="text-sm font-semibold text-emerald-400">.tsx</div><p class="text-xs text-neutral-400 mt-1">trilhas 2 a 4</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 5 ===================== -->
-    <section id="topico-5" data-ARCKHÉ-topic="modulo-1-2#topico-5" class="mb-16">
+    <section id="topico-5" data-ARCKHê-topic="modulo-1-2#topico-5" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">5</span>
-        <h2 class="text-2xl font-bold flex-1">Declare opÃ§Ãµes com userConfig</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <h2 class="text-2xl font-bold flex-1">Declare opêÂ§êÂµes com userConfig</h2>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m1-2-t5-p1" class="text-neutral-300 mb-4 leading-relaxed">Cada campo de <code>userConfig</code> vira uma opÃ§Ã£o. O valor escolhido chega no segundo argumento de <code>register(on, options)</code>, jÃ¡ com o padrÃ£o preenchido. No <code>recibo-sessao</code>, o mod lÃª <code>options.abridor</code>.</p>
-      <p data-ARCKHÉ-block="m1-2-t5-p2" class="text-neutral-300 mb-6 leading-relaxed">Um campo <code>string</code> com a lista <code>options</code> vira um <strong class="text-emerald-400">seletor no <code>/config</code></strong>, sÃ³ com aqueles valores. Um valor guardado fora da lista conta como "nÃ£o definido", e vale o <code>default</code>.</p>
+      <p data-ARCKHê-block="m1-2-t5-p1" class="text-neutral-300 mb-4 leading-relaxed">Cada campo de <code>userConfig</code> vira uma opêÂ§êÂ£o. O valor escolhido chega no segundo argumento de <code>register(on, options)</code>, jêÂ¡ com o padrêÂ£o preenchido. No <code>recibo-sessao</code>, o mod lêÂª <code>options.abridor</code>.</p>
+      <p data-ARCKHê-block="m1-2-t5-p2" class="text-neutral-300 mb-6 leading-relaxed">Um campo <code>string</code> com a lista <code>options</code> vira um <strong class="text-emerald-400">seletor no <code>/config</code></strong>, sêÂ³ com aqueles valores. Um valor guardado fora da lista conta como "nêÂ£o definido", e vale o <code>default</code>.</p>
 
       <div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-emerald-400 mb-2 flex items-center"><span class="mr-2">ðŸ†•</span> Novo aqui? pluginConfigs</h3>
-        <p class="text-neutral-300 text-sm">Ã‰ o bloco do <code>settings.json</code> onde o Claude Code guarda as escolhas, na chave <code>pluginConfigs</code>, com o <code>name</code> do plugin como chave (ou <code>&lt;name&gt;@inline</code> para um mod carregado por <code>--plugin-dir</code>). Campos sensÃ­veis ficam no armazenamento seguro, nÃ£o no arquivo, e nÃ£o viram linha do menu.</p>
+        <h3 class="text-base font-semibold text-emerald-400 mb-2 flex items-center"><span class="mr-2">ê°Å¸â â¢</span> Novo aqui? pluginConfigs</h3>
+        <p class="text-neutral-300 text-sm">êâ° o bloco do <code>settings.json</code> onde o Claude Code guarda as escolhas, na chave <code>pluginConfigs</code>, com o <code>name</code> do plugin como chave (ou <code>&lt;name&gt;@inline</code> para um mod carregado por <code>--plugin-dir</code>). Campos sensêÂ­veis ficam no armazenamento seguro, nêÂ£o no arquivo, e nêÂ£o viram linha do menu.</p>
       </div>
 
       <div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mb-3 overflow-hidden">
-        <svg viewBox="0 0 800 220" class="w-full h-auto" role="img" aria-label="Caminho de uma opÃ§Ã£o em quatro caixas. Primeiro o plugin.json declara o campo abridor com trÃªs valores. Depois o /config mostra um seletor com esses valores. A escolha Ã© gravada em settings.json, em pluginConfigs. Por fim o mÃ³dulo recarrega e register recebe options.abridor com o valor escolhido.">
+        <svg viewBox="0 0 800 220" class="w-full h-auto" role="img" aria-label="Caminho de uma opêÂ§êÂ£o em quatro caixas. Primeiro o plugin.json declara o campo abridor com trêÂªs valores. Depois o /config mostra um seletor com esses valores. A escolha êÂ© gravada em settings.json, em pluginConfigs. Por fim o mêÂ³dulo recarrega e register recebe options.abridor com o valor escolhido.">
           <defs>
             <pattern id="m12b-grid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1.3" cy="1.3" r="1.3" fill="#34d399" opacity="0.10"/></pattern>
             <filter id="m12b-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
@@ -560,16 +560,16 @@ cd claude-mods-starter-kit</pre>
           <g font-family="Inter,sans-serif" font-size="12" text-anchor="middle">
             <rect x="20" y="60" width="170" height="80" rx="12" fill="#1f2937" stroke="#6b7280" stroke-width="2"/><text x="105" y="88" fill="#e5e7eb">plugin.json</text><text x="105" y="108" fill="#9ca3af" font-family="JetBrains Mono,monospace" font-size="11">userConfig.abridor</text><text x="105" y="126" fill="#9ca3af" font-size="11">declara</text>
             <line class="wf-flow" x1="192" y1="100" x2="213" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#m12b-arrow)"/>
-            <rect class="wf-a" x="218" y="60" width="170" height="80" rx="12" fill="#0b1f2e" stroke="#38bdf8" stroke-width="2"/><text x="303" y="88" fill="#bae6fd">/config</text><text x="303" y="108" fill="#7dd3fc" font-size="11">seletor: xdg-open</text><text x="303" y="126" fill="#7dd3fc" font-size="11">open Â· explorer</text>
+            <rect class="wf-a" x="218" y="60" width="170" height="80" rx="12" fill="#0b1f2e" stroke="#38bdf8" stroke-width="2"/><text x="303" y="88" fill="#bae6fd">/config</text><text x="303" y="108" fill="#7dd3fc" font-size="11">seletor: xdg-open</text><text x="303" y="126" fill="#7dd3fc" font-size="11">open êÂ· explorer</text>
             <line class="wf-flow" x1="390" y1="100" x2="411" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#m12b-arrow)"/>
             <rect class="wf-a" x="416" y="60" width="170" height="80" rx="12" fill="#0b1f2e" stroke="#38bdf8" stroke-width="2"/><text x="501" y="88" fill="#bae6fd">settings.json</text><text x="501" y="108" fill="#7dd3fc" font-family="JetBrains Mono,monospace" font-size="11">pluginConfigs</text><text x="501" y="126" fill="#7dd3fc" font-size="11">guarda a escolha</text>
             <line class="wf-flow" x1="588" y1="100" x2="609" y2="100" stroke="#38bdf8" stroke-width="2" marker-end="url(#m12b-arrow)"/>
             <g filter="url(#m12b-glow)"><rect x="614" y="60" width="170" height="80" rx="12" fill="#0e2018" stroke="#34d399" stroke-width="2"/></g><text x="699" y="88" fill="#34d399">register</text><text x="699" y="108" fill="#a7f3d0" font-family="JetBrains Mono,monospace" font-size="11">options.abridor</text><text x="699" y="126" fill="#a7f3d0" font-size="11">recarrega com o valor</text>
           </g>
-          <text x="400" y="190" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">mudar no /config recarrega o mÃ³dulo com as novas options</text>
+          <text x="400" y="190" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="12">mudar no /config recarrega o mêÂ³dulo com as novas options</text>
         </svg>
       </div>
-      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> vocÃª escreve sÃ³ a primeira caixa. O Claude Code cuida do seletor e da gravaÃ§Ã£o. O mod nunca lÃª o <code>settings.json</code>: ele recebe o valor pronto em <code>options</code>, e recebe de novo quando a pessoa troca.</p>
+      <p class="text-sm text-neutral-400 mb-6"><strong class="text-neutral-300">Como ler o desenho:</strong> vocêÂª escreve sêÂ³ a primeira caixa. O Claude Code cuida do seletor e da gravaêÂ§êÂ£o. O mod nunca lêÂª o <code>settings.json</code>: ele recebe o valor pronto em <code>options</code>, e recebe de novo quando a pessoa troca.</p>
 
       <div class="space-y-5 mb-6">
         <div class="flex items-start space-x-4">
@@ -582,75 +582,75 @@ cd claude-mods-starter-kit</pre>
         </div>
         <div class="flex items-start space-x-4">
           <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="text-emerald-400 font-bold">3</span></div>
-          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1">Teste com options</h4><p class="text-neutral-300 text-sm">No teste, <code>test(nome, { options }, corpo)</code> entrega os valores como se viessem do <code>settings.json</code> (mÃ³dulo 4.2).</p></div>
+          <div class="flex-1 bg-dark-800 rounded-xl p-5 border border-dark-600"><h4 class="font-semibold text-neutral-100 mb-1">Teste com options</h4><p class="text-neutral-300 text-sm">No teste, <code>test(nome, { options }, corpo)</code> entrega os valores como se viessem do <code>settings.json</code> (mêÂ³dulo 4.2).</p></div>
         </div>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“</div><div class="text-sm font-semibold text-emerald-400">userConfig</div><p class="text-xs text-neutral-400 mt-1">no manifesto</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸŽšï¸</div><div class="text-sm font-semibold text-emerald-400">/config</div><p class="text-xs text-neutral-400 mt-1">seletor pronto</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ—„ï¸</div><div class="text-sm font-semibold text-emerald-400">pluginConfigs</div><p class="text-xs text-neutral-400 mt-1">onde fica guardado</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ“¥</div><div class="text-sm font-semibold text-emerald-400">options</div><p class="text-xs text-neutral-400 mt-1">chega no register</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ</div><div class="text-sm font-semibold text-emerald-400">userConfig</div><p class="text-xs text-neutral-400 mt-1">no manifesto</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Å½Å¡ê¯Â¸Â</div><div class="text-sm font-semibold text-emerald-400">/config</div><p class="text-xs text-neutral-400 mt-1">seletor pronto</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸ââê¯Â¸Â</div><div class="text-sm font-semibold text-emerald-400">pluginConfigs</div><p class="text-xs text-neutral-400 mt-1">onde fica guardado</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ¥</div><div class="text-sm font-semibold text-emerald-400">options</div><p class="text-xs text-neutral-400 mt-1">chega no register</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
 
     <!-- ===================== TOPICO 6 ===================== -->
-    <section id="topico-6" data-ARCKHÉ-topic="modulo-1-2#topico-6" class="mb-16">
+    <section id="topico-6" data-ARCKHê-topic="modulo-1-2#topico-6" class="mb-16">
       <div class="flex flex-wrap items-center gap-4 mb-6">
         <span class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 font-bold text-xl">6</span>
         <h2 class="text-2xl font-bold flex-1">Valide antes de carregar</h2>
-        <button type="button" data-ARCKHÉ-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dÃºvida</span></button>
+        <button type="button" data-ARCKHê-doubt-toggle aria-pressed="false" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-dark-700 border border-dark-600 text-neutral-300 hover:bg-dark-600 transition-colors text-sm"><span aria-hidden="true">?</span><span>Tenho dêÂºvida</span></button>
       </div>
-      <p data-ARCKHÉ-block="m1-2-t6-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>claude plugin validate</code> lÃª o manifesto e o cÃ³digo do mÃ³dulo <strong class="text-emerald-400">do jeito que o engine vai ler</strong>, sem abrir sessÃ£o. Ele lista os eventos que o mÃ³dulo pendura e os mÃ©todos do <code>$</code> que chama.</p>
-      <p data-ARCKHÉ-block="m1-2-t6-p2" class="text-neutral-300 mb-6 leading-relaxed">Ã‰ o teste mais barato que existe. Rode a cada mudanÃ§a no manifesto ou no <code>hooks.json</code>. Se o evento que vocÃª escreveu nÃ£o aparece na lista, o nome estÃ¡ errado.</p>
+      <p data-ARCKHê-block="m1-2-t6-p1" class="text-neutral-300 mb-4 leading-relaxed">O <code>claude plugin validate</code> lêÂª o manifesto e o cêÂ³digo do mêÂ³dulo <strong class="text-emerald-400">do jeito que o engine vai ler</strong>, sem abrir sessêÂ£o. Ele lista os eventos que o mêÂ³dulo pendura e os mêÂ©todos do <code>$</code> que chama.</p>
+      <p data-ARCKHê-block="m1-2-t6-p2" class="text-neutral-300 mb-6 leading-relaxed">êâ° o teste mais barato que existe. Rode a cada mudanêÂ§a no manifesto ou no <code>hooks.json</code>. Se o evento que vocêÂª escreveu nêÂ£o aparece na lista, o nome estêÂ¡ errado.</p>
 
       <div class="bg-dark-800 rounded-xl border border-emerald-500/30 overflow-hidden mb-6">
-        <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ðŸŽ¯ Objetivo: ver o que o engine enxerga no starter-mod</span></div>
+        <div class="px-5 py-3 bg-emerald-900/20 border-b border-emerald-500/30"><span class="text-emerald-400 font-semibold text-sm">ê°Å¸Å½Â¯ Objetivo: ver o que o engine enxerga no starter-mod</span></div>
         <div class="p-5">
           <p class="text-sm text-neutral-400 mb-3">Na raiz do kit (<code>claude-mods-starter-kit</code>):</p>
           <pre class="font-mono text-sm text-neutral-200 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600 mb-3">claude plugin validate templates/starter-mod</pre>
-          <p class="text-sm text-neutral-400 mb-2">SaÃ­da real no Claude Code 2.1.289 (o comeÃ§o dos caminhos muda na sua mÃ¡quina):</p>
+          <p class="text-sm text-neutral-400 mb-2">SaêÂ­da real no Claude Code 2.1.289 (o comeêÂ§o dos caminhos muda na sua mêÂ¡quina):</p>
           <pre class="font-mono text-xs text-neutral-300 whitespace-pre-wrap bg-dark-900/60 rounded-lg p-4 border border-dark-600">Validating plugin manifest: .../templates/starter-mod/.claude-plugin/plugin.json
 
 Validating hooks: .../templates/starter-mod/hooks/hooks.json
 
-  â¯ ./starter.mjs hooks: session.start, tool.call{tool=Read}, command.run{command=readcount}
-  â¯ ./starter.mjs calls: $.command.register
+  ê¢ÂÂ¯ ./starter.mjs hooks: session.start, tool.call{tool=Read}, command.run{command=readcount}
+  ê¢ÂÂ¯ ./starter.mjs calls: $.command.register
 
-âœ” Validation passed</pre>
+ê¢Åâ Validation passed</pre>
         </div>
-        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-emerald-400">Como verificar:</strong> a Ãºltima linha Ã© <code>âœ” Validation passed</code> e a linha <code>hooks:</code> mostra os trÃªs eventos, com os matchers entre chaves. Se faltar um evento, confira o nome no cÃ³digo.</div>
+        <div class="px-5 py-3 bg-dark-700/40 border-t border-dark-600 text-neutral-300 text-sm"><strong class="text-emerald-400">Como verificar:</strong> a êÂºltima linha êÂ© <code>ê¢Åâ Validation passed</code> e a linha <code>hooks:</code> mostra os trêÂªs eventos, com os matchers entre chaves. Se faltar um evento, confira o nome no cêÂ³digo.</div>
       </div>
 
       <div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6 mb-6">
-        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">âš ï¸</span> claude plugin init nÃ£o cria um mod</h3>
-        <p class="text-neutral-300 text-sm">O nome engana. O <code>claude plugin init</code> monta <strong>outro tipo de plugin</strong>, de hooks de comando, dentro de <code>~/.claude/skills</code>. Um mod vocÃª escreve direto: os trÃªs arquivos deste mÃ³dulo. Para comeÃ§ar rÃ¡pido, copie o starter-mod (mÃ³dulo 1.4).</p>
+        <h3 class="text-base font-semibold text-red-400 mb-2 flex items-center"><span class="mr-2">ê¢Å¡Â ê¯Â¸Â</span> claude plugin init nêÂ£o cria um mod</h3>
+        <p class="text-neutral-300 text-sm">O nome engana. O <code>claude plugin init</code> monta <strong>outro tipo de plugin</strong>, de hooks de comando, dentro de <code>~/.claude/skills</code>. Um mod vocêÂª escreve direto: os trêÂªs arquivos deste mêÂ³dulo. Para comeêÂ§ar rêÂ¡pido, copie o starter-mod (mêÂ³dulo 1.4).</p>
       </div>
 
-      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6" data-ARCKHÉ-check="modulo-1-2#q1">
-        <p class="font-medium mb-4">Teste rÃ¡pido (opcional): o Rafa pÃ´s o mÃ³dulo em <code>hooks/contador.mjs</code> e escreveu <code>{"modules":["./hooks/contador.mjs"]}</code> no <code>hooks.json</code>. O mod nÃ£o carrega. Por quÃª?</p>
+      <div class="bg-dark-800 rounded-xl border border-dark-600 p-6 mb-6" data-ARCKHê-check="modulo-1-2#q1">
+        <p class="font-medium mb-4">Teste rêÂ¡pido (opcional): o Rafa pêÂ´s o mêÂ³dulo em <code>hooks/contador.mjs</code> e escreveu <code>{"modules":["./hooks/contador.mjs"]}</code> no <code>hooks.json</code>. O mod nêÂ£o carrega. Por quêÂª?</p>
         <div class="space-y-2">
-          <button type="button" data-ARCKHÉ-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Porque o mÃ³dulo precisa ser <code>.ts</code>.</button>
-          <button type="button" data-ARCKHÉ-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Porque o caminho Ã© relativo ao <code>hooks.json</code>: aponta para <code>hooks/hooks/contador.mjs</code>.</button>
-          <button type="button" data-ARCKHÉ-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Porque falta <code>userConfig</code> no <code>plugin.json</code>.</button>
+          <button type="button" data-ARCKHê-check-option="0" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Porque o mêÂ³dulo precisa ser <code>.ts</code>.</button>
+          <button type="button" data-ARCKHê-check-option="1" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Porque o caminho êÂ© relativo ao <code>hooks.json</code>: aponta para <code>hooks/hooks/contador.mjs</code>.</button>
+          <button type="button" data-ARCKHê-check-option="2" class="block w-full text-left px-4 py-2 rounded-lg bg-dark-700 border border-dark-600 hover:bg-dark-600 transition-colors text-sm">Porque falta <code>userConfig</code> no <code>plugin.json</code>.</button>
         </div>
-        <div data-ARCKHÉ-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
+        <div data-ARCKHê-check-feedback class="mt-4 text-sm" role="status" aria-live="polite"></div>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ”</div><div class="text-sm font-semibold text-emerald-400">validate</div><p class="text-xs text-neutral-400 mt-1">sem abrir sessÃ£o</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸª</div><div class="text-sm font-semibold text-emerald-400">hooks:</div><p class="text-xs text-neutral-400 mt-1">eventos e matchers</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸ’²</div><div class="text-sm font-semibold text-emerald-400">calls:</div><p class="text-xs text-neutral-400 mt-1">o que usa do $</p></div>
-        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ðŸš«</div><div class="text-sm font-semibold text-emerald-400">plugin init</div><p class="text-xs text-neutral-400 mt-1">outro tipo</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ</div><div class="text-sm font-semibold text-emerald-400">validate</div><p class="text-xs text-neutral-400 mt-1">sem abrir sessêÂ£o</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸ÂªÂ</div><div class="text-sm font-semibold text-emerald-400">hooks:</div><p class="text-xs text-neutral-400 mt-1">eventos e matchers</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸âÂ²</div><div class="text-sm font-semibold text-emerald-400">calls:</div><p class="text-xs text-neutral-400 mt-1">o que usa do $</p></div>
+        <div class="bg-dark-800 rounded-xl p-4 border border-dark-600 text-center"><div class="text-2xl mb-1">ê°Å¸Å¡Â«</div><div class="text-sm font-semibold text-emerald-400">plugin init</div><p class="text-xs text-neutral-400 mt-1">outro tipo</p></div>
       </div>
       <div class="flex justify-start mt-6">
-        <button type="button" data-ARCKHÉ-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
-          <span class="ARCKHÉ-read-icon" aria-hidden="true">â—‹</span><span class="ARCKHÉ-read-label">Marcar como lido</span>
+        <button type="button" data-ARCKHê-read-toggle aria-pressed="false" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/30 transition-colors">
+          <span class="ARCKHê-read-icon" aria-hidden="true">ê¢ââ¹</span><span class="ARCKHê-read-label">Marcar como lido</span>
         </button>
       </div>
     </section>
@@ -658,34 +658,34 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
     <!-- ===================== RESUMO ===================== -->
     <section class="mb-12">
       <div class="bg-gradient-to-br from-emerald-900/40 via-dark-800 to-dark-800 rounded-xl border border-emerald-500/30 p-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ðŸŽ“</span> Resumo do mÃ³dulo</h2>
+        <h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">ê°Å¸Å½â</span> Resumo do mêÂ³dulo</h2>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">âœ“</span><div><strong class="text-neutral-100">TrÃªs arquivos bastam</strong><span class="text-neutral-400"> â€” plugin.json, hooks.json e o mÃ³dulo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">âœ“</span><div><strong class="text-neutral-100">name identifica o plugin</strong><span class="text-neutral-400"> â€” na saÃ­da, nas opÃ§Ãµes e na instalaÃ§Ã£o.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">âœ“</span><div><strong class="text-neutral-100">hooks.json tem um caminho</strong><span class="text-neutral-400"> â€” relativo a ele mesmo.</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">âœ“</span><div><strong class="text-neutral-100">Oito extensÃµes, sempre ES module</strong><span class="text-neutral-400"> â€” e nunca import().</span></div></div>
-          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">âœ“</span><div><strong class="text-neutral-100">userConfig vira /config e options</strong><span class="text-neutral-400"> â€” validate confere tudo antes.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">TrêÂªs arquivos bastam</strong><span class="text-neutral-400"> ê¢â¬â plugin.json, hooks.json e o mêÂ³dulo.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">name identifica o plugin</strong><span class="text-neutral-400"> ê¢â¬â na saêÂ­da, nas opêÂ§êÂµes e na instalaêÂ§êÂ£o.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">hooks.json tem um caminho</strong><span class="text-neutral-400"> ê¢â¬â relativo a ele mesmo.</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">Oito extensêÂµes, sempre ES module</strong><span class="text-neutral-400"> ê¢â¬â e nunca import().</span></div></div>
+          <div class="flex items-start space-x-3"><span class="text-emerald-400 mt-1">ê¢Åâ</span><div><strong class="text-neutral-100">userConfig vira /config e options</strong><span class="text-neutral-400"> ê¢â¬â validate confere tudo antes.</span></div></div>
         </div>
         <div class="bg-dark-800/50 rounded-lg p-4 mb-8">
-          <h3 class="font-semibold text-emerald-400 mb-2">PrÃ³ximo mÃ³dulo:</h3>
-          <p class="text-neutral-300">1.3 â€” Carregar, recarregar e instalar</p>
+          <h3 class="font-semibold text-emerald-400 mb-2">PrêÂ³ximo mêÂ³dulo:</h3>
+          <p class="text-neutral-300">1.3 ê¢â¬â Carregar, recarregar e instalar</p>
         </div>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">â† Voltar para a trilha</a>
-          <a href="modulo-1-3.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">MÃ³dulo 1.3 â†’</a>
+          <a href="index.html" class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors">ê¢â Â Voltar para a trilha</a>
+          <a href="modulo-1-3.html" class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors">MêÂ³dulo 1.3 ê¢â â</a>
         </div>
       </div>
     </section>
   </main>
 
   <aside class="hidden lg:block">
-    <nav data-ARCKHÉ-toc aria-label="Ãndice da pÃ¡gina" class="sticky top-24">
-      <p class="text-sm text-neutral-400 mb-3"><span data-ARCKHÉ-section-counter>SeÃ§Ã£o 1 de 6</span></p>
+    <nav data-ARCKHê-toc aria-label="êÂndice da pêÂ¡gina" class="sticky top-24">
+      <p class="text-sm text-neutral-400 mb-3"><span data-ARCKHê-section-counter>SeêÂ§êÂ£o 1 de 6</span></p>
       <ol class="space-y-2 text-sm">
-        <li><a href="#topico-1" class="text-neutral-400 hover:text-emerald-400">1. Ãrvore mÃ­nima</a></li>
+        <li><a href="#topico-1" class="text-neutral-400 hover:text-emerald-400">1. êÂrvore mêÂ­nima</a></li>
         <li><a href="#topico-2" class="text-neutral-400 hover:text-emerald-400">2. plugin.json</a></li>
         <li><a href="#topico-3" class="text-neutral-400 hover:text-emerald-400">3. hooks.json</a></li>
-        <li><a href="#topico-4" class="text-neutral-400 hover:text-emerald-400">4. ExtensÃ£o</a></li>
+        <li><a href="#topico-4" class="text-neutral-400 hover:text-emerald-400">4. ExtensêÂ£o</a></li>
         <li><a href="#topico-5" class="text-neutral-400 hover:text-emerald-400">5. userConfig</a></li>
         <li><a href="#topico-6" class="text-neutral-400 hover:text-emerald-400">6. Validar</a></li>
       </ol>
@@ -695,8 +695,8 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
 
   <footer class="border-t border-dark-600 py-8 mt-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-      <p>Mods do Claude Code â€” tÃ©cnico Â· 2026 | <a href="https://ARCKHÉ AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHÉ AI</a> - <a href="https://ARCKHÉ.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
-      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHÉ-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHÉ-mods</a> Â· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
+      <p>Mods do Claude Code ê¢â¬â têÂ©cnico êÂ· 2026 | <a href="https://ARCKHê AI" target="_blank" class="text-sky-400 hover:text-sky-300">ARCKHê AI</a> - <a href="https://ARCKHê.pro" target="_blank" class="text-amber-700 hover:text-amber-600 dark:text-slate-300 dark:hover:text-slate-200">PRO</a></p>
+      <p class="mt-2 text-xs">Kits usados no curso: <a href="https://github.com/linnoff88-dev/ARCKHê-mods" target="_blank" class="text-sky-400 hover:text-sky-300">linnoff88-dev/ARCKHê-mods</a> êÂ· <a href="https://github.com/promptadvisers/claude-mods-starter-kit" target="_blank" class="text-sky-400 hover:text-sky-300">Claude Mods Starter Kit</a> (Prompt Advisers, MIT)</p>
     </div>
   </footer>
 
@@ -708,7 +708,7 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
     if (!_html.classList.contains('dark')) { themeToggleDarkIcon.classList.remove('hidden'); }
     else { themeToggleLightIcon.classList.remove('hidden'); }
     themeToggle.addEventListener('click', () => {
-      if (window.ARCKHÉ && ARCKHÉ.setPref) { ARCKHÉ.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHÉ-dark'); }
+      if (window.ARCKHê && ARCKHê.setPref) { ARCKHê.setPref('theme', _html.classList.contains('dark') ? 'claro' : 'ARCKHê-dark'); }
       else { _html.classList.toggle('dark'); }
       themeToggleDarkIcon.classList.toggle('hidden', _html.classList.contains('dark'));
       themeToggleLightIcon.classList.toggle('hidden', !_html.classList.contains('dark'));
@@ -729,16 +729,16 @@ Validating hooks: .../templates/starter-mod/hooks/hooks.json
   </script>
   <script src="../../assets/learn.js"></script>
   <script>
-    if (window.ARCKHÉ && typeof window.ARCKHÉ.init === 'function') { window.ARCKHÉ.init(); }
+    if (window.ARCKHê && typeof window.ARCKHê.init === 'function') { window.ARCKHê.init(); }
   </script>
   <script>
     window.addEventListener('DOMContentLoaded', function () {
-      if (window.ARCKHÉ && ARCKHÉ.registerCheck) {
+      if (window.ARCKHê && ARCKHê.registerCheck) {
 
-        ARCKHÉ.registerCheck('modulo-1-2#q1', { answer: 1, explain: {
-          '0': '.mjs Ã© uma das extensÃµes aceitas. O problema estÃ¡ no caminho.',
-          '1': 'Isso. O caminho em modules Ã© relativo ao prÃ³prio hooks.json, que jÃ¡ estÃ¡ em hooks/. O certo Ã© "./contador.mjs".',
-          '2': 'userConfig Ã© opcional. Um mod sem opÃ§Ãµes carrega normalmente.'
+        ARCKHê.registerCheck('modulo-1-2#q1', { answer: 1, explain: {
+          '0': '.mjs êÂ© uma das extensêÂµes aceitas. O problema estêÂ¡ no caminho.',
+          '1': 'Isso. O caminho em modules êÂ© relativo ao prêÂ³prio hooks.json, que jêÂ¡ estêÂ¡ em hooks/. O certo êÂ© "./contador.mjs".',
+          '2': 'userConfig êÂ© opcional. Um mod sem opêÂ§êÂµes carrega normalmente.'
         } });
       }
     });

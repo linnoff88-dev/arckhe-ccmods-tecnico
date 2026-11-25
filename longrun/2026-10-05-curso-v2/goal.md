@@ -1,21 +1,21 @@
-# Goal â€” curso-v2 (ccmods-tecnico)
+# Goal ê¢â¬â curso-v2 (ccmods-tecnico)
 
-- **InÃ­cio:** 2026-10-05 17:09 Â· **Agente:** Claude (sessÃ£o interativa) + 5 subagentes
-- **Tetos:** tempo 4 h Â· sem API paga Â· Codex sÃ³ pela assinatura (traduÃ§Ã£o, se fizer)
+- **InêÂ­cio:** 2026-10-05 17:09 êÂ· **Agente:** Claude (sessêÂ£o interativa) + 5 subagentes
+- **Tetos:** tempo 4 h êÂ· sem API paga êÂ· Codex sêÂ³ pela assinatura (traduêÂ§êÂ£o, se fizer)
 
 ## Resultado
-Curso v2 "Mods do Claude Code â€” o curso tÃ©cnico" publicado em linnoff88-dev.github.io/ e cadastrado no portal (trilha ðŸ–¥ï¸ Claude Code).
+Curso v2 "Mods do Claude Code ê¢â¬â o curso têÂ©cnico" publicado em linnoff88-dev.github.io/ e cadastrado no portal (trilha ê°Å¸âÂ¥ê¯Â¸Â Claude Code).
 
-## CritÃ©rios de pronto
-**FunÃ§Ã£o**
-- [ ] `python3 scripts/montar.py && python3 scripts/lint.py` â†’ `LINT OK` (16 mÃ³dulos Ã— 6 tÃ³picos, 4 Ã­ndices com 24 tÃ³picos, landing; checagem de API contra o d.ts 2.1.289)
-- [ ] `node scripts/checar-navegador.cjs http://127.0.0.1:<porta> pt` (NODE_PATH=~/projetos/agent-browser/node_modules) â†’ 0 erros de pÃ¡gina, 0 overflow em 360 px
-- [ ] `curl -s -o /dev/null -w '%{http_code}' https://linnoff88-dev.github.io/ â†’ `200`
-**RegressÃ£o**
-- [ ] `context/corpos/modulo-1-1.html` sem mudanÃ§a depois do lote (modelo congelado): `git diff --stat <commit-modelo> -- context/corpos/modulo-1-1.html` â†’ vazio
+## CritêÂ©rios de pronto
+**FunêÂ§êÂ£o**
+- [ ] `python3 scripts/montar.py && python3 scripts/lint.py` ê¢â â `LINT OK` (16 mêÂ³dulos êâ 6 têÂ³picos, 4 êÂ­ndices com 24 têÂ³picos, landing; checagem de API contra o d.ts 2.1.289)
+- [ ] `node scripts/checar-navegador.cjs http://127.0.0.1:<porta> pt` (NODE_PATH=~/projetos/agent-browser/node_modules) ê¢â â 0 erros de pêÂ¡gina, 0 overflow em 360 px
+- [ ] `curl -s -o /dev/null -w '%{http_code}' https://linnoff88-dev.github.io/ ê¢â â `200`
+**RegressêÂ£o**
+- [ ] `context/corpos/modulo-1-1.html` sem mudanêÂ§a depois do lote (modelo congelado): `git diff --stat <commit-modelo> -- context/corpos/modulo-1-1.html` ê¢â â vazio
 **Limite**
-- [ ] nada editado em ~/projetos/ARCKHÉ-mods nem ~/projetos/claude-mods-starter-kit (`git -C â€¦ status --short` igual ao inÃ­cio)
-- [ ] portal: sÃ³ as linhas do curso (courses.ts, Portal.tsx trilha Claude Code, courses.data.json)
+- [ ] nada editado em ~/projetos/ARCKHê-mods nem ~/projetos/claude-mods-starter-kit (`git -C ê¢â¬Â¦ status --short` igual ao inêÂ­cio)
+- [ ] portal: sêÂ³ as linhas do curso (courses.ts, Portal.tsx trilha Claude Code, courses.data.json)
 
-**Teste rÃ¡pido por ciclo**: `LINT_SEM_LINKS=1 python3 scripts/lint.py <arquivo>`
+**Teste rêÂ¡pido por ciclo**: `LINT_SEM_LINKS=1 python3 scripts/lint.py <arquivo>`
 **Teste completo no final**: lint completo + checar-navegador
