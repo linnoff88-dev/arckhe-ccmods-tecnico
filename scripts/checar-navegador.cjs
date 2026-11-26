@@ -1,5 +1,5 @@
 // Abre todas as páginas por HTTP local e procura: erro JS (pageerror), erro de console,
-// transbordo horizontal em 390 px, <html lang> e se o learn.js iniciou (window.INEMA).
+// transbordo horizontal em 390 px, <html lang> e se o learn.js iniciou (window.ARCKHÉ).
 // Uso: node scripts/checar-navegador.cjs http://127.0.0.1:PORTA [pt|en|es ...]
 const { chromium } = require('/home/nmaldaner/projetos/agent-browser/node_modules/playwright');
 const fs = require('fs'), path = require('path');
@@ -30,10 +30,10 @@ const LANG = { pt: 'pt-BR', en: 'en', es: 'es' };
         const r = await page.evaluate(() => ({
           lang: document.documentElement.lang,
           over: document.documentElement.scrollWidth - window.innerWidth,
-          inema: !!(window.INEMA && window.INEMA.init),
+          ARCKHÉ: !!(window.ARCKHÉ && window.ARCKHÉ.init),
         }));
         total++;
-        const ok = !erros.length && r.lang === LANG[lg] && r.over <= 1 && r.inema;
+        const ok = !erros.length && r.lang === LANG[lg] && r.over <= 1 && r.ARCKHÉ;
         if (!ok) { falhas++; console.log('FALHA', vw, rel, JSON.stringify(r), erros.slice(0, 3).join(' | ')); }
         await page.close();
       }
